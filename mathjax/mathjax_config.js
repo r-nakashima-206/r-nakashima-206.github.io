@@ -8,7 +8,7 @@ tex: {
     
     /* マクロ */
     Macros: {
-        bm: ["{\\boldsymbol{#1}}", 1]
+        bm: ["{\\boldsymbol #1}", 1]
     }
 },
 svg: {
