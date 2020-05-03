@@ -5,8 +5,10 @@ tex: {
     inlineMath: [
         ['$', '$']
     ],
-    macros: {
-        bm: ["{\\boldsymbol #1}", 1]
+    /* マクロ */
+    Macros: {
+        bm: ["{\\boldsymbol #1}", 1],
+        ud: "{\\rm d}"
     }
 },
 svg: {
