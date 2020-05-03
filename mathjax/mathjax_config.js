@@ -1,18 +1,18 @@
 window.MathJax = {
 
 tex: {
-    /* 本文中の数式 */
+    // 本文中の数式 //
     inlineMath: [
         ['$', '$']
     ],
-    
-    /* マクロ */
-    Macros: {
-        bm: ["{\\boldsymbol #1}", 1]
-    }
+    // ディスプレイ数式モード //
+    displayMath: [
+        ['\[', '\]']
+    ]
 },
+
 svg: {
     fontCache: 'global'
 }
-    
+
 };
