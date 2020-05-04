@@ -1,29 +1,51 @@
 body {
-    /* 基本のフォント(メイリオ優先, 次sans-serif) */
-    font-family: "メイリオ", Meiryo, sans-serif;
-    font-size: 1rem;
+    font-family: "メイリオ", Meiryo, sans-serif; /* 基本のフォント(メイリオ優先, 次sans-serif) */
+    margin: 0; /*  */
 }
 
 header {
-    /* 文字色 */
-    color: darkorange;
-    /* 背景色 */
-    background-color: indigo;
+    background-color: indigo; /* 背景色 */
+}
+
+#index_header {
+    color: darkorange; /* 文字色 */
+    padding: 0px 10px 10px 10px; /* 上右下左の空白*/
+}
+
+#uppermost_header {
+    color: white; /* 文字色 */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
+}
+
+main {
+    padding: 0px 0px 0px 20px; /* 上右下左の空白*/
 }
 
 footer {
-    background-color: black;
-    color: white;
+    color: white; /* 文字色 */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
 }
 
+/* ======================================== */
+
 h1 {
-    color: purple;
+    color: lightseagreen; /* 文字色 */
+    font-weight: lighter; /* 文字の太さ */
+}
+
+h2 {
+    color: purple; /* 文字色 */
+    font-weight: lighter; /* 文字の太さ */
+}
+
+/* ======================================== */
+
+p {
+    text-align: justify; /* 長文の両端揃え */
 }
 
 a {
-    color: darkorange;
-}
-
-.MathJax {
-    font-size: 1rem;
+    color: darkorange; /* 文字色 */
 }
