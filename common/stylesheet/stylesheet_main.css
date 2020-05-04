@@ -1,0 +1,24 @@
+body {
+    /* 基本のフォント(メイリオ優先, 次sans-serif) */
+    font-family: "メイリオ", Meiryo, sans-serif;
+}
+
+header {
+    /* 文字色 */
+    color: darkorange;
+    /* 背景色 */
+    background-color: indigo;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: purple;
+}
+
+a {
+    color: darkorange;
+}
