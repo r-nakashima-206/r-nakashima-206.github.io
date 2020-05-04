@@ -1,46 +1,7 @@
 body {
-    font-family: "メイリオ", Meiryo, sans-serif; /* 基本のフォント(メイリオ優先, 次sans-serif) */
-    margin: 0; /*  */
+    font-family: "メイリオ", Meiryo, serif; /* 基本のフォント(左ほど優先) */
+    margin: 0px 0px 0px 0px; /* 上右下左の空白(margin)*/
 }
-
-header {
-    background-color: indigo; /* 背景色 */
-}
-
-#index_header {
-    color: darkorange; /* 文字色 */
-    padding: 0px 10px 10px 10px; /* 上右下左の空白*/
-}
-
-#uppermost_header {
-    color: white; /* 文字色 */
-    background-color: dimgray; /* 背景色 */
-    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
-}
-
-main {
-    padding: 0px 0px 0px 20px; /* 上右下左の空白*/
-}
-
-footer {
-    color: white; /* 文字色 */
-    background-color: dimgray; /* 背景色 */
-    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
-}
-
-/* ======================================== */
-
-h1 {
-    color: lightseagreen; /* 文字色 */
-    font-weight: lighter; /* 文字の太さ */
-}
-
-h2 {
-    color: purple; /* 文字色 */
-    font-weight: lighter; /* 文字の太さ */
-}
-
-/* ======================================== */
 
 p {
     text-align: justify; /* 長文の両端揃え */
@@ -49,3 +10,104 @@ p {
 a {
     color: darkorange; /* 文字色 */
 }
+
+hr {
+    border: 3px dashed lightsteelblue; /* 線のスタイル */
+    margin: 40px 0px 20px -10px; /* 上右下左の空白(margin)*/
+}
+
+/* ======================================== */
+/* header */
+/* ======================================== */
+
+header {
+    background-color: indigo; /* 背景色 */
+}
+
+header a {
+    color: orange; /* 文字色 */
+}
+
+p#index_header {
+    color: darkorange; /* 文字色 */
+    padding: 0px 10px 10px 10px; /* 上右下左の空白(padding)*/
+}
+
+p#uppermost_header {
+    color: white; /* 文字色 */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
+}
+
+/* ======================================== */
+/* main */
+/* ======================================== */
+
+main {
+    padding: 0px 0px 0px 20px; /* 上右下左の空白*/
+}
+
+p#section {
+    font-size: 1.8rem; /* フォントサイズ */
+    color: yellow; /* 文字色 */
+    background-color: darkblue; /* 背景色 */
+    padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
+    width: 500px; /* 囲みの大きさ */
+}
+
+p#subsection {
+    font-size: 1.6rem; /* フォントサイズ */
+    color: black; /* 文字色 */
+    padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
+    border: 1px solid teal; /* 囲み線 */
+    border-left: 8px solid teal; /* 囲み線(左のみ) */
+    width: 300px; /* 囲みの大きさ */
+    background: linear-gradient(to right, transparent, honeydew, palegreen); /* 背景色グラデーション */
+}
+
+p#info {
+    margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
+}
+
+p#sub_info {
+    font-size: 0.85rem; /* フォントサイズ */
+    margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
+    border: 1px solid black; /* 囲み線 */
+    padding: 10px 10px 10px 20px; /* 上右下左の空白(margin)*/
+    width: 450px; /* 囲みの大きさ */
+    background-color: gainsboro; /* 背景色 */
+}
+
+.period{
+    color: black; /* 文字色 */
+    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
+    font-size: 0.95rem; /* フォントサイズ */
+    margin-left : 20px; /* 左側のスペース */
+}
+
+.english{
+    color: deeppink; /* 文字色 */
+    font-size: 0.95rem; /* フォントサイズ */
+    margin-left : 20px; /* 左側のスペース */
+}
+
+.PB{
+    color: deeppink; /* 文字色 */
+    font-size: 1rem; /* フォントサイズ */
+    margin-left : 20px; /* 左側のスペース */
+}
+
+a#a_info {
+    color: black; /* 文字色 */
+}
+
+/* ======================================== */
+/* footer */
+/* ======================================== */
+
+footer {
+    color: white; /* 文字色 */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
+}
+
