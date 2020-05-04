@@ -3,35 +3,35 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
+
     <title>Ryosuke Nakashima</title>
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="./stylesheet/stylesheet.css">
+    <!-- jQueryを読み込み -->
+    <script
+        src="https://code.jquery.com/jquery-3.5.0.js"
+        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+        crossorigin="anonymous"></script>
+    </script>
+    <!-- 共通パーツのhtmlファイルを指定 [./common/common_part.js] -->
+    <script type="text/javascript" src="./common/common_part.js"></script>
     
-    <!-- MathJax version 3 (ここから) -->
-        <!-- IE対応 -->
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <!-- configファイル読み込み -->
-        <script src="./mathjax/mathjax_config.js" defer></script>
-        <!-- MathJax v3 (tex-svg) -->
-        <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <!-- MathJax version 3 (ここまで) -->
+    <!-- 共通パーツ(共通head) -->
+    <div id="common_head"></div>
     
 </head>
 
 <body>
-    <p><a href="./index.html">Home</a></p>
-    <p><a href="./research.html">Research</a></p>
-    <p><a href="./publications.html">Publications</a></p>
-    <p><a href="./presentations.html">Presentations</a></p>
+    
+    <!-- 共通パーツ(menu) -->
+    <div id="menu"></div>
+        
 <hr>
+
     <h1>Ryosuke Nakashima (中島 涼輔)</h1>
     <h2>数式の練習</h2>
     <p> 誘導方程式
-        \[
-        \frac{\upartial \bm{B}}{\upartial t}\,=\,\bm{\nabla}\times(\bm{u}\times\bm{B})\,+\,\eta_\mathrm{m}\nabla^2\bm{B}
+         \[
+        \frac{\upartial\bm{B}}{\upartial t}\,=\,\bm{\nabla}\times(\bm{u}\times\bm{B})\,+\,\eta_\mathrm{m}\nabla^2\bm{B}
         \]
         ここで, $\bm{B}$は磁場.
     </p>
