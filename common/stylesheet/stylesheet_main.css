@@ -1,6 +1,7 @@
 body {
     /* 基本のフォント(メイリオ優先, 次sans-serif) */
     font-family: "メイリオ", Meiryo, sans-serif;
+    font-size: 1rem;
 }
 
 header {
@@ -21,4 +22,8 @@ h1 {
 
 a {
     color: darkorange;
+}
+
+.MathJax {
+    font-size: 1rem;
 }
