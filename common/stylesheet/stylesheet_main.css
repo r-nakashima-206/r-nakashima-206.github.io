@@ -6,7 +6,6 @@ body {
 
 #container {
     margin: 0 auto; /* 上右下左の空白(margin), センタリング */
-    width: 750px; /* 幅 */
     background-color: white; /* 背景色 */
 }
 
@@ -21,6 +20,20 @@ a {
 hr {
     border: 3px dashed lightsteelblue; /* 線のスタイル */
     margin: 40px 0px 20px -10px; /* 上右下左の空白(margin)*/
+}
+
+/* ======================================== */
+
+@media screen and (min-width:0px){
+    #container {
+        width: 550px; /* 幅 */
+    }
+}
+
+@media screen and (min-width:750px){
+    #container {
+        width: 1000px; /* 幅 */
+    }
 }
 
 /* ======================================== */
@@ -59,7 +72,7 @@ p.section {
     color: yellow; /* 文字色 */
     background-color: indigo; /* 背景色 */
     padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
-    width: 500px; /* 囲みの大きさ */
+    width: 470px; /* 囲みの大きさ */
 }
 
 p.subsection {
@@ -81,7 +94,7 @@ p.info {
     margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
     border: 1px solid black; /* 囲み線 */
     padding: 10px 10px 10px 20px; /* 上右下左の空白(margin)*/
-    width: 450px; /* 囲みの大きさ */
+    width: 420px; /* 囲みの大きさ */
     background-color: gainsboro; /* 背景色 */
 }
 
