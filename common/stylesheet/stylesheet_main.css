@@ -2,6 +2,7 @@ body {
     font-family: "メイリオ", Meiryo, serif; /* 基本のフォント(左ほど優先) */
     margin: 0px 0px 0px 0px; /* 上右下左の空白(margin)*/
     background-color: gainsboro; /* 背景色 */
+    width: 1000px; /* 幅(PC) */
 }
 
 #container {
@@ -20,20 +21,6 @@ a {
 hr {
     border: 3px dashed lightsteelblue; /* 線のスタイル */
     margin: 40px 0px 20px -10px; /* 上右下左の空白(margin)*/
-}
-
-/* ======================================== */
-
-@media screen and (min-width:0px){
-    #container {
-        width: 550px; /* 幅 */
-    }
-}
-
-@media screen and (min-width:750px){
-    #container {
-        width: 1000px; /* 幅 */
-    }
 }
 
 /* ======================================== */
@@ -139,3 +126,23 @@ footer {
     padding: 0px 0px 0px 10px; /* 上右下左の空白*/
 }
 
+/* ======================================== */
+/* 小ウィンドウ, スマホ */
+/* ======================================== */
+
+@media screen and (max-width:700px){
+    
+    #container {
+        width: 500px; /* 幅(スマホ) */
+    }
+    
+    p.section {
+        font-size: 1.6rem; /* フォントサイズ */
+        width: 420px; /* 囲みの大きさ */
+    }
+    
+    p.info {
+        font-size: 0.8rem; /* フォントサイズ */
+        width: 380px; /* 囲みの大きさ */
+    }
+}
