@@ -1,6 +1,13 @@
 body {
     font-family: "メイリオ", Meiryo, serif; /* 基本のフォント(左ほど優先) */
     margin: 0px 0px 0px 0px; /* 上右下左の空白(margin)*/
+    background-color: gainsboro; /* 背景色 */
+}
+
+#container {
+    margin: 0 auto; /* 上右下左の空白(margin), センタリング */
+    width: 1000px; /* 幅 */
+    background-color: white; /* 背景色 */
 }
 
 p {
@@ -47,29 +54,29 @@ main {
     padding: 0px 0px 0px 20px; /* 上右下左の空白*/
 }
 
-p#section {
+p.section {
     font-size: 1.8rem; /* フォントサイズ */
     color: yellow; /* 文字色 */
-    background-color: darkblue; /* 背景色 */
+    background-color: indigo; /* 背景色 */
     padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
     width: 500px; /* 囲みの大きさ */
 }
 
-p#subsection {
+p.subsection {
     font-size: 1.6rem; /* フォントサイズ */
     color: black; /* 文字色 */
     padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
-    border: 1px solid teal; /* 囲み線 */
-    border-left: 8px solid teal; /* 囲み線(左のみ) */
+    border: 1px solid indigo; /* 囲み線 */
+    border-left: 8px solid indigo; /* 囲み線(左のみ) */
     width: 300px; /* 囲みの大きさ */
-    background: linear-gradient(to right, transparent, honeydew, palegreen); /* 背景色グラデーション */
+    background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
 }
 
-p#info {
-    margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
+p.text {
+    margin: 20px 100px 20px 20px; /* 上右下左の空白(margin)*/
 }
 
-p#sub_info {
+p.info {
     font-size: 0.85rem; /* フォントサイズ */
     margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
     border: 1px solid black; /* 囲み線 */
@@ -78,27 +85,35 @@ p#sub_info {
     background-color: gainsboro; /* 背景色 */
 }
 
+ul {
+    margin: 20px 100px 20px 20px; /* 上右下左の空白(margin)*/
+}
+
 .period{
     color: black; /* 文字色 */
-    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
-    font-size: 0.95rem; /* フォントサイズ */
+    background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
+    font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
 .english{
-    color: deeppink; /* 文字色 */
-    font-size: 0.95rem; /* フォントサイズ */
+    color: blue; /* 文字色 */
+    font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
 .PB{
-    color: deeppink; /* 文字色 */
+    color: blue; /* 文字色 */
     font-size: 1rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
-a#a_info {
+a.href_info {
     color: black; /* 文字色 */
+}
+
+.emphasize{
+    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
 }
 
 /* ======================================== */
