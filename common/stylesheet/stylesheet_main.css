@@ -127,23 +127,41 @@ footer {
 }
 
 /* ======================================== */
-/* 小ウィンドウ, スマホ */
+/* 小ウィンドウ, スマホ用に上書き */
 /* ======================================== */
 
-@media screen and (max-width:750px){
+@media screen and (max-width:600px){
     
     body {
-        width: 490px; /* 幅(スマホ) */
+        width: 430px; /* 幅(スマホ) */
     }
     
     p.section {
-        font-size: 1.6rem; /* フォントサイズ */
-        width: 420px; /* 囲みの大きさ */
+        font-size: 1.4rem; /* フォントサイズ */
+        width: 370px; /* 囲みの大きさ */
+    }
+    
+    p.subsection {
+        font-size: 1.2rem; /* フォントサイズ */
+        width: 300px; /* 囲みの大きさ */
+    }
+    
+    p.text {
+        margin: 20px 40px 20px 20px; /* 上右下左の空白(margin)*/
     }
     
     p.info {
-        font-size: 0.8rem; /* フォントサイズ */
-        width: 380px; /* 囲みの大きさ */
+        font-size: 0.7rem; /* フォントサイズ */
+        width: 330px; /* 囲みの大きさ */
+        padding: 10px 10px 10px 10px; /* 上右下左の空白(margin)*/
+    }
+    
+    ul {
+        margin: 20px 40px 20px 20px; /* 上右下左の空白(margin)*/
+    }
+    
+    .english{
+        font-size: 0.75rem; /* フォントサイズ */
     }
     
 }
