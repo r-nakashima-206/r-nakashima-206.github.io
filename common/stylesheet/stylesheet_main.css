@@ -89,20 +89,20 @@ ul {
     margin: 20px 100px 20px 20px; /* 上右下左の空白(margin)*/
 }
 
-.period{
+.period {
     color: black; /* 文字色 */
     background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
     font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
-.english{
+.english {
     color: blue; /* 文字色 */
     font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
-.PB{
+.PB {
     color: blue; /* 文字色 */
     font-size: 1rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
@@ -112,7 +112,7 @@ a.href_info {
     color: black; /* 文字色 */
 }
 
-.emphasize{
+.emphasize {
     background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
 }
 
@@ -130,38 +130,47 @@ footer {
 /* 小ウィンドウ, スマホ用に上書き */
 /* ======================================== */
 
-@media screen and (max-width:600px){
+@media screen and (max-width:500px){
     
     body {
-        width: 430px; /* 幅(スマホ) */
+        width: 375px; /* 幅(スマホ) */
     }
     
     p.section {
-        font-size: 1.4rem; /* フォントサイズ */
-        width: 370px; /* 囲みの大きさ */
+        font-size: 1.2rem; /* フォントサイズ */
+        width: 310px; /* 囲みの大きさ */
     }
     
     p.subsection {
-        font-size: 1.2rem; /* フォントサイズ */
+        font-size: 1rem; /* フォントサイズ */
         width: 300px; /* 囲みの大きさ */
     }
     
     p.text {
-        margin: 20px 40px 20px 20px; /* 上右下左の空白(margin)*/
+        margin: 10px 40px 10px 10px; /* 上右下左の空白(margin)*/
     }
     
     p.info {
-        font-size: 0.7rem; /* フォントサイズ */
-        width: 330px; /* 囲みの大きさ */
+        margin: 10px 0px 10px 10px; /* 上右下左の空白(margin)*/
+        width: 290px; /* 囲みの大きさ */
         padding: 10px 10px 10px 10px; /* 上右下左の空白(margin)*/
     }
     
     ul {
-        margin: 20px 40px 20px 20px; /* 上右下左の空白(margin)*/
+        margin: 10px 40px 10px 0px; /* 上右下左の空白(margin)*/
     }
     
-    .english{
+    .period {
+        background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
+        font-size: 0.9rem; /* フォントサイズ */
+        margin-left : 10px; /* 左側のスペース */
+    }
+    
+    .english {
         font-size: 0.75rem; /* フォントサイズ */
+        margin-left : 10px; /* 左側のスペース */
     }
     
+    .MathJax {
+        font-size: 0.9rem;
 }
