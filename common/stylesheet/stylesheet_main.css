@@ -130,7 +130,7 @@ footer {
 /* 小ウィンドウ, スマホ用に上書き */
 /* ======================================== */
 
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
     
     body {
         width: 375px; /* 幅(スマホ) */
