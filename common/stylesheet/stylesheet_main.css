@@ -1,5 +1,5 @@
 body {
-    font-family: "メイリオ", Meiryo, Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; /* 基本のフォント(左ほど優先) */
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; /* 基本のフォント(左ほど優先) */
     margin: 0px 0px 0px 0px; /* 上右下左の空白(margin)*/
     background-color: gainsboro; /* 背景色 */
     width: 1000px; /* 幅(PC) */
