@@ -1,12 +1,12 @@
 body {
     font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; /* 基本のフォント(左ほど優先) */
-    margin: 0px 0px 0px 0px; /* 上右下左の空白(margin)*/
+    margin: 0 auto; /* 上右下左の空白 */
     background-color: gainsboro; /* 背景色 */
     width: 1000px; /* 幅(PC) */
 }
 
 #container {
-    margin: 0 auto; /* 上右下左の空白(margin), センタリング */
+    margin: 0; /* 上右下左の空白 */
     background-color: white; /* 背景色 */
 }
 
@@ -19,8 +19,8 @@ a {
 }
 
 hr {
+    margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
     border: 3px dashed lightsteelblue; /* 線のスタイル */
-    margin: 40px 0px 20px -10px; /* 上右下左の空白(margin)*/
 }
 
 /* ======================================== */
@@ -35,15 +35,19 @@ header a {
     color: orange; /* 文字色 */
 }
 
-p#index_header {
-    color: darkorange; /* 文字色 */
-    padding: 0px 10px 10px 10px; /* 上右下左の空白(padding)*/
+header h1 {
+    margin-bottom: 8px; /* 上右下左の空白(下のみ) */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+    font-size: 1rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+    color: white; /* 文字色 */
 }
 
-p#uppermost_header {
-    color: white; /* 文字色 */
-    background-color: dimgray; /* 背景色 */
-    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
+header p {
+    margin-top: 8px; /* 上右下左の空白(上のみ) */
+    color: orange; /* 文字色 */
+    padding: 0px 10px 10px 20px; /* 上右下左の空白 */
 }
 
 /* ======================================== */
@@ -51,42 +55,55 @@ p#uppermost_header {
 /* ======================================== */
 
 main {
-    padding: 0px 0px 0px 20px; /* 上右下左の空白*/
+    padding: 0px 100px 0px 20px; /* 上右下左の空白 */
 }
 
-p.section {
-    font-size: 1.8rem; /* フォントサイズ */
-    color: yellow; /* 文字色 */
+h2.section {
+    padding: 5px 0px 5px 20px; /* 上右下左の空白 */
     background-color: indigo; /* 背景色 */
-    padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
-    width: 470px; /* 囲みの大きさ */
+    width: 480px; /* 囲みの大きさ */
+    font-size: 1.8rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+    color: yellow; /* 文字色 */
 }
 
-p.subsection {
-    font-size: 1.6rem; /* フォントサイズ */
-    color: black; /* 文字色 */
-    padding: 0px 0px 0px 20px; /* 上右下左の空白(margin)*/
-    border: 1px solid indigo; /* 囲み線 */
-    border-left: 8px solid indigo; /* 囲み線(左のみ) */
-    width: 300px; /* 囲みの大きさ */
+h3.subsection {
+    padding: 5px 0px 5px 20px; /* 上右下左の空白 */
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
+    border: 1px solid indigo; /* 囲み線 */
+    border-left: 10px solid indigo; /* 囲み線(左のみ) */
+    width: 470px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
+    font-size: 1.6rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+    color: black; /* 文字色 */
 }
 
-p.text {
-    margin: 20px 100px 20px 20px; /* 上右下左の空白(margin)*/
+h4.subsubsection {
+    margin: 20px 20px 20px 20px; /* 上右下左の空白 */
+    font-size: 1rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+}
+
+.emphasize_cyan {
+    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
+}
+
+p.textbox {
+    margin: 20px 20px 20px 20px; /* 上右下左の空白 */
 }
 
 p.info {
     font-size: 0.85rem; /* フォントサイズ */
-    margin: 20px 0px 20px 20px; /* 上右下左の空白(margin)*/
+    margin: 20px 20px 20px 20px; /* 上右下左の空白 */
     border: 1px solid black; /* 囲み線 */
-    padding: 10px 10px 10px 20px; /* 上右下左の空白(margin)*/
-    width: 420px; /* 囲みの大きさ */
+    padding: 10px 15px 10px 15px; /* 上右下左の空白 */
+    width: 410px; /* 囲みの大きさ */
     background-color: gainsboro; /* 背景色 */
 }
 
 ul {
-    margin: 20px 100px 20px 20px; /* 上右下左の空白(margin)*/
+    margin: 20px 0px 20px 20px; /* 上右下左の空白 */
+    text-align: justify; /* 長文の両端揃え */
 }
 
 .period {
@@ -98,22 +115,23 @@ ul {
 
 .english {
     color: blue; /* 文字色 */
-    font-size: 0.9rem; /* フォントサイズ */
+    font-size: 0.85rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
+.english-small_margin {
+    color: blue; /* 文字色 */
+    font-size: 0.85rem; /* フォントサイズ */
+    margin-left : 10px; /* 左側のスペース */
+}
 
-.PB {
+.best_time {
     color: blue; /* 文字色 */
     font-size: 1rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
 
-a.href_info {
+a.no_color {
     color: black; /* 文字色 */
-}
-
-.emphasize {
-    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
 }
 
 /* ======================================== */
@@ -121,9 +139,10 @@ a.href_info {
 /* ======================================== */
 
 footer {
-    color: white; /* 文字色 */
     background-color: dimgray; /* 背景色 */
-    padding: 0px 0px 0px 10px; /* 上右下左の空白*/
+    padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+    font-size: 1rem; /* フォントサイズ */
+    color: white; /* 文字色 */
 }
 
 /* ======================================== */
@@ -133,36 +152,65 @@ footer {
 @media screen and (max-width:500px){
     
     body {
-        width: 375px; /* 幅(スマホ) */
+        width: 360px; /* 幅(スマホ) */
+        font-size: 0.9rem;
     }
     
-    p.section {
-        font-size: 1.2rem; /* フォントサイズ */
+    p {
+        text-align: left; /* 長文の左揃え */
+    }
+    
+    hr {
+        margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
+        border: 2px dashed lightsteelblue; /* 線のスタイル */
+    }
+    
+    header h1 {
+        font-size: 0.9rem; /* フォントサイズ */
+    }
+    
+    main {
+        padding: 0px 15px 0px 15px; /* 上右下左の空白 */
+    }
+    
+    h2.section {
+        padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         width: 310px; /* 囲みの大きさ */
+        font-size: 1.2rem; /* フォントサイズ */
     }
     
-    p.subsection {
+    h3.subsection {
+        padding: 5px 10px 5px 10px; /* 上右下左の空白 */
+        border: 1px solid indigo; /* 囲み線 */
+        border-left: 10px solid indigo; /* 囲み線(左のみ) */
+        width: 299px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
+        font-size: 1.1rem; /* フォントサイズ */
+    }
+    
+    h4.subsubsection {
+        margin: 20px 20px 20px 20px; /* 上右下左の空白 */
         font-size: 1rem; /* フォントサイズ */
-        width: 300px; /* 囲みの大きさ */
+        font-weight: lighter; /* 文字の太さ */
     }
     
-    p.text {
-        margin: 10px 40px 10px 10px; /* 上右下左の空白(margin)*/
+    p.textbox {
+        margin: 10px 5px 10px 5px; /* 上右下左の空白 */
     }
     
     p.info {
-        margin: 10px 0px 10px 10px; /* 上右下左の空白(margin)*/
-        width: 290px; /* 囲みの大きさ */
-        padding: 10px 10px 10px 10px; /* 上右下左の空白(margin)*/
+        font-size: 0.8rem; /* フォントサイズ */
+        margin: 10px 0px 10px 0px; /* 上右下左の空白 */
+        padding: 10px 15px 10px 15px; /* 上右下左の空白 */
+        width: 298px; /* 囲みの大きさ */
     }
     
     ul {
-        margin: 10px 40px 10px 0px; /* 上右下左の空白(margin)*/
+        margin: 10px 5px 10px -10px; /* 上右下左の空白 */
+        text-align: left; /* 長文の左揃え */
     }
     
     .period {
-        background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
-        font-size: 0.9rem; /* フォントサイズ */
+        font-size: 0.8rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
     
@@ -170,7 +218,21 @@ footer {
         font-size: 0.75rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
+    .english-small_margin {
+        font-size: 0.75rem; /* フォントサイズ */
+    }
+    
+    .best_time {
+        font-size: 0.9rem; /* フォントサイズ */
+        margin-left : 10px; /* 左側のスペース */
+    }
+    
+    footer {
+        font-size: 0.9rem; /* フォントサイズ */
+    }
     
     .MathJax {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* フォントサイズ */
+    }
+
 }
