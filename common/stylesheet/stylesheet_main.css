@@ -167,6 +167,7 @@ footer {
     
     header h1 {
         font-size: 0.9rem; /* フォントサイズ */
+        font-weight: normal; /* 文字の太さ */
     }
     
     main {
@@ -177,20 +178,21 @@ footer {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         width: 310px; /* 囲みの大きさ */
         font-size: 1.2rem; /* フォントサイズ */
+        font-weight: normal; /* 文字の太さ */
     }
     
     h3.subsection {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
-        border: 1px solid indigo; /* 囲み線 */
         border-left: 10px solid indigo; /* 囲み線(左のみ) */
         width: 299px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
         font-size: 1.1rem; /* フォントサイズ */
+        font-weight: normal; /* 文字の太さ */
     }
     
     h4.subsubsection {
-        margin: 20px 20px 20px 20px; /* 上右下左の空白 */
+        margin: 10px 10px 10px 10px; /* 上右下左の空白 */
         font-size: 1rem; /* フォントサイズ */
-        font-weight: lighter; /* 文字の太さ */
+        font-weight: normal; /* 文字の太さ */
     }
     
     p.textbox {
