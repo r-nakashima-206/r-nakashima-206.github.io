@@ -1,6 +1,6 @@
 /* 基本はstylesheet_main.css */
 
-a {
+.hla a {
     color: purple; /* 文字色 */
 }
 
@@ -8,15 +8,15 @@ a {
 /* header */
 /* ======================================== */
 
-header {
+.hla header {
     background-color: navy; /* 背景色 */
 }
 
-header a {
+.hla header a {
     color: yellow; /* 文字色 */
 }
 
-header p {
+.hla header p {
     color: yellow; /* 文字色 */
 }
 
@@ -24,12 +24,12 @@ header p {
 /* main */
 /* ======================================== */
 
-h2.section {
+.hla h2.section {
     background-color: navy; /* 背景色 */
     color: lightpink; /* 文字色 */
 }
 
-h3.subsection {
+.hla h3.subsection {
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
     border: 1px solid navy; /* 囲み線 */
     border-left: 10px solid navy; /* 囲み線(左のみ) */
