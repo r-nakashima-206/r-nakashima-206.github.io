@@ -1,0 +1,36 @@
+/* 基本はstylesheet_main.css */
+
+a {
+    color: purple; /* 文字色 */
+}
+
+/* ======================================== */
+/* header */
+/* ======================================== */
+
+header {
+    background-color: navy; /* 背景色 */
+}
+
+header a {
+    color: yellow; /* 文字色 */
+}
+
+header p {
+    color: yellow; /* 文字色 */
+}
+
+/* ======================================== */
+/* main */
+/* ======================================== */
+
+h2.section {
+    background-color: navy; /* 背景色 */
+    color: lightpink; /* 文字色 */
+}
+
+h3.subsection {
+    background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
+    border: 1px solid navy; /* 囲み線 */
+    border-left: 10px solid navy; /* 囲み線(左のみ) */
+}
