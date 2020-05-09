@@ -84,7 +84,7 @@ h4.subsubsection {
     font-weight: lighter; /* 文字の太さ */
 }
 
-.emphasize_cyan {
+.cyan {
     background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
 }
 
@@ -150,37 +150,37 @@ footer {
 /* ======================================== */
 
 @media screen and (max-width:500px){
-    
+
     body {
         width: 360px; /* 幅(スマホ) */
         font-size: 0.9rem;
     }
-    
+
     p {
         text-align: left; /* 長文の左揃え */
     }
-    
+
     hr {
         margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
         border: 2px dashed lightsteelblue; /* 線のスタイル */
     }
-    
+
     header h1 {
         font-size: 0.9rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
-    
+
     main {
         padding: 0px 15px 0px 15px; /* 上右下左の空白 */
     }
-    
+
     h2.section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         width: 310px; /* 囲みの大きさ */
         font-size: 1.2rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
-    
+
     h3.subsection {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         border-left: 10px solid indigo; /* 囲み線(左のみ) */
@@ -188,34 +188,34 @@ footer {
         font-size: 1.1rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
-    
+
     h4.subsubsection {
         margin: 10px 10px 10px 10px; /* 上右下左の空白 */
         font-size: 1rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
-    
+
     p.textbox {
         margin: 10px 5px 10px 5px; /* 上右下左の空白 */
     }
-    
+
     p.info {
         font-size: 0.8rem; /* フォントサイズ */
         margin: 10px 0px 10px 0px; /* 上右下左の空白 */
         padding: 10px 15px 10px 15px; /* 上右下左の空白 */
         width: 298px; /* 囲みの大きさ */
     }
-    
+
     ul {
         margin: 10px 5px 10px -10px; /* 上右下左の空白 */
         text-align: left; /* 長文の左揃え */
     }
-    
+
     .period {
         font-size: 0.8rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
-    
+
     .english {
         font-size: 0.75rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
@@ -223,16 +223,16 @@ footer {
     .english-small_margin {
         font-size: 0.75rem; /* フォントサイズ */
     }
-    
+
     .best_time {
         font-size: 0.9rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
-    
+
     footer {
         font-size: 0.9rem; /* フォントサイズ */
     }
-    
+
     .MathJax {
         font-size: 0.9rem; /* フォントサイズ */
     }

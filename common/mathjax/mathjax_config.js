@@ -11,8 +11,12 @@ tex: {
     ],
     // マクロ //
     macros: {
-        bm: ["{\\boldsymbol #1}", 1],
-        
+        bm: ["{\\boldsymbol{#1}}", 1],
+
+        ip: "{\\boldsymbol{\\cdot}}",
+        div: "{\\boldsymbol{\\nabla}\\ip}",
+        rot: "{\\boldsymbol{\\nabla}\\times}",
+
         uO: "{\\mathrm{O}}",
         ud: "{\\mathrm{d}}",
         uD: "{\\mathrm{D}}",
