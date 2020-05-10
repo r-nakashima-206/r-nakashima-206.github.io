@@ -6,9 +6,7 @@ strong.red {
 strong.blue {
     color: blue; /* 文字色 */
 }
-.cyan {
-    background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
-}
+
 .magenta {
     background: linear-gradient(transparent 50%, hotpink 50%); /* 蛍光ペン風 */
 }
@@ -21,17 +19,20 @@ strong.blue {
 
 table#rireki {
     border-collapse: collapse; /* 結合ボーダー */
-    border: 1px solid navy; /* 囲み線 */
+    border: 3px solid navy; /* 囲み線 */
     margin: 0px 10px 0px 10px; /* 上右下左の空白 */
     width: 600px; /* 幅 */
+    table-layout: fixed; /* 固定レイアウト */
 }
 #rireki td {
     border: 1px solid navy; /* 囲み線 */
     padding: 0px 10px 0px 10px; /* 上右下左の空白*/
 }
-col#rireki-date {
+#rireki tbody td:first-child {
     background-color: ghostwhite; /* 背景色 */
     width: 100px; /* 幅 */
+    text-align: center; /* 横方向 中央揃え */
+    vertical-align: baseline; /* 縦方向 上揃え */
 }
 
 /* ======================================== */
@@ -68,6 +69,9 @@ col#rireki-date {
 @media screen and (min-width:500px){
 
     .hla p.textbox {
+        margin: 20px 100px 20px 20px; /* 上右下左の空白 */
+    }
+    .hla ul {
         margin: 20px 100px 20px 20px; /* 上右下左の空白 */
     }
 
