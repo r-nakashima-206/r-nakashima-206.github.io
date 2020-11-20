@@ -92,6 +92,10 @@ p.textbox {
     margin: 20px 20px 20px 20px; /* 上右下左の空白 */
 }
 
+address {
+    font-style: normal; /*イタリック体を解除*/
+}
+
 p.info {
     font-size: 0.85rem; /* フォントサイズ */
     margin: 20px 20px 20px 20px; /* 上右下左の空白 */
@@ -148,8 +152,11 @@ a.no_color {
 footer {
     background-color: dimgray; /* 背景色 */
     padding: 0px 10px 0px 10px; /* 上右下左の空白*/
-    font-size: 1rem; /* フォントサイズ */
     color: white; /* 文字色 */
+}
+
+footer small {
+    font-size: 1rem; /* フォントサイズ */
 }
 
 /* ======================================== */
@@ -243,7 +250,7 @@ footer {
         margin-left : 10px; /* 左側のスペース */
     }
 
-    footer {
+    footer small {
         font-size: 0.9rem; /* フォントサイズ */
     }
 
