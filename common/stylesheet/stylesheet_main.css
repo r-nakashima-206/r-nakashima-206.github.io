@@ -163,7 +163,7 @@ footer small {
 /* 小ウィンドウ, スマホ用に上書き */
 /* ======================================== */
 
-@media screen and (max-width:500px){
+@media screen and (max-width: 500px){
 
     body {
         width: 360px; /* 幅(スマホ) */

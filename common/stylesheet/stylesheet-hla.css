@@ -69,7 +69,7 @@ table#rireki td:first-child {
     border-left: 10px solid navy; /* 囲み線(左のみ) */
 }
 
-@media screen and (min-width:500px){
+@media screen and (min-width: 500px){
 
     .hla p.textbox {
         margin: 20px 100px 20px 20px; /* 上右下左の空白 */
@@ -81,7 +81,7 @@ table#rireki td:first-child {
 
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width: 500px){
 
     table#rireki {
         margin: 0px 5px 0px 5px; /* 上右下左の空白 */
