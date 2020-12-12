@@ -5,6 +5,14 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
+@font-face {
+  font-family: 'Noto_Serif_JP';
+  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
+}
+h2, h3 {
+  font-family: Noto_Serif_JP;
+}
+
 #container {
     margin: 0; /* 上右下左の空白 */
     background-color: white; /* 背景色 */
