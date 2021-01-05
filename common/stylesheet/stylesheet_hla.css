@@ -1,0 +1,95 @@
+/* 基本は stylesheet_main.css */
+
+/* ======================================== */
+/* header */
+/* ======================================== */
+
+.hla header {
+    background-color: navy; /* 背景色 */
+}
+
+.hla header a {
+    color: yellow; /* 文字色 */
+}
+
+.hla header p {
+    color: yellow; /* 文字色 */
+}
+
+.hla header .sub-index {
+    color: lime; /* 文字色 */
+}
+
+/* ======================================== */
+/* main */
+/* ======================================== */
+
+.hla h2.section {
+    background-color: navy; /* 背景色 */
+    color: lightpink; /* 文字色 */
+}
+
+.hla h3.sub-section {
+    background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
+    border: 1px solid navy; /* 囲み線 */
+    border-left: 10px solid navy; /* 囲み線(左のみ) */
+}
+
+.hla strong.red-text {
+    color: red; /* 文字色 */
+}
+.hla strong.blue-text {
+    color: blue; /* 文字色 */
+}
+
+.hla .magenta-line {
+    background: linear-gradient(transparent 50%, hotpink 50%); /* 蛍光ペン風 */
+}
+.hla .yellow-line {
+    background: linear-gradient(transparent 50%, yellow 50%); /* 蛍光ペン風 */
+}
+.hla .green-line {
+    background: linear-gradient(transparent 50%, lime 50%); /* 蛍光ペン風 */
+}
+
+.hla table#rireki {
+    border-collapse: collapse; /* 結合ボーダー */
+    border: 3px solid navy; /* 囲み線 */
+    margin: 0px 10px 0px 10px; /* 上右下左の空白 */
+    width: 600px; /* 幅 */
+    table-layout: fixed; /* 固定レイアウト */
+}
+.hla table#rireki td {
+    border: 1px solid navy; /* 囲み線 */
+    padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+}
+.hla table#rireki td:first-child {
+    background-color: ghostwhite; /* 背景色 */
+    width: 100px; /* 幅 */
+    text-align: center; /* 横方向 中央揃え */
+}
+
+@media screen and (min-width: 640px){
+
+    .hla p.textbox {
+        margin: 20px 100px 20px 20px; /* 上右下左の空白 */
+    }
+
+    .hla ul {
+        margin: 20px 100px 20px 20px; /* 上右下左の空白 */
+    }
+
+}
+
+@media screen and (max-width: 640px){
+
+    .hla table#rireki {
+        margin: 0px 5px 0px 5px; /* 上右下左の空白 */
+        width: 320px; /* 幅 */
+    }
+
+    .hla header .sub-index {
+        display: none; /* 非表示
+    }
+
+}
