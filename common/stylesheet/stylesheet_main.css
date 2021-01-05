@@ -5,30 +5,19 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-@font-face {
-  font-family: 'Noto_Serif_JP';
-  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
-}
-h2, h3 {
-  font-family: Noto_Serif_JP;
+@media screen and (min-width: 667px){
+  @font-face {
+    font-family: 'Noto_Serif_JP';
+    url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
+  }
+  h2, h3 {
+    font-family: Noto_Serif_JP;
+  }
 }
 
 #container {
     margin: 0; /* 上右下左の空白 */
     background-color: white; /* 背景色 */
-}
-
-p {
-    text-align: justify; /* 長文の両端揃え */
-}
-
-a {
-    color: darkorange; /* 文字色 */
-}
-
-hr {
-    margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
-    border: 3px dashed lightsteelblue; /* 線のスタイル */
 }
 
 /* ======================================== */
@@ -66,6 +55,22 @@ main {
     padding: 0px 100px 0px 20px; /* 上右下左の空白 */
 }
 
+p {
+    text-align: justify; /* 長文の両端揃え */
+}
+
+a {
+    color: darkorange; /* 文字色 */
+}
+a.no-color {
+    color: black; /* 文字色 */
+}
+
+hr {
+    margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
+    border: 3px dashed lightsteelblue; /* 線のスタイル */
+}
+
 h2.section {
     padding: 5px 0px 5px 20px; /* 上右下左の空白 */
     background-color: indigo; /* 背景色 */
@@ -75,7 +80,7 @@ h2.section {
     color: yellow; /* 文字色 */
 }
 
-h3.subsection {
+h3.sub-section {
     padding: 5px 0px 5px 20px; /* 上右下左の空白 */
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
     border: 1px solid indigo; /* 囲み線 */
@@ -86,22 +91,17 @@ h3.subsection {
     color: black; /* 文字色 */
 }
 
-h4.subsubsection {
+h4.subsub-section {
     margin: 20px 20px 20px 20px; /* 上右下左の空白 */
     font-size: 1rem; /* フォントサイズ */
     font-weight: lighter; /* 文字の太さ */
 }
-
-.cyan {
+.cyan-line {
     background: linear-gradient(transparent 50%, cyan 50%); /* 蛍光ペン風 */
 }
 
 p.textbox {
     margin: 20px 20px 20px 20px; /* 上右下左の空白 */
-}
-
-address {
-    font-style: normal; /*イタリック体を解除*/
 }
 
 p.info {
@@ -111,6 +111,9 @@ p.info {
     padding: 10px 15px 10px 15px; /* 上右下左の空白 */
     width: 410px; /* 囲みの大きさ */
     background-color: gainsboro; /* 背景色 */
+}
+address {
+    font-style: normal; /*イタリック体を解除*/
 }
 
 ul {
@@ -137,20 +140,16 @@ ul.ul-2nd {
     font-size: 0.85rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
-.english-small_margin {
+.english_small-margin {
     color: blue; /* 文字色 */
     font-size: 0.85rem; /* フォントサイズ */
     margin-left : 10px; /* 左側のスペース */
 }
 
-.best_time {
+.best-time {
     color: blue; /* 文字色 */
     font-size: 1rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
-}
-
-a.no_color {
-    color: black; /* 文字色 */
 }
 
 /* ======================================== */
@@ -171,20 +170,11 @@ footer small {
 /* 小ウィンドウ, スマホ用に上書き */
 /* ======================================== */
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 640px){
 
     body {
         width: 360px; /* 幅(スマホ) */
         font-size: 0.9rem;
-    }
-
-    p {
-        text-align: left; /* 長文の左揃え */
-    }
-
-    hr {
-        margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
-        border: 2px dashed lightsteelblue; /* 線のスタイル */
     }
 
     header h1 {
@@ -196,6 +186,15 @@ footer small {
         padding: 0px 15px 0px 15px; /* 上右下左の空白 */
     }
 
+    p {
+        text-align: left; /* 長文の左揃え */
+    }
+
+    hr {
+        margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
+        border: 2px dashed lightsteelblue; /* 線のスタイル */
+    }
+
     h2.section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         width: 310px; /* 囲みの大きさ */
@@ -203,7 +202,7 @@ footer small {
         font-weight: normal; /* 文字の太さ */
     }
 
-    h3.subsection {
+    h3.sub-section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         border-left: 10px solid indigo; /* 囲み線(左のみ) */
         width: 299px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
@@ -211,7 +210,7 @@ footer small {
         font-weight: normal; /* 文字の太さ */
     }
 
-    h4.subsubsection {
+    h4.subsub-section {
         margin: 10px 10px 10px 10px; /* 上右下左の空白 */
         font-size: 1rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
@@ -249,11 +248,11 @@ footer small {
         font-size: 0.75rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
-    .english-small_margin {
+    .english_small-margin {
         font-size: 0.75rem; /* フォントサイズ */
     }
 
-    .best_time {
+    .best-time {
         font-size: 0.9rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
