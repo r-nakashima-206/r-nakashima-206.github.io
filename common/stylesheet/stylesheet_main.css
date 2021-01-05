@@ -5,14 +5,12 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-@media screen and (min-width: 667px){
-  @font-face {
-    font-family: 'Noto_Serif_JP';
-    url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
-  }
-  h2, h3 {
-    font-family: Noto_Serif_JP;
-  }
+@font-face {
+  font-family: 'Noto_Serif_JP';
+  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
+}
+h2, h3 {
+  font-family: Noto_Serif_JP;
 }
 
 #container {
@@ -167,7 +165,7 @@ footer small {
 }
 
 /* ======================================== */
-/* 小ウィンドウ, スマホ用に上書き */
+/* スマホ用 */
 /* ======================================== */
 
 @media screen and (max-width: 640px){
