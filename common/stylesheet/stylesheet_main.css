@@ -5,12 +5,14 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-@font-face {
-  font-family: 'Noto_Serif_JP';
-  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.woff') format('woff');
-}
-h2, h3 {
-  font-family: 'Noto_Serif_JP';
+@media screen and (min-width: 400px){
+    @font-face {
+      font-family: 'Noto_Serif_JP';
+      url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.woff') format('woff');
+    }
+    h2, h3 {
+      font-family: 'Noto_Serif_JP';
+    }
 }
 
 #container {
