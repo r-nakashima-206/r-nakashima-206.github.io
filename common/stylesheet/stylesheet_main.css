@@ -7,10 +7,10 @@ body {
 
 @font-face {
   font-family: 'Noto_Serif_JP';
-  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.otf') format('opentype');
+  url('../fonts/Noto_Serif_JP/NotoSerifJP-Medium.woff') format('woff');
 }
 h2, h3 {
-  font-family: Noto_Serif_JP;
+  font-family: 'Noto_Serif_JP';
 }
 
 #container {
