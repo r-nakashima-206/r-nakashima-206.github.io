@@ -11,6 +11,9 @@
 .hla header a {
     color: yellow; /* 文字色 */
 }
+.hla header a:hover {
+    color: lightpink; /* 文字色 */
+}
 
 .hla header p {
     color: yellow; /* 文字色 */
