@@ -31,6 +31,9 @@ header {
 header a {
     color: orange; /* 文字色 */
 }
+header a:hover{
+    color: yellow; /* 文字色 */
+}
 
 header h1 {
     margin-bottom: 8px; /* 上右下左の空白(下のみ) */
@@ -57,13 +60,14 @@ main {
 
 p {
     text-align: justify; /* 長文の両端揃え */
+    color: black; /* 文字色 */
 }
 
 a {
-    color: darkorange; /* 文字色 */
+    color: currentColor; /* 文字色 */
 }
-a.no-color {
-    color: black; /* 文字色 */
+a:hover {
+    color: darkorange; /* 文字色 */
 }
 
 hr {
@@ -159,6 +163,9 @@ ul.ul-2nd {
 footer {
     background-color: dimgray; /* 背景色 */
     padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+}
+
+footer p {
     color: white; /* 文字色 */
 }
 
