@@ -126,7 +126,7 @@ ul {
     text-align: justify; /* 長文の両端揃え */
 }
 
-ul.ul-2nd {
+ul > ul {
     margin: 10px 0px 10px 0px; /* 上右下左の空白 */
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
     text-align: justify; /* 長文の両端揃え */
@@ -240,7 +240,7 @@ footer small {
         text-align: left; /* 長文の左揃え */
     }
 
-    ul.ul-2nd {
+    ul > ul {
         margin: 10px 5px 10px 0px; /* 上右下左の空白 */
         padding: 0px 0px 0px 20px; /* 上右下左の空白 */
         text-align: left; /* 長文の左揃え */
