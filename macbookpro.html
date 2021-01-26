@@ -6,17 +6,12 @@
 
     <title>MacBook Proメモ【Ryosuke Nakashima】</title>
 
-    <!-- jQueryを読み込み -->
-    <script
-        src="https://code.jquery.com/jquery-3.5.0.js"
-        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-        crossorigin="anonymous">
-    </script>
-    <!-- 共通パーツのhtmlファイルを指定 [./common/common_part.js] -->
-    <script type="text/javascript" src="./common/common_part.js"></script>
+    <script type="text/javascript" src="./common/scripts/include.js"></script>
 
     <!-- head内の共通部分 -->
-    <div id="common_head"></div>
+    <script type="text/javascript">
+        include("./common/include/common_head.txt");
+    </script>
 
 </head>
 
@@ -25,7 +20,9 @@
 <div id="container">
 
     <!-- 共通 header -->
-    <div id="header"></div>
+    <script type="text/javascript">
+        include("./common/include/header.html");
+    </script>
 
 <main>
 
@@ -88,7 +85,9 @@
 </main>
 
     <!-- 共通 footer -->
-    <div id="footer"></div>
+    <script type="text/javascript">
+        include("./common/include/footer.html");
+    </script>
 
 </div> <!-- #container 終わり -->
 
