@@ -8,17 +8,10 @@
 
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
-    <!-- jQueryを読み込み -->
-    <script
-        src="https://code.jquery.com/jquery-3.5.0.js"
-        integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-        crossorigin="anonymous">
-    </script>
-    <!-- 共通パーツのhtmlファイルを指定 [./common/include/common_part.js] -->
-    <script type="text/javascript" src="./common/include/common_part.js"></script>
-
     <!-- head内の共通部分 -->
-    <div id="common_head"></div>
+    <script type="text/javascript">
+        include("./common/include/common_head.txt");
+    </script>
 
 </head>
 
@@ -27,7 +20,7 @@
 <div id="container">
 
     <!-- 共通 header -->
-    <script type="text/javascript" >
+    <script type="text/javascript">
         include("./common/include/header.html");
     </script>
 
@@ -61,7 +54,7 @@
 </main>
 
     <!-- 共通 footer -->
-    <script type="text/javascript" >
+    <script type="text/javascript">
         include("./common/include/footer.html");
     </script>
 
