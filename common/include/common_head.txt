@@ -2,11 +2,23 @@
 <meta charset="UTF-8">
 
 
+<!-- 検索結果下の説明書き -->
+<meta name="description" content="Ryosuke Nakashima (中島 涼輔)'s Home Page">
+
+
 <!-- CSS -->
 <link type="text/css" rel="stylesheet" href="./common/styles/main.css">
 <!-- ひたすらCSS -->
 <link type="text/css" rel="stylesheet" href="../common/styles/main.css">
 <link type="text/css" rel="stylesheet" href="../common/styles/hla.css">
+
+
+<!-- IEの互換モード対策 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<!-- レスポンシブ用のviewpoint設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <!-- MathJax version 3 -->
@@ -28,18 +40,6 @@
     crossorigin="anonymous">
 </script>
 -->
-
-
-<!-- IEの互換モード対策 -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-<!-- レスポンシブ用のviewpoint設定 -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<!-- 検索結果下の説明書き -->
-<meta name="description" content="Ryosuke Nakashima (中島 涼輔)'s Home Page">
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
