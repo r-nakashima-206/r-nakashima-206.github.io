@@ -6,6 +6,11 @@
 <meta name="description" content="Ryosuke Nakashima (中島 涼輔)'s Home Page">
 
 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+
+
 <!-- CSS -->
 <link type="text/css" rel="stylesheet" href="./common/styles/main.css">
 <!-- ひたすらCSS -->
