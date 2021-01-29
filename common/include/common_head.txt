@@ -11,6 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
 
 
+<!-- Font Awesome Kit -->
+<script src="https://kit.fontawesome.com/29824876ec.js" crossorigin="anonymous"></script>
+
+
 <!-- CSS -->
 <link type="text/css" rel="stylesheet" href="./common/styles/main.css">
 <!-- ひたすらCSS -->

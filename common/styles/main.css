@@ -5,8 +5,10 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-h2, h3 {
-  font-family: 'Noto Serif JP';
+@media screen and (min-width: 400px){
+    h2, h3 {
+      font-family: 'Noto Serif JP';
+    }
 }
 
 #container {
@@ -42,6 +44,16 @@ header p {
     margin-top: 8px; /* 上右下左の空白(上のみ) */
     color: orange; /* 文字色 */
     padding: 0px 10px 10px 20px; /* 上右下左の空白 */
+    line-height: 1.3rem; /* 行間 */
+}
+
+header i {
+    margin: 0px 0px 0px 3px; /* 上右下左の空白 */
+    width: 20px; /* 幅 */
+    text-align: center; /* 横方向 中央揃え */
+}
+header i.fa-home {
+    margin: 0px 3px 0px 0px; /* 上右下左の空白 */
 }
 
 /* ======================================== */
@@ -138,9 +150,8 @@ ul > ul {
     font-size: 0.85rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
-.english_small-margin {
-    color: blue; /* 文字色 */
-    font-size: 0.85rem; /* フォントサイズ */
+
+#thesis .english, #thesis .period {
     margin-left : 10px; /* 左側のスペース */
 }
 
