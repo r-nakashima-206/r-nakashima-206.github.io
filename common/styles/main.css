@@ -48,12 +48,9 @@ header p {
 }
 
 header i {
-    margin: 0px 0px 0px 3px; /* 上右下左の空白 */
-    width: 20px; /* 幅 */
-    text-align: center; /* 横方向 中央揃え */
-}
-header i.fa-home {
     margin: 0px 3px 0px 0px; /* 上右下左の空白 */
+    width: 23px; /* 幅 */
+    text-align: center; /* 横方向 中央揃え */
 }
 
 /* ======================================== */
