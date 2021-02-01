@@ -23,8 +23,8 @@ tex: {
         ue: "{\\mathrm{e}}",
         ui: "{\\mathrm{i}}",
         ul: "{\\ell}",
-        upi: "{\\Large\\unicode[0.5,0.05][times]{x3c0}}",
-        upartial: "{\\Large\\unicode[0.5,0.05][times]{x2202}}"
+        upi: "{\\Large\\unicode[0.5,0.05][Times New Roman]{x3c0}}",
+        upartial: "{\\large\\unicode[0.5,0.05][Times New Roman]{x2202}}"
     }
 },
 
