@@ -6,9 +6,17 @@
 
     <title>Research【Ryosuke Nakashima】</title>
 
+    <!-- すべて読み込まれるまで全体を非表示 -->
+    <style type="text/css">
+        html {
+            display: none;
+        }
+    </style>
+
+    <!-- include.js 読み込み -->
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
-    <!-- head内の共通部分 -->
+    <!-- head 内の共通部分 -->
     <script type="text/javascript">
         include("./common/include/common_head.txt");
     </script>
@@ -36,7 +44,7 @@
             <li>地球電磁気学<span class="english">Geomagnetism</span></li>
             <li>地球流体力学<span class="english">Geophysical fluid dynamics</span></li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
     <h3 class= "sub-section">研究内容・興味・手法</h3>
     <section>
@@ -46,14 +54,14 @@
             <li>(回転系)(電磁)流体力学の線形波動・線形安定論</li>
             <li>...</li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
     <h3 class= "sub-section">所属学会</h3>
     <section>
         <ul>
             <li><a href="http://www.jpgu.org" target="_blank">日本地球惑星科学連合(JpGU)</a></li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section終わり -->
 
 <hr>
 
@@ -66,9 +74,9 @@
             <li>博士論文<span class="english">Doctoral thesis</span>「<a href="https://catalog.lib.kyushu-u.ac.jp/opac_detail_md/?reqCode=fromlist&lang=1&amode=MD823&bibid=4059999" target="blank">Magnetohydrodynamic waves on a rotating sphere and its implications for the outermost Earth’s core and geomagnetic fluctuations</a>」<span class="period">2020.2</span></li> <!--https://drive.google.com/open?id=1LmmhqFhBlsjBhxNnjGykHptiVNwh4MnR-->
         </ul>
     </div>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
-    </section> <!-- h2のsection終わり -->
+    </section> <!-- h2 の section 終わり -->
 
 </main>
 
@@ -78,6 +86,17 @@
     </script>
 
 </div> <!-- #container 終わり -->
+
+    <!-- 共通 javascript -->
+    <script type="text/javascript">
+        include("./common/include/common_js.html");
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script type="text/javascript">
+        const html = document.querySelector('html');
+        html.classList.add('show_html');
+    </script>
 
 </body>
 
