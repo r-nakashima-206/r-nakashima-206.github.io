@@ -6,6 +6,14 @@
 
     <title>Private【Ryosuke Nakashima】</title>
 
+    <!-- すべて読み込まれるまで全体を非表示 -->
+    <style type="text/css">
+        html {
+            display: none;
+        }
+    </style>
+
+    <!-- include.js 読み込み -->
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
     <!-- head内の共通部分 -->
@@ -35,8 +43,9 @@
             <li><a href="https://www.office.com" target="_blank">Microsoft Office サインイン</a></li>
             <li><a href="https://moodle.s.kyushu-u.ac.jp" target="_blank">九州大学 Moodle</a></li>
             <li><a href="https://portal.jimu.kyushu-u.ac.jp" target="_blank">九州大学 全学用ポータル</a></li>
-            <li><a href="https://hyoka-lab.ir.kyushu-u.ac.jp" target="_blank">教員活動進捗・報告システム(Q-RADeRS)</a></li>
-            <li><a href="https://q-qls.jimu.kyushu-u.ac.jp" target="_blank">裁量労働制適用職員勤務・健康状況把握システム</a></li>
+            <li><a href="https://hyoka-lab.ir.kyushu-u.ac.jp" target="_blank">九州大学 教員活動進捗・報告システム(Q-RADeRS)</a></li>
+            <li><a href="https://q-qls.jimu.kyushu-u.ac.jp" target="_blank">九州大学 裁量労働制適用職員勤務・健康状況把握システム(Q-QLS)</a></li>
+            <li><a href="https://jinq-web.jimu.kyushu-u.ac.jp/portal/servlet/RC" target="_blank">九州大学 Web給与明細システム</a></li>
             <li><a href="https://edu.aprin.or.jp" target="_blank">APRIN eラーニングプログラム(eAPRIN)</a></li>
             <li><a href="https://anpic-kyushu-u.jecc.jp/kyushu-u/login/" target="_blank">九州大学 安否確認システム(ANPIC)</a></li>
         <p></p>
@@ -75,6 +84,7 @@
             <li><a href="https://html.spec.whatwg.org" target="_blank">HTML Living Standard</a></li>
             <li><a href="https://developer.mozilla.org/ja/" target="_blank">MDN(Mozilla Developer Network) Web Docs</a></li>
             <li><a href="https://caniuse.com" target="_blank">Can I use</a>
+            <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">PageSpeed Insights</a>
         <p></p>
             <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a></li>
             <li><a href="https://fontawesome.com" target="_blank">Font Awesome</a></li>
@@ -96,6 +106,12 @@
     <!-- 共通 javascript -->
     <script type="text/javascript">
         include("./common/include/common_js.html");
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script type="text/javascript">
+        const html = document.querySelector('html');
+        html.classList.add('show_html');
     </script>
 
 </body>

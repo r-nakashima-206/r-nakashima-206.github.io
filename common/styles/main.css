@@ -1,3 +1,7 @@
+html.show_html {
+    display: block; /* 表示 */
+}
+
 body {
     font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; /* 基本のフォント(左ほど優先) */
     margin: 0 auto; /* 上右下左の空白 */
@@ -12,8 +16,9 @@ body {
 }
 
 #container {
+    color: black; /* 文字色 */
     margin: 0; /* 上右下左の空白 */
-    background-color: white; /* 背景色 */
+    background-color: whitesmoke; /* 背景色 */
 }
 
 /* ======================================== */
@@ -63,7 +68,7 @@ main {
 
 p {
     text-align: justify; /* 長文の両端揃え */
-    color: black; /* 文字色 */
+    color: currentColor; /* 文字色 */
 }
 
 a {
@@ -95,7 +100,7 @@ h3.sub-section {
     width: 470px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
     font-size: 1.6rem; /* フォントサイズ */
     font-weight: lighter; /* 文字の太さ */
-    color: black; /* 文字色 */
+    color: currentColor; /* 文字色 */
 }
 
 h4.subsub-section {
@@ -128,15 +133,17 @@ ul {
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
     text-align: justify; /* 長文の両端揃え */
 }
-
 ul > ul {
     margin: 10px 0px 10px 0px; /* 上右下左の空白 */
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
     text-align: justify; /* 長文の両端揃え */
 }
+li {
+    color: currentColor; /* 文字色 */
+}
 
 .period {
-    color: black; /* 文字色 */
+    color: currentColor; /* 文字色 */
     background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
     font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
