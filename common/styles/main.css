@@ -35,6 +35,12 @@ header a {
 header a:hover{
     color: yellow; /* 文字色 */
 }
+header a.nav_here {
+    color: white; /* 文字色 */
+    pointer-events: none; /* リンク無効化 */
+    cursor: default;  /* カーソルをdefaultに */
+    text-decoration: none;  /* 下線を消去 */
+}
 
 header h1 {
     margin-bottom: 8px; /* 上右下左の空白(下のみ) */
