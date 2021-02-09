@@ -41,16 +41,6 @@
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 
-<!-- jQuery -->
-<!--
-<script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-    crossorigin="anonymous">
-</script>
--->
-
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159930372-3"></script>
 <script>

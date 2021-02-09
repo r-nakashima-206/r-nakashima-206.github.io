@@ -6,9 +6,17 @@
 
     <title>Publications【Ryosuke Nakashima】</title>
 
+    <!-- すべて読み込まれるまで全体を非表示 -->
+    <style type="text/css">
+        html {
+            display: none;
+        }
+    </style>
+
+    <!-- include.js 読み込み -->
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
-    <!-- head内の共通部分 -->
+    <!-- head 内の共通部分 -->
     <script type="text/javascript">
         include("./common/include/common_head.txt");
     </script>
@@ -40,16 +48,16 @@
                 <li>Takuto Minami, Shin’ya Nakano, Vincent Lesur, Futoshi Takahashi, Masaki Matsushima, Hisayoshi Shimizu, <b>Ryosuke Nakashima</b>, Hinami Taniguchi, Hiroaki Toh, A candidate secular variation model for IGRF-13 based on MHD dynamo simulation and 4DEnVar data assimilation, <i>Earth Planets and Space</i> <b>72</b>, 136 (2020), doi: <a href="https://doi.org/10.1186/s40623-020-01253-8" target="_blank">10.1186/s40623-020-01253-8</a></li>
             </ul>
         </section>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
     <h3 class="sub-section">The Others</h3>
     <section>
         <ul>
             <li><a href="http://wdc.kugi.kyoto-u.ac.jp/wdc/news/1901.pdf" target="_blank">地磁気世界資料解析センター ニュース [No.173] 2019年1月</a> に記事を掲載</li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
-    </section> <!-- h2のsection終わり -->
+    </section> <!-- h2 の section 終わり -->
 
 </main>
 
@@ -59,6 +67,17 @@
     </script>
 
 </div> <!-- #container 終わり -->
+
+    <!-- 共通 javascript -->
+    <script type="text/javascript">
+        include("./common/include/common_js.html");
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script type="text/javascript">
+        const html = document.querySelector('html');
+        html.classList.add('show_html');
+    </script>
 
 </body>
 

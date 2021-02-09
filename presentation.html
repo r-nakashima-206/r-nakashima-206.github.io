@@ -6,9 +6,17 @@
 
     <title>Presentations【Ryosuke Nakashima】</title>
 
+    <!-- すべて読み込まれるまで全体を非表示 -->
+    <style type="text/css">
+        html {
+            display: none;
+        }
+    </style>
+
+    <!-- include.js 読み込み -->
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
-    <!-- head内の共通部分 -->
+    <!-- head 内の共通部分 -->
     <script type="text/javascript">
         include("./common/include/common_head.txt");
     </script>
@@ -49,7 +57,7 @@
                 <li><b>中島涼輔</b>・吉田茂生, <a href="http://www2.jpgu.org/meeting/2015/session/PDF/S-IT35/SIT35-P01.pdf" target="_blank">外核最上部の密度成層した層に存在する軸対称MAC波の境界モード</a>, 日本地球惑星科学連合2015年大会, SIT35-P01, 千葉, 2015年5月</li>
             </ul>
         </section>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
     <h3 class="sub-section">The Others</h3>
     <section>
@@ -67,9 +75,9 @@
                 <li><b>中島涼輔</b>, Alfvén波の固有モード 〜単純かと思いきや、ちょっと困った〜, <a href="http://www.gfd-dennou.org/seminars/gfdsemi/" target="_blank">地球流体セミナー</a> 分科会, 北海道 支笏湖, 2016年8月</li>
             </ul>
         </section>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
-    </section> <!-- h2のsection終わり -->
+    </section> <!-- h2 の section 終わり -->
 
 </main>
 
@@ -79,6 +87,17 @@
     </script>
 
 </div> <!-- #container 終わり -->
+
+    <!-- 共通 javascript -->
+    <script type="text/javascript">
+        include("./common/include/common_js.html");
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script type="text/javascript">
+        const html = document.querySelector('html');
+        html.classList.add('show_html');
+    </script>
 
 </body>
 

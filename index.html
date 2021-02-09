@@ -6,9 +6,17 @@
 
     <title>Ryosuke Nakashima</title>
 
+    <!-- すべて読み込まれるまで全体を非表示 -->
+    <style type="text/css">
+        html {
+            display: none;
+        }
+    </style>
+
+    <!-- include.js 読み込み -->
     <script type="text/javascript" src="./common/scripts/include.js"></script>
 
-    <!-- head内の共通部分 -->
+    <!-- head 内の共通部分 -->
     <script type="text/javascript">
         include("./common/include/common_head.txt");
     </script>
@@ -85,7 +93,7 @@
                 <span class="english">Department of Earth and Planetary Sciences, Graduate School of Science, Kyushu University (Doctoral Course)</span><br>
                 <span class="english">Dynamics of the Earth’s Interior Group (Supervisor: Shigeo Yoshida)</span><br>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
 <hr>
 
@@ -101,7 +109,7 @@
             <li><a href="https://www.meti.go.jp/policy/economy/hyojun/techno_infra/20_keiryoushi.html" target="_blank">一般計量士</a><span class="period">[2015.5.30]</span></li>
             <li><a href="http://www.jemai.or.jp/polconman/index.html" target="_blank">公害防止管理者 (水質関係第一種)</a><span class="period">[2015.12.15]</span></li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
 <hr>
 
@@ -116,7 +124,7 @@
             <li>half marathon<span class="best-time">1:10'55"</span><span class="period">[2013.3.23]</span></li>
             <li>full marathon<span class="best-time">2:33'58"</span><span class="period">[2014.11.9]</span></li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
 <hr>
 
@@ -128,9 +136,9 @@
             <li>ティーチング・アシスタント 九州大学基幹教育院<span class="period">[2017.10-2018.2]</span></li>
             <li>リサーチ・アシスタント 九州大学大学院理学府<span class="period">[2019.10-2020.3]</span></li>
         </ul>
-    </section> <!-- h3のsection終わり -->
+    </section> <!-- h3 の section 終わり -->
 
-    </section> <!-- h2のsection終わり -->
+    </section> <!-- h2 の section 終わり -->
 
 </main>
 
@@ -140,6 +148,17 @@
     </script>
 
 </div> <!-- #container 終わり -->
+
+    <!-- 共通 javascript -->
+    <script type="text/javascript">
+        include("./common/include/common_js.html");
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script type="text/javascript">
+        const html = document.querySelector('html');
+        html.classList.add('show_html');
+    </script>
 
 </body>
 
