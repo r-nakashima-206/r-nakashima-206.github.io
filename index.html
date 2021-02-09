@@ -156,8 +156,16 @@
 
     <!-- html に class を追加し、ページ全体を表示 -->
     <script type="text/javascript">
-        const html = document.querySelector('html');
-        html.classList.add('show_html');
+        const el_html = document.querySelector('html');
+        el_html.classList.add('show_html');
+    </script>
+
+    <!-- nav の現在のページだけリンク解除 -->
+    <script type="text/javascript">
+        window.onload = function() {
+            const el_nav = document.getElementById('home');
+            el_nav.classList.add('nav_here');
+        };
     </script>
 
 </body>
