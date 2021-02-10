@@ -15,7 +15,7 @@
     color: lightpink; /* 文字色 */
 }
 .hla header a.nav_here {
-    color: white; /* 文字色 */
+    color: lightcyan; /* 文字色 */
     pointer-events: none; /* リンク無効化 */
     cursor: default;  /* カーソルをdefaultに */
     text-decoration: none;  /* 下線を消去 */
