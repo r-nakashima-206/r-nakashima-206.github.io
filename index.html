@@ -53,7 +53,7 @@
             </p>
         </address>
         <p class="textbox">
-            <a href="https://hyoka.ofc.kyushu-u.ac.jp/search/details/K007562/index.html" target="_blank">九州大学 研究者情報</a> / <a href="https://researchmap.jp/ryosuke_nakashima" target="_blank">researchmap</a> / <a itemprop="sameAs" content="https://orcid.org/0000-0003-1817-057X"
+            <a href="https://hyoka.ofc.kyushu-u.ac.jp/search/details/K007562/index.html" target="_blank">九州大学 研究者情報</a> / <a href="https://researchmap.jp/ryosuke_nakashima" target="_blank">researchmap</a> / <a content="https://orcid.org/0000-0003-1817-057X"
                 href="https://orcid.org/0000-0003-1817-057X" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:baseline;">
                 <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1rem;margin-right:.2rem;vertical-align:-10%;" alt="ORCID iD icon">ORCID
             </a>
@@ -154,18 +154,18 @@
         include("./common/include/common_js.html");
     </script>
 
-    <!-- html に class を追加し、ページ全体を表示 -->
-    <script>
-        const el_html = document.querySelector('html');
-        el_html.classList.add('show_html');
-    </script>
-
     <!-- nav の現在のページだけリンク解除 -->
     <script>
         window.onload = function() {
             const el_nav = document.getElementById('home');
             el_nav.classList.add('nav_here');
         };
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script>
+        const el_html = document.querySelector('html');
+        el_html.classList.add('show_html');
     </script>
 
 </body>
