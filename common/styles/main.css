@@ -214,6 +214,10 @@ footer small {
         font-weight: normal; /* 文字の太さ */
     }
 
+    header p {
+        padding: 0px 10px 10px 15px; /* 上右下左の空白 */
+    }
+
     main {
         padding: 0px 15px 0px 15px; /* 上右下左の空白 */
     }
