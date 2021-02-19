@@ -25,8 +25,17 @@
     color: yellow; /* 文字色 */
 }
 
+.hla header .index-arrow:before {
+    margin-left : 15px; /* 左側のスペース */
+    border-left: 2px solid yellow; /* 線のスタイル */
+    content: "---\03e"; /* 矢印を追加 */
+}
+
 .hla header .sub-index {
     color: lime; /* 文字色 */
+}
+.hla header span.sub-index:before {
+    content: "--\03e"; /* 矢印を追加 */
 }
 
 /* ======================================== */
