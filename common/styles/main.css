@@ -121,6 +121,12 @@ h4.subsub-section {
 p.textbox {
     margin: 20px 20px 20px 20px; /* 上右下左の空白 */
 }
+p.indent {
+    text-indent: 1rem; /* インデント */
+}
+p.no-margin-top {
+    margin-top: -20px; /* 上右下左の空白 */
+}
 
 p.info {
     font-size: 0.85rem; /* フォントサイズ */
@@ -139,7 +145,7 @@ ul {
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
     text-align: justify; /* 長文の両端揃え */
 }
-ul > ul {
+li > ul {
     margin: 10px 0px 10px 0px; /* 上右下左の空白 */
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
     text-align: justify; /* 長文の両端揃え */

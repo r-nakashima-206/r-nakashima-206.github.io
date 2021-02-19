@@ -81,7 +81,7 @@
 @media screen and (min-width: 640px){
 
     .hla p.textbox {
-        margin: 20px 100px 20px 20px; /* 上右下左の空白 */
+        margin-right: 100px; /* 上右下左の空白 */
     }
 
     .hla ul {
