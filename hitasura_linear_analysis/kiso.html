@@ -60,18 +60,18 @@
         include("../common/include/common_js.html");
     </script>
 
-    <!-- html に class を追加し、ページ全体を表示 -->
-    <script>
-        const el_html = document.querySelector('html');
-        el_html.classList.add('show_html');
-    </script>
-
     <!-- nav の現在のページだけリンク解除 -->
     <script>
         window.onload = function() {
             const el_nav = document.getElementById('kiso');
             el_nav.classList.add('nav_here');
         };
+    </script>
+
+    <!-- html に class を追加し、ページ全体を表示 -->
+    <script>
+        const el_html = document.querySelector('html');
+        el_html.classList.add('show_html');
     </script>
 
 </body>
