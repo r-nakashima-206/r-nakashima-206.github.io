@@ -92,7 +92,7 @@ hr {
 h2.section {
     padding: 5px 0px 5px 20px; /* 上右下左の空白 */
     background-color: indigo; /* 背景色 */
-    width: 480px; /* 囲みの大きさ */
+    width: 490px; /* 囲みの大きさ */
     font-size: 1.8rem; /* フォントサイズ */
     font-weight: lighter; /* 文字の太さ */
     color: yellow; /* 文字色 */
@@ -103,7 +103,7 @@ h3.sub-section {
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
     border: 1px solid indigo; /* 囲み線 */
     border-left: 10px solid indigo; /* 囲み線(左のみ) */
-    width: 470px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
+    width: 480px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
     font-size: 1.6rem; /* フォントサイズ */
     font-weight: lighter; /* 文字の太さ */
     color: currentColor; /* 文字色 */
