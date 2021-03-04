@@ -81,16 +81,17 @@
     border-collapse: collapse; /* 結合ボーダー */
     border: 3px solid navy; /* 囲み線 */
     margin: 0px 10px 0px 10px; /* 上右下左の空白 */
-    width: 600px; /* 幅 */
+    width: 700px; /* 幅 */
     table-layout: fixed; /* 固定レイアウト */
 }
 .hla table#rireki td {
     border: 1px solid navy; /* 囲み線 */
     padding: 0px 10px 0px 10px; /* 上右下左の空白*/
 }
-.hla table#rireki td:first-child {
+.hla table#rireki th {
     background-color: ghostwhite; /* 背景色 */
-    width: 100px; /* 幅 */
+    width: 120px; /* 幅 */
+    font-weight: normal; /* 文字の太さ */
     text-align: center; /* 横方向 中央揃え */
 }
 
