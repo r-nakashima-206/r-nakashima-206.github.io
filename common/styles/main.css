@@ -10,7 +10,7 @@ body {
 }
 
 h2, h3 {
-  font-family: 'Noto Serif JP';
+    font-family: 'Noto Serif JP', serif;
 }
 
 #container {
