@@ -9,10 +9,8 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-@media screen and (min-width: 400px){
-    h2, h3 {
-      font-family: 'Noto Serif JP';
-    }
+h2, h3 {
+  font-family: 'Noto Serif JP';
 }
 
 #container {
@@ -103,7 +101,7 @@ h3.sub-section {
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
     border: 1px solid indigo; /* 囲み線 */
     border-left: 10px solid indigo; /* 囲み線(左のみ) */
-    width: 480px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
+    width: calc(490px - 11px); /* 囲みの大きさ(左囲み線の分だけ調整) */
     font-size: 1.6rem; /* フォントサイズ */
     font-weight: lighter; /* 文字の太さ */
     color: currentColor; /* 文字色 */
@@ -199,19 +197,28 @@ footer small {
 }
 
 /* ======================================== */
+/* PC小画面用 */
+/* ======================================== */
+
+@media screen and (max-width: 1000px){
+
+    body {
+        width: 100vw; /* 幅(PC小画面) */
+    }
+
+    main {
+        padding-right: 50px; /* 上右下左の空白 */
+    }
+}
+
+/* ======================================== */
 /* スマホ用 */
 /* ======================================== */
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 500px){
 
-    body {
-        width: 360px; /* 幅(スマホ) */
-        font-size: 0.9rem;
-    }
-
-    header h1 {
+    body, header h1, footer small {
         font-size: 0.9rem; /* フォントサイズ */
-        font-weight: normal; /* 文字の太さ */
     }
 
     header p {
@@ -233,7 +240,7 @@ footer small {
 
     h2.section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
-        width: 310px; /* 囲みの大きさ */
+        width: calc(100vw - 50px); /* 囲みの大きさ */
         font-size: 1.2rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
@@ -241,7 +248,7 @@ footer small {
     h3.sub-section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         border-left: 10px solid indigo; /* 囲み線(左のみ) */
-        width: 299px; /* 囲みの大きさ(左囲み線の分だけ要調整) */
+        width: calc(100vw - 61px); /* 囲みの大きさ(左囲み線の分だけ調整) */
         font-size: 1.1rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
@@ -260,7 +267,7 @@ footer small {
         font-size: 0.8rem; /* フォントサイズ */
         margin: 10px 0px 10px 0px; /* 上右下左の空白 */
         padding: 10px 15px 10px 15px; /* 上右下左の空白 */
-        width: 298px; /* 囲みの大きさ */
+        width: calc(100vw - 62px); /* 囲みの大きさ */
     }
 
     ul {
@@ -284,21 +291,34 @@ footer small {
         font-size: 0.75rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
-    .english_small-margin {
-        font-size: 0.75rem; /* フォントサイズ */
-    }
 
     .best-time {
         font-size: 0.9rem; /* フォントサイズ */
         margin-left : 10px; /* 左側のスペース */
     }
 
-    footer small {
+    .MathJax {
+        font-size: 1rem; /* フォントサイズ */
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    body, header h1, footer small {
+        font-size: 0.8rem; /* フォントサイズ */
+    }
+
+    h2.section, h3.sub-section {
+        font-size: 1.1rem; /* フォントサイズ */
+    }
+
+    h4.subsub-section {
         font-size: 0.9rem; /* フォントサイズ */
     }
 
-    .MathJax {
-        font-size: 1rem; /* フォントサイズ */
+    p.info {
+        font-size: 0.7rem; /* フォントサイズ */
     }
 
 }
