@@ -213,6 +213,16 @@ footer small {
     hr {
         margin-right: -50px; /* 右の空白, mainの左右paddingと合わせる */
     }
+
+    h2.section {
+        width: calc(100vw - 50px); /* 囲みの大きさ */
+        font-size: 1.2rem; /* フォントサイズ */
+    }
+
+    h3.sub-section {
+        width: calc(100vw - 61px); /* 囲みの大きさ(左囲み線の分だけ調整) */
+        font-size: 1.1rem; /* フォントサイズ */
+    }
 }
 
 /* ======================================== */
@@ -244,16 +254,12 @@ footer small {
 
     h2.section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
-        width: calc(100vw - 50px); /* 囲みの大きさ */
-        font-size: 1.2rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
 
     h3.sub-section {
         padding: 5px 10px 5px 10px; /* 上右下左の空白 */
         border-left: 10px solid indigo; /* 囲み線(左のみ) */
-        width: calc(100vw - 61px); /* 囲みの大きさ(左囲み線の分だけ調整) */
-        font-size: 1.1rem; /* フォントサイズ */
         font-weight: normal; /* 文字の太さ */
     }
 
