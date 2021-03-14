@@ -141,12 +141,10 @@ address {
 ul {
     margin: 20px 0px 20px 20px; /* 上右下左の空白 */
     padding: 0px 0px 0px 30px; /* 上右下左の空白 */
-    text-align: justify; /* 長文の両端揃え */
 }
 li > ul {
     margin: 10px 0px 10px 0px; /* 上右下左の空白 */
-    padding: 0px 0px 0px 30px; /* 上右下左の空白 */
-    text-align: justify; /* 長文の両端揃え */
+    padding: 0px 0px 0px 25px; /* 上右下左の空白 */
 }
 li {
     color: currentColor; /* 文字色 */
@@ -277,13 +275,10 @@ footer small {
     ul {
         margin: 10px 5px 10px 5px; /* 上右下左の空白 */
         padding: 0px 0px 0px 20px; /* 上右下左の空白 */
-        text-align: left; /* 長文の左揃え */
     }
 
-    ul > ul {
-        margin: 10px 5px 10px 0px; /* 上右下左の空白 */
-        padding: 0px 0px 0px 20px; /* 上右下左の空白 */
-        text-align: left; /* 長文の左揃え */
+    li > ul {
+        margin: 5px 5px 5px 0px; /* 上右下左の空白 */
     }
 
     .period {
