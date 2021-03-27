@@ -5,7 +5,7 @@ body {
     width: 1000px; /* 幅(PC) */
 }
 
-h2, h3 {
+h2 {
     font-family: 'Noto Serif JP', serif;
 }
 
@@ -33,19 +33,12 @@ header h1 {
 /* ======================================== */
 
 main {
-    padding: 0px 100px 0px 20px; /* 上右下左の空白 */
+    padding: 0px 200px 0px 20px; /* 上右下左の空白 */
 }
 
 p {
     text-align: justify; /* 長文の両端揃え */
     color: currentColor; /* 文字色 */
-}
-
-a {
-    color: currentColor; /* 文字色 */
-}
-a:hover {
-    color: darkorange; /* 文字色 */
 }
 
 hr {
@@ -68,9 +61,6 @@ p.textbox {
 p.indent {
     text-indent: 1rem; /* インデント */
 }
-p.no-margin-top {
-    margin-top: -20px; /* 上右下左の空白 */
-}
 
 ul {
     margin: 20px 0px 20px 20px; /* 上右下左の空白 */
@@ -82,6 +72,18 @@ li > ul {
 }
 li {
     color: currentColor; /* 文字色 */
+}
+
+details {
+    margin: 0px 0px 0px 15px; /* 上右下左の空白 */
+}
+.details-box {
+    background-color: gainsboro; /* 背景色 */
+    padding: 5px;
+}
+summary {
+    outline: none;
+    color: blue;
 }
 
 /* ======================================== */
