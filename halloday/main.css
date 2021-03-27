@@ -1,0 +1,190 @@
+body {
+    font-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif; /* 基本のフォント(左ほど優先) */
+    margin: 0 auto; /* 上右下左の空白 */
+    background-color: gainsboro; /* 背景色 */
+    width: 1000px; /* 幅(PC) */
+}
+
+h2, h3 {
+    font-family: 'Noto Serif JP', serif;
+}
+
+#container {
+    color: black; /* 文字色 */
+    margin: 0; /* 上右下左の空白 */
+    background-color: whitesmoke; /* 背景色 */
+}
+
+/* ======================================== */
+/* header */
+/* ======================================== */
+
+header h1 {
+    margin-bottom: 8px; /* 上右下左の空白(下のみ) */
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+    font-size: 1rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+    color: white; /* 文字色 */
+}
+
+/* ======================================== */
+/* main */
+/* ======================================== */
+
+main {
+    padding: 0px 100px 0px 20px; /* 上右下左の空白 */
+}
+
+p {
+    text-align: justify; /* 長文の両端揃え */
+    color: currentColor; /* 文字色 */
+}
+
+a {
+    color: currentColor; /* 文字色 */
+}
+a:hover {
+    color: darkorange; /* 文字色 */
+}
+
+hr {
+    margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
+    border: 3px dashed lightsteelblue; /* 線のスタイル */
+}
+
+h2.section {
+    padding: 5px 0px 5px 20px; /* 上右下左の空白 */
+    background-color: darkgreen; /* 背景色 */
+    width: 490px; /* 囲みの大きさ */
+    font-size: 1.8rem; /* フォントサイズ */
+    font-weight: lighter; /* 文字の太さ */
+    color: yellow; /* 文字色 */
+}
+
+p.textbox {
+    margin: 20px 20px 20px 20px; /* 上右下左の空白 */
+}
+p.indent {
+    text-indent: 1rem; /* インデント */
+}
+p.no-margin-top {
+    margin-top: -20px; /* 上右下左の空白 */
+}
+
+ul {
+    margin: 20px 0px 20px 20px; /* 上右下左の空白 */
+    padding: 0px 0px 0px 30px; /* 上右下左の空白 */
+}
+li > ul {
+    margin: 10px 0px 10px 0px; /* 上右下左の空白 */
+    padding: 0px 0px 0px 25px; /* 上右下左の空白 */
+}
+li {
+    color: currentColor; /* 文字色 */
+}
+
+/* ======================================== */
+/* footer */
+/* ======================================== */
+
+footer {
+    background-color: dimgray; /* 背景色 */
+    padding: 0px 10px 0px 10px; /* 上右下左の空白*/
+}
+
+footer p {
+    color: white; /* 文字色 */
+}
+
+footer small {
+    font-size: 1.1rem; /* フォントサイズ */
+}
+
+/* ======================================== */
+/* PC小画面用 */
+/* ======================================== */
+
+@media screen and (max-width: 1000px){
+
+    body {
+        width: 100vw; /* 幅(PC小画面) */
+    }
+
+    main {
+        padding-right: 50px; /* 右の空白 */
+    }
+
+    hr {
+        margin-right: -50px; /* 右の空白, mainの左右paddingと合わせる */
+    }
+}
+
+/* ======================================== */
+/* スマホ用 */
+/* ======================================== */
+
+@media screen and (max-width: 550px){
+
+    body, header h1, footer small {
+        font-size: 0.9rem; /* フォントサイズ */
+    }
+
+    header p {
+        padding: 0px 10px 10px 15px; /* 上右下左の空白 */
+    }
+
+    main {
+        padding: 0px 15px 0px 15px; /* 上右下左の空白 */
+    }
+
+    p {
+        text-align: left; /* 長文の左揃え */
+    }
+
+    hr {
+        margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
+        border: 2px dashed lightsteelblue; /* 線のスタイル */
+    }
+
+    h2.section {
+        padding: 5px 10px 5px 10px; /* 上右下左の空白 */
+        width: calc(100vw - 50px); /* 囲みの大きさ */
+        font-size: 1.2rem; /* フォントサイズ */
+        font-weight: normal; /* 文字の太さ */
+    }
+
+    p.textbox {
+        margin: 10px 5px 10px 5px; /* 上右下左の空白 */
+    }
+
+    ul {
+        margin: 10px 5px 10px 5px; /* 上右下左の空白 */
+        padding: 0px 0px 0px 20px; /* 上右下左の空白 */
+    }
+
+    li > ul {
+        margin: 5px 5px 5px 0px; /* 上右下左の空白 */
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    body, header h1, footer small {
+        font-size: 0.8rem; /* フォントサイズ */
+    }
+
+    h2.section, h3.sub-section {
+        font-size: 1.1rem; /* フォントサイズ */
+    }
+
+    h4.subsub-section {
+        font-size: 0.9rem; /* フォントサイズ */
+    }
+
+    p.info {
+        font-size: 0.7rem; /* フォントサイズ */
+    }
+
+}
