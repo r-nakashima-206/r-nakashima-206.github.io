@@ -42,8 +42,8 @@ p {
 }
 
 hr {
-    margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
-    border: 3px dashed lightsteelblue; /* 線のスタイル */
+    margin: 40px -200px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
+    border: 3px dashed paleturquoise; /* 線のスタイル */
 }
 
 h2.section {
