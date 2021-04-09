@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>プレゼン テンプレート</title>
+
+	<link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js-master/dist/theme/simple.css">
+
+	<link rel="stylesheet" href="./info.css">
+	<link rel="stylesheet" href="./main.css">
+
+	<!-- Font Awesome Kit -->
+	<script src="https://kit.fontawesome.com/29824876ec.js" crossorigin="anonymous"></script>
+
+	<!-- MathJax version 3 -->
+	<!-- IE対応 -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<!-- configファイル読み込み -->
+	<script src="./mathjax_config.js"></script>
+	<!-- MathJax v3 (tex-svg) -->
+	<script type="text/javascript" id="MathJax-script" async
+	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+	<header id="info_header">
+		<div id="presentation_title">
+			<h1>地球惑星内部の流体力学とダイナモ作用</h1>
+		</div>
+		<div id="presentation_date">
+			<p>2021年度 合同研究発表会 春大会 (<time>2021-04-17</time>)</p>
+		</div>
+		<div id="nav_slide">
+			<nav>
+			<p><span
+				id="nav_part1">導入</span><span id="nav_part1-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part2"><i class="fas fa-chevron-right"></i> 定式化</span><span id="nav_part2-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part3"><i class="fas fa-chevron-right"></i> 数値計算</span><span id="nav_part3-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part4"><i class="fas fa-chevron-right"></i> 考察</span><span id="nav_part4-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part5"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part5-sub" class="sub-slide">$($補足$)$</span></p>
+			<nav>
+		</dic>
+	</header>
+
+	<footer id="info_footer">
+		<div id="presentation_speaker">
+			<address><i class="fas fa-microphone"></i> <a href="https://r-nakashima-geophysics.github.io" target="_blank">中島 涼輔</a> (九大・理) [ <i class="far fa-envelope"></i> r.nakashima.a10&nbsp;<i class="fas fa-at"></i>&nbsp;m.kyushu-u.ac.jp ]</address>
+		</div>
+	</footer>
+
+<div class="slides">
+
+	<section data-state="top-slide">
+		<h2 class="large">地球惑星内部の流体力学とダイナモ作用</h2>
+		<p>中島 涼輔 (九州大学 大学院理学研究院)</p>
+	</section>
+
+<!-- ========== part 1 ========== -->
+
+	<section data-state="part1">
+		<h2>イントロ</h2>
+	</section>
+
+	<section data-state="part1" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge navigate-right">本発表のすべて</h2>
+	</section>
+	<section data-state="part1" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">本発表のすべて</h2>
+	</section>
+
+<!-- ========== part 2 ========== -->
+
+	<section data-state="part2">
+		<h2>回転球面上 2 次元 $($余緯度 $\theta$, 経度 $\phi)$ の理想 MHD 方程式</h2>
+	</section>
+
+	<section data-state="part2" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge navigate-right">ここまでのまとめ</h2>
+	</section>
+	<section data-state="part2" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">ここまでのまとめ</h2>
+		<ul>
+			<li class="semi-large">回転球面上 2 次元理想 MHD の線形問題を考えたい</li>
+			<li class="semi-large">擬角運動量と擬エネルギーが保存</li>
+		</ul>
+	</section>
+
+<!-- ========== part 3 ========== -->
+
+	<section>
+		<section data-state="part3">
+			slide
+		</section>
+		<section data-state="part3-sub">
+			slide (補足)
+		</section>
+	</section>
+
+<!-- ========== part 4 ========== -->
+
+	<section>
+		<section data-state="part4">
+			slide
+		</section>
+		<section data-state="part4-sub">
+			slide（補足）
+		</section>
+	</section>
+
+<!-- ========== part 5 ========== -->
+
+	<section>
+		<section data-state="part5">
+			slide
+		</section>
+		<section data-state="part5-sub">
+			slide（補足）
+		</section>
+	</section>
+
+</div>
+</div>
+
+	<script src="../reveal.js-master/dist/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			width: 1024,
+			height: 576,
+
+			slideNumber: slide => {
+	    		return [ Reveal.getIndices( slide ).h, '/', this.Reveal.getHorizontalSlides().length - 1 ];
+			}
+		});
+	</script>
+
+	<script type="text/javascript">
+		var el_nav = document.getElementById('nav_slide');
+		var el_slidenumber = document.getElementsByClassName('slide-number');
+		Reveal.addEventListener( 'top-slide', function() {
+			el_nav.className = 'top-slide';
+			el_slidenumber.className = 'top-slide';
+		}, false );
+
+        const num_part = 5;
+		const el_part = Array(num_part);
+		const el_part_sub = Array(num_part);
+		for (var i = 1; i <= num_part; i++) {
+			el_part[i] = document.getElementById('nav_part'+ i);
+			el_part_sub[i] = document.getElementById('nav_part'+ i +'-sub');
+		}
+
+		Reveal.addEventListener( 'part1', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 1) {
+					el_part[i].classList = 'past';
+				} else if (i === 1) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				el_part_sub[i].className = 'sub-slide';
+			}
+		}, false );
+		Reveal.addEventListener( 'part1-sub', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 1) {
+					el_part[i].classList = 'past';
+				} else if (i === 1) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				if (i === 1) {
+					el_part_sub[i].className = 'here show-sub';
+				} else {
+					el_part_sub[i].className = 'sub-slide';
+				}
+			}
+		}, false );
+
+		Reveal.addEventListener( 'part2', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 2) {
+					el_part[i].classList = 'past';
+				} else if (i === 2) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				el_part_sub[i].className = 'sub-slide';
+			}
+		}, false );
+		Reveal.addEventListener( 'part2-sub', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 2) {
+					el_part[i].classList = 'past';
+				} else if (i === 2) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				if (i === 2) {
+					el_part_sub[i].className = 'here show-sub';
+				} else {
+					el_part_sub[i].className = 'sub-slide';
+				}
+			}
+		}, false );
+
+		Reveal.addEventListener( 'part3', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 3) {
+					el_part[i].classList = 'past';
+				} else if (i === 3) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				el_part_sub[i].className = 'sub-slide';
+			}
+		}, false );
+		Reveal.addEventListener( 'part3-sub', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 3) {
+					el_part[i].classList = 'past';
+				} else if (i === 3) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				if (i === 3) {
+					el_part_sub[i].className = 'here show-sub';
+				} else {
+					el_part_sub[i].className = 'sub-slide';
+				}
+			}
+		}, false );
+
+		Reveal.addEventListener( 'part4', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 4) {
+					el_part[i].classList = 'past';
+				} else if (i === 4) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				el_part_sub[i].className = 'sub-slide';
+			}
+		}, false );
+		Reveal.addEventListener( 'part4-sub', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 4) {
+					el_part[i].classList = 'past';
+				} else if (i === 4) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				if (i === 4) {
+					el_part_sub[i].className = 'here show-sub';
+				} else {
+					el_part_sub[i].className = 'sub-slide';
+				}
+			}
+		}, false );
+
+		Reveal.addEventListener( 'part5', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 5) {
+					el_part[i].classList = 'past';
+				} else if (i === 5) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				el_part_sub[i].className = 'sub-slide';
+			}
+		}, false );
+		Reveal.addEventListener( 'part5-sub', function() {
+			for (var i = 1; i <= num_part; i++) {
+				if (i < 5) {
+					el_part[i].classList = 'past';
+				} else if (i === 5) {
+					el_part[i].className = 'here';
+				} else {
+					el_part[i].className = 'future';
+				}
+
+				if (i === 5) {
+					el_part_sub[i].className = 'here show-sub';
+				} else {
+					el_part_sub[i].className = 'sub-slide';
+				}
+			}
+		}, false );
+
+	</script>
+
+</body>
+
+</html>
