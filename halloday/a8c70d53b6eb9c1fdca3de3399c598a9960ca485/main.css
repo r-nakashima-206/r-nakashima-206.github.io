@@ -41,9 +41,32 @@ p {
     color: currentColor; /* 文字色 */
 }
 
+.download-box {
+    display: inline-flex;
+}
+a.download {
+    font-size: 1.2rem; /* フォントサイズ */
+    text-decoration: none; /* 下線なし　*/
+    color: lightcyan; /* 文字色 */
+    background-color: midnightblue; /* 背景色 */
+    padding: 0px 20px 0px 20px; /* 上右下左の空白 */
+    margin: 0px 20px 0px 20px; /* 上右下左の空白 */
+    border: 2px solid midnightblue; /* 囲み線 */
+    padding: 10px 15px 10px 15px; /* 上右下左の空白 */
+    border-radius : 10px; /* 角 */
+    font-weight: bold; /* 文字の太さ */
+}
+a.download + a.download {
+    margin-left: 0px; /* 上右下左の空白 */
+}
+a.download:hover {
+    color: midnightblue; /* 文字色 */
+    background-color: lightcyan; /* 背景色 */
+}
+
 hr {
     margin: 40px -200px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
-    border: 3px dashed paleturquoise; /* 線のスタイル */
+    border: 3px dashed lawngreen; /* 線のスタイル */
 }
 
 h2.section {
