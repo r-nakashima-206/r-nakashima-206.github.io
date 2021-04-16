@@ -45,12 +45,11 @@ p {
     display: inline-flex;
 }
 a.download {
+    margin: 0px 20px 0px 20px; /* 上右下左の空白 */
     font-size: 1.2rem; /* フォントサイズ */
     text-decoration: none; /* 下線なし　*/
     color: lightcyan; /* 文字色 */
     background-color: midnightblue; /* 背景色 */
-    padding: 0px 20px 0px 20px; /* 上右下左の空白 */
-    margin: 0px 20px 0px 20px; /* 上右下左の空白 */
     border: 2px solid midnightblue; /* 囲み線 */
     padding: 10px 15px 10px 15px; /* 上右下左の空白 */
     border-radius : 10px; /* 角 */
@@ -192,6 +191,10 @@ footer small {
         margin: 5px 5px 5px 0px; /* 上右下左の空白 */
     }
 
+    a.download {
+        font-size: 1.2rem; /* フォントサイズ */
+    }
+
 }
 
 @media screen and (max-width: 320px){
@@ -200,16 +203,8 @@ footer small {
         font-size: 0.8rem; /* フォントサイズ */
     }
 
-    h2.section, h3.sub-section {
+    h2.section {
         font-size: 1.1rem; /* フォントサイズ */
-    }
-
-    h4.subsub-section {
-        font-size: 0.9rem; /* フォントサイズ */
-    }
-
-    p.info {
-        font-size: 0.7rem; /* フォントサイズ */
     }
 
 }
