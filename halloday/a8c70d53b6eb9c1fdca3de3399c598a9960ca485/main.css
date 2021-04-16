@@ -168,7 +168,7 @@ footer small {
 
     hr {
         margin: 20px -15px 20px -15px; /* 上右下左の空白, mainの左右paddingと合わせる */
-        border: 2px dashed lightsteelblue; /* 線のスタイル */
+        border: 2px dashed lawngreen; /* 線のスタイル */
     }
 
     h2.section {
@@ -191,10 +191,6 @@ footer small {
         margin: 5px 5px 5px 0px; /* 上右下左の空白 */
     }
 
-    a.download {
-        font-size: 1.2rem; /* フォントサイズ */
-    }
-
 }
 
 @media screen and (max-width: 320px){
@@ -204,7 +200,15 @@ footer small {
     }
 
     h2.section {
-        font-size: 1.1rem; /* フォントサイズ */
+        font-size: 1rem; /* フォントサイズ */
+    }
+
+    a.download {
+        font-size: 1rem; /* フォントサイズ */
+        margin: 0px 10px 0px 10px; /* 上右下左の空白 */
+    }
+    a.download + a.download {
+        margin: 0px 10px 0px 10px; /* 上右下左の空白 */
     }
 
 }
