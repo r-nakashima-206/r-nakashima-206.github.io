@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>日本地球惑星科学連合2021年大会 [MIS24-P01] 東西磁場が印加された回転球面上の 2 次元理想磁気流体波動とアルフべン連続モード</title>
+
+	<link rel="stylesheet" href="../reveal.js-master/dist/reveal.css">
+	<link rel="stylesheet" href="../reveal.js-master/dist/theme/simple.css">
+
+	<link rel="stylesheet" href="./main.css">
+
+	<!-- Font Awesome Kit -->
+	<script src="https://kit.fontawesome.com/29824876ec.js" crossorigin="anonymous"></script>
+
+	<!-- MathJax version 3 -->
+	<!-- IE対応 -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<!-- configファイル読み込み -->
+	<script src="./mathjax_config.js"></script>
+	<!-- MathJax v3 (tex-svg) -->
+	<script type="text/javascript" id="MathJax-script" async
+	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+	<header id="info_header">
+		<div id="presentation_title">
+			<h1>[MIS24-P01] 東西磁場が印加された回転球面上の 2 次元理想磁気流体波動とアルフべン連続モード</h1>
+		</div>
+		<div id="presentation_date">
+			<p><a href="http://www.jpgu.org/meeting_j2021/" target="_blank">日本地球惑星科学連合2021年大会</a> (<time datetime="2021-06-06">2021-06-06</time>)</p>
+		</div>
+		<div id="nav_slide">
+			<nav>
+			<p><span
+				id="nav_part1">導入</span><span id="nav_part1-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part2"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part2-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part3"><i class="fas fa-chevron-right"></i> 定式化</span><span id="nav_part3-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part4"><i class="fas fa-chevron-right"></i> 数値計算</span><span id="nav_part4-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part5"><i class="fas fa-chevron-right"></i> 考察</span><span id="nav_part5-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part6"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part6-sub" class="sub-slide">$($補足$)$</span></p>
+			<nav>
+		</dic>
+	</header>
+
+	<footer id="info_footer">
+		<div id="presentation_speaker">
+			<address><i class="fas fa-microphone"></i> <a href="https://r-nakashima-geophysics.github.io" target="_blank">中島 涼輔</a> (九大・理) [ <i class="far fa-envelope"></i> r.nakashima.a10&nbsp;<i class="fas fa-at"></i>&nbsp;m.kyushu-u.ac.jp ]</address>
+		</div>
+	</footer>
+
+<div class="slides">
+
+	<section data-state="top-slide" data-background-color="ghostwhite">
+		<h2 class="large">東西磁場が印加された回転球面上の<br>
+			2 次元理想磁気流体波動と<br>
+			アルフべン連続モード<h2>
+		<p>Two-dimensional ideal MHD waves and the continuous Alfvén spectrum<br> on a rotating sphere with a background toroidal magnetic field</p>
+		<img src="./figures/SSymbolLogo-tenchi_E_jpg.jpg" width="8%" alt="九州大学ロゴ" style="margin: 1%; border: solid black 1px;">
+		<p>中島 涼輔 (九州大学 大学院理学研究院)</p>
+		<p>吉田 茂生 (九州大学 大学院理学研究院 地球惑星科学部門)</p>
+	</section>
+
+<!-- ========== part 1 ========== -->
+
+	<section data-state="part1">
+		<h2>外核最上部に安定成層があるかもしれない</h2>
+
+		<div class="fig-box">
+			<figure style="width: 45%;">
+				<img src="./figures/Kaneshima_2018.jpg" width="60%" alt="地球外核最上部の安定成層の証拠" style="margin: 1%;">
+				<figcaption>外核最上部 数百 km の P 波速度構造<br><a href="https://www.sciencedirect.com/science/article/pii/0031920181900467?via%3Dihub" target="_blank" title="Preliminary Reference Earth Model">PREM</a> よりも低速度になっている<br><span class="ref"><a href="https://www.sciencedirect.com/science/article/pii/S0031920116303144" target="_blank" title="Array analyses of SmKS waves and the stratification of Earth’s outermost core">Kaneshima (2018)</a> より</span></figcaption>
+			</figure>
+
+			<div style="width: 55%;">
+				<p style="margin: 5% 10% 5% 0;">地球の外核最上部 (コア・マントル境界 直下) で<br>
+				深さ数百 km にわたって<span class="alert">安定成層</span>している<br>
+				(あまり混合していない) かもしれない<br>
+				ということが地震学的研究により検出された<br>
+				<span class="ref">(e.g. <a href="https://www.nature.com/articles/nature09636" target="_blank" title="Outer-core compositional stratification from observed core wave speed profiles">Helffrich &amp; Kaneshima (2010)</a>)</span></p>
+
+				<p style="margin: 5% 10% 5% 0;">このような層の存在は<br>
+				地球の熱・化学進化やダイナモ等に<br>
+				影響を与えうるため重要であるが<br>
+				詳細はほとんど分かっていない</p>
+
+				<p style="margin: 5% 10% 5% 0;">本当にそのような層が存在するのか？<br>
+				ということでさえ議論の最中である<br>
+				<span class="ref">(e.g. <a href="https://advances.sciencemag.org/content/4/6/eaar2538" target="_blank" title="Seismically determined elastic parameters for Earth’s outer core">Irving <i>et al.</i> (2018)</a>, <a href="https://academic.oup.com/gji/article/223/2/1338/5890339" target="_blank" title="The signal of outermost-core stratification in body-wave and normal-mode data">van Tent <i>et al.</i> (2020)</a>)</span></p>
+			</div>
+		</div>
+	</section>
+
+	<section data-state="part1">
+		<h2>地磁気観測は, 外核最上部安定成層の議論に助力できるかも</h2>
+
+		<div class="fig-box">
+			<figure style="width: 50%;">
+				<img src="./figures/Buffett-et-al_2016.png" width="40%" alt="地球外核最上部の安定成層の証拠" style="margin: 1%;">
+				<figcaption>地磁気観測から推定される外核表面の流れ (A) と<br>
+				外核最上部の波動伝播の理論 (B) との比較<br><span class="ref"><a href="https://academic.oup.com/gji/article/204/3/1789/682165" target="_blank" title="Evidence for MAC waves at the top of Earth's core and implications for variations in length of day">Buffett <i>et al.</i> (2016)</a> より</span></figcaption>
+			</figure>
+
+			<div style="width: 50%">
+				<p style="margin: 8% 10% 8% 0;">地震学以外で外核最上部安定成層を<br>
+				検出できるかもしれない方法として<br>
+				地球磁場を使うことが挙げられる</p>
+
+				<p style="margin: 8% 10% 8% 0;">もし外核最上部に安定成層が存在すれば<br>
+				その中を<span class="alert">伝播する波動</span>が存在可能で<br>
+				その波の伝わる様子を地磁気観測によって<br>
+				見ることができるかもしれない<p>
+
+				<p style="margin: 8% 10% 8% 0;">この方法によって<br>
+				安定成層の特徴を制約しようとした<br>
+				研究がいくつかある<br>
+				<span class="ref">(e.g. <a href="https://www.nature.com/articles/nature13122" target="_blank" title="Geomagnetic fluctuations reveal stable stratification at the top of the Earth’s core">Buffett (2014)</a>, <a href="https://academic.oup.com/gji/article-abstract/218/2/1210/5491334?redirectedFrom=fulltext" target="_blank" title="Equatorially trapped waves in Earth’s core">Buffett &amp; Matsui (2019)</a>)</span></p>
+			</div>
+		</div>
+	</section>
+
+	<section data-state="part1" data-background-color="#000011" class="summary">
+		<h2>安定成層内の波動を用いた研究は, どこまで信用できるか？</h2>
+
+		<div class="fig-box">
+			<div style="width: 70%;">
+				<table style="margin-top: 3%;">
+				<tr>
+					<th>これまでの研究 :</th><td>波の計算がしやすいように仕立てられた<br>
+					<span class="alert">簡単モデル</span>が用いられている<td>
+				</tr>
+				</table>
+
+				<p style="margin: 3% 0 3% 0;">このモデルをより複雑なものに取り替えても<br>
+				結果に大きな違いがなさそうであれば<br>
+				これまでの研究による結果は信頼性が高い</p>
+
+				<table style="margin-top: 8%;">
+				<tr>
+					<th>本研究 :</th><td><span class="alert">印加された磁場の分布を変更</span>したときの<br>
+					波動伝播に対する影響について調べる<td>
+				</tr>
+				</table>
+
+				<p style="margin: 3% 0 3% 0;">本発表では, 背景磁場の分布は<br>波の周期や構造に影響を及ぼすだけではなく<br><span class="alert">存在可能な波の種類を制限する</span>ことを示す</p>
+			</div>
+
+			<div style="display: block; width: 30%;">
+				<img src="./figures/background-field_sin.png" width="65%" alt="背景磁場分布" style="margin: 1%;">
+				<p class="fig-text" style="left: 71.5%; top: 16%; font-size: 1rem;">簡単モデルでの背景磁場分布の例</p>
+				<img src="./figures/background-field_sincos.png" width="65%" alt="背景磁場分布" style="margin: 1%;">
+				<p class="fig-text" style="left: 74.5%; top: 54.5%; font-size: 1rem;">背景磁場分布を<br>少し複雑なものに変更する</p>
+			</div>
+		</div>
+	</section>
+
+<!-- ========== part 2 ========== -->
+
+	<section data-state="part2" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge">本発表のすべて</h2>
+	</section>
+	<section data-state="part2" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">本発表のすべて</h2>
+
+		<div style="display: flex;">
+			<div style="width: 50%; margin: 1%; padding: 1%; padding-left: 0; border: orchid solid 3px; border-radius: 20px; background: linear-gradient(to top, orchid 1%, black 8%);">
+				<ul style="margin: 0;">
+					<li style="margin: 5% 0">地球の外核最上部安定成層を調べるため<br>
+					 MHD 波動を考えたい</li>
+					<li style="margin: 5% 0">背景磁場が $B_{0\phi}=B_0\sin\theta\cos\theta$ の場合の<br>
+					固有値問題を数値的に解いた</li>
+					<li style="margin: 5% 0">背景磁場の選択は<br>
+					MHD 波動に重大な影響を及ぼしうる</li>
+					<li style="margin: 5% 0">本発表の問題設定では<br>
+					遅い磁気 Rossby 波は存在できない</li>
+					<li style="margin: 5% 0">浅水系への拡張が必要である</li>
+				</ul>
+			</div>
+
+			<div style="width: 50%; display: block;">
+				<div style="width: 90%; margin: 1%; padding: 3%; border: aquamarine solid 3px; border-radius: 20px; background: linear-gradient(to top, aquamarine 1%, black 10%);">
+					<p>本発表の問題における<br>
+					擬運動量と擬エネルギー,<br>
+					波の作用保存則を導出した<p>
+					<p style="fontsize: 0.8rem;">$\mathfrak{p}\equiv(\varOmega_0\sin^2\theta/R_0)\overline{\xi_\theta'^2}-\overline{\zeta'\xi_\theta'}\sin\theta$</p>
+				</div>
+
+				<div style="display: flex; width: 90%; margin: 1%; margin-top: 2%; padding: 3%; border: aquamarine solid 3px; border-radius: 20px; background: linear-gradient(to top, aquamarine 1%, black 10%);">
+					<div style="width: 65%;">
+						<p>数値計算で連続モードの<br>
+						存在を確かめた<p>
+						<p>磁場が弱い状況における<br>
+						波線理論との<br>
+						対応について考察した</p>
+					</div>
+					<div style="width: 35%;">
+						<img src="./figures/ray_continuous.png" width="90%" alt="test" style="margin: 1%;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- ========== part 3 ========== -->
+
+	<section data-state="part3">
+		<h2>回転球面上 2 次元 $($余緯度 $\theta$, 経度 $\phi)$ の理想 MHD 方程式</h2>
+
+		<div class="math-box" style="font-size: 0.95rem; width: 65%;">
+		\[\begin{align}
+		<!-- -->
+		\frac{\uD u_\theta}{\uD t}\,-\,\frac{u_\phi^2\cot\theta}{R_0}\,-\,2\varOmega_0\cos\theta u_\phi\,&amp;=\,-\frac{1}{R_0}\frac{\upartial\varpi}{\upartial\theta}\,+\,\frac{(\bm{B}\ip\bm{\nabla}_\mathrm{H})B_\theta}{\rho_0\mu_\mathrm{m}}\,-\,\frac{B_\phi^2\cot\theta}{R_0\rho_0\mu_\mathrm{m}}\\
+		<!-- -->
+		\frac{\uD u_\phi}{\uD t}\,+\,\frac{u_\phi u_\theta\cot\theta}{R_0}\,+\,2\varOmega_0\cos\theta u_\theta\,&amp;=\,-\frac{1}{R_0\sin\theta}\frac{\upartial\varpi}{\upartial\phi}\,+\,\frac{(\bm{B}\ip\bm{\nabla}_\mathrm{H})B_\phi}{\rho_0\mu_\mathrm{m}}\,+\,\frac{B_\phi B_\theta\cot\theta}{R_0\rho_0\mu_\mathrm{m}}\\
+		<!-- -->
+		\frac{\uD B_\theta}{\uD t}\,&amp;=\,(\bm{B}\ip\bm{\nabla}_\mathrm{H})u_\theta\\
+		<!-- -->
+		\frac{\uD B_\phi}{\uD t}\,+\,\frac{u_\phi B_\theta\cot\theta}{R_0}\,&amp;=\,(\bm{B}\ip\bm{\nabla}_\mathrm{H})u_\phi\,+\,\frac{B_\phi u_\theta\cot\theta}{R_0}\\
+		<!-- -->
+		\frac{\upartial}{\upartial \theta}(u_\theta\sin\theta)\,+\,\frac{\upartial u_\phi}{\upartial \phi}\,&amp;=\,\frac{\upartial}{\upartial \theta}(B_\theta\sin\theta)\,+\,\frac{\upartial B_\phi}{\upartial \phi}\,=\,0
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<table>
+		<tr>
+			<td>ここで,</td><td>速度 $\bm{u}$, 磁場 $\bm{B}$, 球の半径 $R_0$, 自転角速度 $\varOmega_0$<td>
+		</tr>
+		<tr>
+			<td></td><td>$(\uD/\uD t)\equiv(\upartial/\upartial t)+\bm{u}\ip\bm{\nabla}_\mathrm{H}$<td>
+		</tr>
+		<tr>
+			<td></td><td>磁気圧を含んだ圧力 $\rho_0\varpi\equiv p+\bm{B}^2/2\mu_\mathrm{m}$</td>
+		</tr>
+		</table>
+
+		<img src="./figures/theta-phi.png" width="180px" alt="余緯度と経度" style="position: absolute; bottom: 0; left: 0; margin: 0;">
+	</section>
+
+	<section>
+		<section data-state="part3">
+			<h2>経度平均した保存量の式</h2>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 80%;">
+			\[\begin{align}
+			<!-- -->
+			\frac{\upartial}{\upartial t}(\rho_0\overline{u_\phi}\sin\theta)\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left(\frac{\overline{B_\theta B_\phi}}{\mu_\mathrm{m}}\,-\,\rho_0\overline{u_\theta u_\phi}\right)\sin^2\theta\right]\,=\,(\overline{B_\theta j}\,-\,\rho_0\overline{u_\theta \zeta})\sin\theta\qquad(\text{角運動量保存})\\
+			<!-- -->
+			\frac{\upartial\overline{E}}{\upartial t}\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left(\frac{\overline{(\bm{u}\ip\bm{B})B_\theta}}{\mu_\mathrm{m}}\,-\,\overline{(E+\rho_0\varpi)u_\theta}\right)\sin\theta\right]\qquad(\text{エネルギー保存})\\
+			<!-- -->
+			\frac{\upartial\overline{H_\mathrm{c}}}{\upartial t}\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left(\overline{\frac{E-\rho_0\varpi}{\rho_0}B_\theta}\,+\,\varOmega_0R_0\sin\theta \overline{u_\phi B_\theta}\,-\,\overline{H_\mathrm{c}u_\theta}\right)\sin\theta\right]\qquad(\text{クロスヘリシティ保存})\\
+			<!-- -->
+			\end{align}\]
+			</div>
+
+			<table>
+			<tr>
+				<td>ここで,</td><td>経度平均 $\overline{[\cdots]}(\theta,t)\equiv(1/2\upi)\int_0^{2\upi}[\cdots](\theta,\phi,t)\ud\phi$</td>
+			</tr>
+			<tr>
+				<td></td><td>ソレノイダル条件より $\overline{u_\theta}\sin\theta=\int_0^\theta\frac{\upartial}{\upartial\theta_&lowast;}(\overline{u_\theta}\sin\theta_&lowast;)\ud\theta_&lowast;=0$</td>
+			</tr>
+			<tr>
+				<td></td><td>渦度 $\zeta\equiv\frac{1}{R_0\sin\theta}\left[\frac{\upartial}{\upartial\theta}(u_\phi\sin\theta)-\frac{\upartial u_\theta}{\upartial \phi}\right]$, 電流 $j\equiv\frac{1}{\mu_\mathrm{m}}\frac{1}{R_0\sin\theta}\left[\frac{\upartial}{\upartial\theta}(b_\phi\sin\theta)-\frac{\upartial b_\theta}{\upartial \phi}\right]$</td>
+			</tr>
+			<tr>
+				<td></td><td>エネルギー $E\equiv\rho_0\bm{u}^2/2+\bm{B}^2/2\mu_\mathrm{m}$</td>
+			</tr>
+			<tr>
+				<td></td><td>クロスヘリシティ $H_\mathrm{c}\equiv(\bm{u}+\varOmega_0R_0\sin\theta\hat{\bm{e}}_\phi)\ip\bm{B}$</td>
+			</tr>
+			</table>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>経度平均した保存量の式は, 基礎方程式から導出される</h2>
+			<ul>
+				<li>角運動量保存は, 運動方程式の $\phi$ 成分, もしくは渦度方程式 (運動方程式の回転)
+					<div class="math-box_small" style="font-size: 0.85rem; width: 35%;">
+					\[
+					\frac{\uD \zeta}{\uD t}\,-\,\frac{2\varOmega_0\sin\theta}{R_0}u_\theta\,=\,\frac{(\bm{B}\ip\bm{\nabla}_\mathrm{H})(\mu_\mathrm{m}j)}{\rho_0\mu_\mathrm{m}}
+					\]
+					</div>
+					の経度平均から求められる</li>
+				<li>誘導方程式の $\phi$ 成分より (保存則ではないが)
+					<div class="math-box_small" style="font-size: 0.85rem; width: 30%;">
+					\[
+					\frac{\upartial\overline{B_\phi}}{\upartial t}\,=\,\frac{1}{R_0}\frac{\upartial}{\upartial\theta}(\overline{u_\phi B_\theta-u_\theta B_\phi})
+					\]
+					</div></li>
+				<li>エネルギー保存は, 運動方程式と $\bm{u}$ との内積, 誘導方程式と $\bm{B}$ との内積の和から求められる<br>
+					$(\bm{u}\ip\bm{B})B_\theta/\mu_\mathrm{m}-(E+\rho_0\varpi)u_\theta=[(\bm{u}\times\bm{B})\times\bm{B}]_\theta-(\rho_0\bm{u}^2/2+p)u_\theta$ に注意</li>
+				<li>クロスヘリシティ保存は, 運動方程式と $\bm{B}$ との内積,<br>
+					誘導方程式と $\bm{u}+\varOmega_0R_0\sin\theta\hat{\bm{e}}_\phi$ との内積の和から求められる<br>
+					$((E-\rho_0\varpi)/\rho_0+\varOmega_0R_0\sin\theta u_\phi)B_\theta-H_\mathrm{c}u_\theta$<br>
+					$=[(\bm{u}\times\bm{B})\times(\bm{u}+\varOmega_0R_0\sin\theta\hat{\bm{e}}_\phi)]_\theta-(\rho_0\bm{u}^2/2+p)B_\theta/\rho_0$ に注意</li>
+			</ul>
+		</section>
+	</section>
+
+	<section data-state="part3">
+		<h2>基本場の解と線形化</h2>
+		<p>基本場 (定常解) を以下のように仮定し, そこからのずれの振幅を小さいパラメータ $\varepsilon$ で展開する</p>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+		\[\bm{u}\,=\,\bm{0}\,,\quad\bm{B}\,=\,B_{0\phi}(\theta)\hat{\bm{e}}_\phi\,,\quad 0\,=\,-\frac{1}{R_0}\frac{\upartial \varpi_0(\theta)}{\upartial\theta}\,-\,\frac{B_{0\phi}^2\cot\theta}{R_0\rho_0\mu_\mathrm{m}}\]
+		</div>
+
+		<p>基本場 $\uO(\varepsilon^0)$ は, ダイナモなどのより遅い現象によって維持されていると仮定する</p>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 70%;">
+		\[\begin{align}
+		\bm{u}\,&amp;=\,\bm{0}\,+\,\varepsilon\bm{u}'\,+\,\varepsilon^2\bm{u}^{(2)}\,+\,\uO(\varepsilon^3)\\
+		\bm{B}\,&amp;=\,B_{0\phi}(\theta)\hat{\bm{e}}_\phi\,+\,\varepsilon\bm{b}'\,+\,\varepsilon^2\bm{b}^{(2)}\,+\,\uO(\varepsilon^3)\\
+		\varpi\,&amp;=\,\varpi_0(\theta)\,+\,\varepsilon\varpi'\,+\,\varepsilon^2\varpi^{(2)}\,+\,\uO(\varepsilon^3)\\
+		\zeta\,&amp;=\,0\,+\,\varepsilon\zeta'\,+\,\varepsilon^2\zeta^{(2)}\,+\,\uO(\varepsilon^3)\\
+		j\,&amp;=\,\frac{1}{\mu_\mathrm{m}}\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}(B_{0\phi}\sin\theta)\,+\,\varepsilon j'\,+\,\varepsilon^2j^{(2)}\,+\,\uO(\varepsilon^3)\\
+		E\,&amp;=\,\frac{B_{0\phi}^2}{2\mu_\mathrm{m}}\,+\,\varepsilon\frac{B_{0\phi}b_\phi'}{\mu_\mathrm{m}}\,+\,\varepsilon^2\left(\rho_0\frac{\bm{u}'^2}{2}+\frac{\bm{b}'^2}{2\mu_\mathrm{m}}+\frac{B_{0\phi}b_\phi^{(2)}}{\mu_\mathrm{m}}\right)\,+\,\uO(\varepsilon^3)\\
+		H_\mathrm{c}\,&amp;=\,\varOmega_0R_0\sin\theta B_{0\phi}\,+\,\varepsilon(u_\phi'B_{0\phi}+\varOmega_0R_0\sin\theta b_\phi')\,+\,\varepsilon^2\left(u_\phi^{(2)}B_{0\phi}+\bm{u}'\ip\bm{b}'+\varOmega_0R_0\sin\theta b_\phi^{(2)}\right)\,+\,\uO(\varepsilon^3)
+		\end{align}\]
+		</div>
+	</section>
+
+	<section data-state="part3">
+		<h2>摂動方程式</h2>
+		<p>1 次のオーダー $\uO(\varepsilon)$ の項だけ取り出す (線形化)</p>
+
+		<div class="math-box" style="font-size: 0.95rem; width: 75%;">
+		\[\begin{align}
+		<!-- -->
+		\frac{\upartial u_\theta'}{\upartial t}\,-\,2\varOmega_0\cos\theta u_\phi'\,&amp;=\,-\frac{1}{R_0}\frac{\upartial\varpi'}{\upartial\theta}\,+\,\frac{B_{0\phi}}{R_0\rho_0\mu_\mathrm{m}\sin\theta}\frac{\upartial b_\theta'}{\upartial\phi}\,-\,\frac{2B_{0\phi} \cot\theta}{R_0\rho_0\mu_\mathrm{m}}b_\phi'\\
+		<!-- -->
+		\frac{\upartial u_\phi'}{\upartial t}\,+\,2\varOmega_0\cos\theta u_\theta'\,&amp;=\,-\frac{1}{R_0\sin\theta}\frac{\upartial\varpi'}{\upartial\phi}\,+\,\frac{B_{0\phi}}{R_0\rho_0\mu_\mathrm{m}\sin\theta}\frac{\upartial b_\phi'}{\upartial\phi}\,+\,\frac{b_\theta'}{R_0\rho_0\mu_\mathrm{m}\sin\theta}\frac{\ud}{\ud\theta}(B_{0\phi}\sin\theta)\\
+		<!-- -->
+		\frac{\upartial b_\theta'}{\upartial t}\,&amp;=\,\frac{B_{0\phi}}{R_0\sin\theta}\frac{\upartial u_\theta'}{\upartial\phi}\\
+		<!-- -->
+		\frac{\upartial b_\phi'}{\upartial t}\,+\,\frac{u_\theta'}{R_0}\frac{\ud B_{0\phi}}{\ud\theta}\,&amp;=\,\frac{B_{0\phi}}{R_0\sin\theta}\frac{\upartial u_\phi'}{\upartial \phi}\,+\,\frac{B_{0\phi}\cot\theta}{R_0}u_\theta'\\
+		<!-- -->
+		\frac{\upartial}{\upartial \theta}(u_\theta'\sin\theta)\,+\,\frac{\upartial u_\phi'}{\upartial \phi}\,&amp;=\,\frac{\upartial}{\upartial \theta}(b_\theta'\sin\theta)\,+\,\frac{\upartial b_\phi'}{\upartial \phi}\,=\,0
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<p>線形波動・線形安定論を考える場合は, これらの式からスタートする<br>
+		(<span class="alert">本研究では, このような系での線形波動について考える</span>)</p>
+	</section>
+
+	<section data-state="part3">
+		<h2>線形の摂動方程式は保存則を満たさない</h2>
+
+		<div class="math-box_small" style="font-size: 0.8rem; width: 80%;">
+		\[\begin{align}
+		<!-- -->
+		\frac{\upartial}{\upartial t}\left(\overline{E_\mathrm{p}}+\frac{B_{0\phi}\overline{b_\phi^{(2)}}}{\mu_\mathrm{m}}\right)\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left(\frac{(\overline{u_\phi' b_\theta'-u_\theta' b_\phi'})B_{0\phi}}{\mu_\mathrm{m}}\,-\,\rho_0\overline{\varpi'u_\theta'}\right)\sin\theta\right]\\
+		<!-- -->
+		\frac{\upartial}{\upartial t}\left(\overline{u_\phi^{(2)}}B_{0\phi}+\overline{\bm{u}'\ip\bm{b}'}+\varOmega_0R_0\sin\theta \overline{b_\phi^{(2)}}\right)\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left\{\left(\frac{\overline{b_\theta' b_\phi'}}{\mu_\mathrm{m}}\,-\,\rho_0\overline{u_\theta' u_\phi'}\right)\frac{B_{0\phi}}{\rho_0}\,+\,\varOmega_0R_0\sin\theta (\overline{u_\phi' b_\theta'-u_\theta' b_\phi'})\,-\,\overline{\varpi' b_\theta'}\right\}\sin\theta\right]
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<p>ここで, $E_\mathrm{p}\equiv\rho_0\bm{u}'^2/2+\bm{b}'^2/2\mu_\mathrm{m}$ と $\bm{u}'\ip\bm{b}'$ は, 1 次摂動による 2 次のエネルギーとクロスヘリシティ</p>
+		<p>2 次のオーダーの保存則を満たすには, 摂動方程式だけでなく 2 次の式も考えなければならない</p>
+
+		<div class="math-box_small" style="font-size: 0.85rem; width: 60%;">
+		\[\begin{align}
+		<!-- -->
+		\frac{\upartial}{\upartial t}(\rho_0\overline{u_\phi^{(2)}}\sin\theta)\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left(\frac{\overline{b_\theta' b_\phi'}}{\mu_\mathrm{m}}\,-\,\rho_0\overline{u_\theta' u_\phi'}\right)\sin^2\theta\right]\,=\,(\overline{b_\theta' j'}\,-\,\rho_0\overline{u_\theta' \zeta'})\sin\theta\\
+		<!-- -->
+		\frac{\upartial\overline{b_\phi^{(2)}}}{\upartial t}\,&amp;=\,\frac{1}{R_0}\frac{\upartial}{\upartial\theta}(\overline{u_\phi' b_\theta'-u_\theta' b_\phi'})
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<p>線形不安定により $E_\mathrm{p}$ が時間変化する場合は, $B_{0\phi}b_\phi^{(2)}/\mu_\mathrm{m}$ で補う必要あり<br>
+		このとき, 摂動が背景場からエネルギーをもらったり捨てたりすると解釈する</p>
+	</section>
+
+	<section>
+		<section data-state="part3">
+			<h2>2 次の量を考えずに議論したい $\Longrightarrow$ 変位場 $\bm{\xi}$ を導入する</h2>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\frac{\uD\xi_\theta}{\uD t}\,\equiv\,u_\theta\,,\quad\frac{\uD\xi_\phi}{\uD t}\,\equiv\,u_\phi
+			\]
+			</div>
+
+			<p>変位場も同様に線形化すると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\frac{\upartial\xi_\theta'}{\upartial t}\,=\,u_\theta'\,,\quad\frac{\upartial\xi_\phi'}{\upartial t}\,=\,u_\phi'
+			\]
+			</div>
+
+			<p>線形の誘導方程式を時間積分すると (積分定数は時間依存しないので, 摂動では $0$ として良い)</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 40%;">
+			\[
+			b_\theta'\,=\,\frac{1}{R_0\sin\theta}\frac{\upartial(B_{0\phi}\xi_\theta')}{\upartial\phi}\,,\quad b_\phi'\,=\,-\frac{1}{R_0}\frac{\upartial(B_{0\phi}\xi_\theta')}{\upartial\theta}
+			\]
+			</div>
+
+			<p>ゆえに $B_{0\phi}\xi_\theta'$ は, 磁場摂動の流線関数 (もしくは, 1 次のベクトルポテンシャル) と等価<br>
+				例えば, $\mu_\mathrm{m}j'\,=\,-\nabla_\mathrm{H}^2(B_{0\phi}\xi_\theta')$ が成り立つ</p>
+			<p><span class="alert">$\xi_\theta'$ を $t$ で微分すると $u_\theta'$ になり, $\phi$ で微分すると $b_\theta'\,(\times R_0\sin\theta/B_{0\phi})$ となる</span>ことが, 後の計算に役立つ</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>ベクトルポテンシャル</h2>
+			<p>誘導方程式を uncurl すると, その $r$ 成分は</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\frac{\upartial A_r}{\upartial t}\,=\,[\bm{u}\times\bm{B}]_r\,+\,\frac{\upartial \chi}{\upartial r}
+			\]
+			</div>
+
+			<p>2 次元なので, $(\upartial\chi/\upartial r)=0$ とする</p>
+			<p>ベクトルポテンシャルも同様に $A_r=0+\varepsilon a'+\varepsilon^2a^{(2)}+\uO(\varepsilon^3)$ と展開すると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 40%;">
+			\[
+			\frac{\upartial a'}{\upartial t}\,=\,u_\theta'B_{0\phi}\,,\quad \frac{\upartial a^{(2)}}{\upartial t}\,=\,u_\theta'b_\phi'\,-\,u_\phi'b_\theta'\,+\,u_\theta^{(2)}B_{0\phi}
+			\]
+			</div>
+
+			<p>これらの経度平均をとると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+			\[
+			\frac{\upartial \overline{a'}}{\upartial t}\,=0\,,\quad \frac{\upartial \overline{a^{(2)}}}{\upartial t}\,=\,-(\overline{u_\phi'b_\theta'-u_\theta'b_\phi'})\,=\,-\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}(\overline{u_\theta'\xi_\theta'}B_{0\phi}\sin\theta)
+			\]
+			</div>
+
+			<p>ゆえに, 1 次と 2 次のベクトルポテンシャルは保存する</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part3">
+			<h2>2 次の角運動量の代用表現</h2>
+			<p>線形化した渦度方程式 (運動方程式の回転)</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 60%;">
+			\[
+			\frac{\upartial \zeta'}{\upartial t}\,-\,\frac{2\varOmega_0\sin\theta}{R_0}u_\theta'\,=\,\frac{B_{0\phi}}{R_0\rho_0\mu_\mathrm{m}\sin\theta}\frac{\upartial(\mu_\mathrm{m}j')}{\upartial\phi}\,+\,\frac{b_\theta'}{R_0^2\rho_0\mu_\mathrm{m}}\frac{\ud}{\ud\theta}\left[\frac{1}{\sin\theta}\frac{\ud}{\ud\theta}(B_{0\phi}\sin\theta)\right]
+			\]
+			</div>
+
+			<p>$\xi_\theta'$ をかけ, $u_\theta'$, $b_\theta'$ と $\xi_\theta'$ の関係を上手く使い, 経度平均すると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 45%;">
+			\[
+			\frac{\upartial}{\upartial t}\left[\rho_0\left(\frac{\varOmega_0\sin\theta}{R_0}\overline{\xi_\theta'^2}-\overline{\zeta'\xi_\theta'}\right)\sin\theta\right]\,=\,(\overline{b_\theta'j'}\,-\,\rho_0\overline{u_\theta'\zeta'})\sin\theta
+			\]
+			</div>
+
+			<p>右辺は, 2 次の角運動量保存則の右辺と同じ形をしているので, $\overline{u_\phi^{(2)}}\sin\theta=\mathfrak{p}(\theta, t)+(\text{$\theta$ のみの関数})$ とおく</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 75%;">
+			\[
+			\mathfrak{p}\,\equiv\,\frac{\varOmega_0\sin^2\theta}{R_0}\overline{\xi_\theta'^2}\,-\,\overline{\zeta'\xi_\theta'}\sin\theta\,=\,\frac{\varOmega_0\sin^2\theta}{R_0}\overline{\xi_\theta'^2}\,-\,\left(\frac{1}{R_0}\overline{\frac{\upartial \xi_\theta'}{\upartial \phi}u_\theta'}+\frac{1}{R_0}\overline{\frac{\upartial \xi_\phi'}{\upartial \phi}u_\phi'}\right)\,-\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}(\overline{u_\phi'\xi_\theta'}\sin^2\theta)
+			\]
+			</div>
+
+			<p>これを, 以下では<ruby><span class="alert">擬$($角$)$運動量</span><rp> (</rp><rt>(angular) pseudomomentum</rt><rp>) </rp></ruby>と呼ぶ (1 次の量のみで書き表されていることに注意)</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>擬角運動量の別の導出法と<br>擬クロスヘリシティ保存則との関係</h2>
+			<p>線形の運動方程式と $-R_0^{-1}[(\upartial \xi_\theta/\upartial\phi)\hat{\bm{e}}_\theta+(\upartial \xi_\phi/\upartial\phi)\hat{\bm{e}}_\phi]$ との内積から</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 60%;">
+			\[
+			\frac{\upartial}{\upartial t}\left[\mathfrak{p}\,+\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left\{\overline{(u_\phi'+\varOmega_0\cos\theta \xi_\theta')\xi_\theta'}\sin^2\theta\right\}\right]\,=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left(\overline{\varpi'\frac{1}{R_0}\frac{\upartial\xi_\theta'}{\upartial\phi}}\sin\theta\right)
+			\]
+			</div>
+
+			<p>この角括弧の中身を擬角運動量と呼ぶ場合もある<br>
+			擬角運動量の定義によって, フラックス項が異なることに注意</p>
+
+			<br>
+
+			<p>ところで, この $(\upartial\mathfrak{p}/\upartial t)$ を 2 次の角運動量保存則で元に戻し, <br>
+			線形の運動方程式 $\phi$ 成分に $\xi_\theta'$ をかけて東西平均したものを用いると,<br>
+			後述の擬クロスヘリシティ保存則と同じ式を得ることができる</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>他の系での擬運動量の例</h2>
+			<ul>
+				<li><b>Rossby波</b> (磁場なし)<br>
+					線形化した渦度方程式より
+					<div class="math-box_small" style="font-size: 0.9rem; width:50%;">
+					\[
+					\frac{\upartial}{\upartial t}\left[\rho_0\left(-\frac{\overline{\zeta'^2}}{4\varOmega_0\sin\theta/R_0}\right)\sin\theta\right]\,=\,(-\rho_0\overline{u_\theta'\zeta'})\sin\theta
+					\]
+					</div>
+					<span class="ref">cf. <a href="https://www.cambridge.org/core/books/waves-and-mean-flows/82860FA16858A8150FEC3B5E6C8B5A00" target="_blank">Oliver B&uuml;hler (2014) Waves and Mean Flows (2nd ed).</a> Cambridge University Press. &sect; 9.2</span><br>
+					渦度方程式を時間積分した $\zeta'=(2\varOmega_0\sin\theta/R_0)\xi_\theta'$ を使えば, $\mathfrak{p}$ と同じになる
+				</li>
+				<li><b>シアー流中の内部重力波</b> (2 次元デカルト座標 $(x,z)$)<br>
+					<div class="math-box_small" style="font-size: 0.9rem; width: 80%;">
+					\[
+					\mathfrak{p}\,=\,-\frac{1}{2}\frac{\ud^2 U(z)}{\ud z^2}\overline{\xi_z'^2}\,-\,\overline{\zeta'\xi_z'}\,=\,-\frac{1}{2}\frac{\ud^2 U(z)}{\ud z^2}\overline{\xi_z'^2}\,-\,\left(\overline{\frac{\upartial\xi_x'}{\upartial x}u_x'}\,+\,\overline{\frac{\upartial\xi_z'}{\upartial x}u_z'}\right)\,-\,\frac{\upartial}{\upartial z}(\overline{u_x'\xi_z'})
+					\]
+					</div>
+					<span class="ref">cf. <a href="https://www.cambridge.org/core/books/waves-and-mean-flows/82860FA16858A8150FEC3B5E6C8B5A00" target="_blank">Oliver B&uuml;hler (2014) Waves and Mean Flows (2nd ed).</a> Cambridge University Press. &sect; 6.3, 7.1</span><br>
+					平均流が存在する場合は, 変位場の定義が変わるので注意
+				</li>
+			</ul>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part3">
+			<h2>擬エネルギー・擬クロスヘリシティ</h2>
+			<p>線形の誘導方程式の $\phi$ 成分に $\xi_\theta'$ をかける, もしくは 2 次のベクトルポテンシャルの式から</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 40%;">
+			\[
+			\frac{\upartial}{\upartial t}\left[-\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left(\frac{\overline{\xi_\theta'^2}}{2}B_{0\phi}\sin\theta\right)\right]\,=\,-(\overline{
+			u_\phi' b_\theta'-u_\theta' b_\phi'})
+			\]
+			</div>
+
+			<p>ゆえに, (極で $B_{0\phi}=0$ ならば) 2 次のオーダーのエネルギー保存とクロスヘリシティ保存の式は<br>
+			</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 90%;">
+			\[\begin{align}
+			<!-- -->
+			\frac{\ud}{\ud t}\int_0^\upi\left[\overline{E_\mathrm{p}}\,+\,\frac{\overline{\xi_\theta'^2}}{2\mu_\mathrm{m}}\frac{B_{0\phi}}{R_0}\frac{\ud}{\ud\theta}\left(\frac{1}{R_0\sin\theta}\frac{\ud}{\ud\theta}(B_{0\phi}\sin\theta)\right)\right]\sin\theta\ud\theta\,&amp;=\,0\\
+			<!-- -->
+			\frac{\upartial}{\upartial t}\left[-\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left\{\overline{(u_\phi'+\varOmega_0\cos\theta \xi_\theta')\xi_\theta'}B_{0\phi}\sin\theta\right\}\right]\,&amp;=\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}\left[\left\{\left(\frac{\overline{b_\theta' b_\phi'}}{\mu_\mathrm{m}}\,-\,\rho_0\overline{u_\theta' u_\phi'}\right)\frac{B_{0\phi}}{\rho_0}\,-\,\overline{\varpi' b_\theta'}\right\}\sin\theta\right]
+			<!-- -->
+			\end{align}\]
+			</div>
+
+			<p>左辺の角括弧の中身をそれぞれ, <ruby></rp><span class="alert">擬エネルギー</span><rp> (</rp><rt>pseudoenergy</rt><rp>) </rp></ruby> $\mathfrak{e}(\theta, t)$, 擬クロスヘリシティと呼ぶ</p>
+			<p>ただし, 擬クロスヘリシティ保存則は, 擬角運動量保存則と等価なので, 以後考えない</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>擬角運動量と 1 次摂動による 2 次のクロスヘリシティの関係</h2>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 80%;">
+			\[
+			\left[-\left(\frac{1}{R_0}\overline{\frac{\upartial \xi_\theta'}{\upartial \phi}u_\theta'}+\frac{1}{R_0}\overline{\frac{\upartial \xi_\phi'}{\upartial \phi}u_\phi'}\right)\,-\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}(\overline{u_\phi'\xi_\theta'}\sin^2\theta)\right]\frac{B_{0\phi}}{\sin\theta}\,=\,-\overline{\bm{u}'\ip\bm{b}'}\,-\,\frac{1}{R_0\sin\theta}\frac{\upartial}{\upartial\theta}(\overline{u_\phi'\xi_\theta'}B_{0\phi}\sin\theta)
+			\]
+			</div>
+
+			<hr>
+			<h2>他の系での擬エネルギーの例</h2>
+			<p>平均流がある場合 (磁場なし, 2 次元デカルト座標 $(x,y)$) の擬エネルギーは</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 45%;">
+			\[
+			\mathfrak{e}\,=\,\overline{E_\mathrm{P}}\,+\,U(y)\mathfrak{p}\quad\left(\,=\,\overline{E_\mathrm{P}}\,+\,U(y)\overline{u_\phi^{(2)}}\,+\,(\text{$\theta$ のみの関数})\right)
+			\]
+			</div>
+		</section>
+	</section>
+
+	<section data-state="part3" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge">ここまでのまとめ</h2>
+	</section>
+	<section data-state="part3" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">ここまでのまとめ</h2>
+		<ul>
+			<li class="semi-large">回転球面上 2 次元理想 MHD の線形問題を考えたい</li>
+			<li class="semi-large"><span class="alert">擬角運動量</span>と<span class="alert">擬エネルギー</span>が<span class="alert">保存</span>する</li>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 65%;">
+			\[
+			\frac{\upartial(\rho_0\mathfrak{p})}{\upartial t}\,=\,\div\bm{\mathcal{F}}
+			\]
+			\[
+			\int_0^\upi\left[\overline{E_\mathrm{p}}\,+\,\frac{\overline{\xi_\theta'^2}}{2\mu_\mathrm{m}}\frac{B_{0\phi}}{R_0}\frac{\ud}{\ud\theta}\left(\frac{1}{R_0\sin\theta}\frac{\ud}{\ud\theta}(B_{0\phi}\sin\theta)\right)\right]\sin\theta\ud\theta\,=\,\text{const.}\\
+			\]
+			</div>
+
+			<table>
+			<tr>
+				<td>ここで,</td><td>擬角運動量 $\mathfrak{p}\equiv(\varOmega_0\sin^2\theta/R_0)\overline{\xi_\theta'^2}-\overline{\zeta'\xi_\theta'}\sin\theta$</td>
+			</tr>
+			<tr>
+				<td></td><td>E-P (Eliassen-Palm) フラックス $\bm{\mathcal{F}}\equiv\left[(\overline{b_\theta'b_\phi'}/\mu_\mathrm{m}-\rho_0\overline{u_\theta'u_\phi'})\sin\theta\right]\hat{\bm{e}}_\theta$</td>
+			</tr>
+			<tr>
+				<td></td><td>1 次摂動のエネルギー $E_\mathrm{p}\equiv\rho_0\bm{u}'^2/2+\bm{b}'^2/2\mu_\mathrm{m}$</td>
+			</tr>
+			</table>
+		</ul>
+	</section>
+
+	<section data-state="part3">
+		<h2>数値的に解きやすい式に変形する</h2>
+		<p>1 次のベクトルポテンシャルを $a'\equiv B_{0\phi}\xi_\theta'$ とする</p>
+		<p>連続の式より, 流線関数 $\psi'$ を導入できる</p>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 30%;">
+		\[
+		\frac{1}{R_0\sin\theta}\frac{\upartial\psi'}{\upartial\phi}\,\equiv\,u_\theta'\,,\quad -\frac{1}{R_0}\frac{\upartial\psi'}{\upartial\theta}\,\equiv\,u_\phi'
+		\]
+		</div>
+
+		<p>これらを線形の渦度方程式に代入すると</p>
+
+		<div class="math-box" style="font-size: 0.9rem; width: 65%;">
+		\[\begin{align}
+		<!-- -->
+		\left(\frac{\upartial}{\upartial t}\nabla_\mathrm{H}^2\,+\,\frac{2\varOmega_0}{R_0^2}\frac{\upartial}{\upartial\phi}\right)\psi'\,&amp;=\,\frac{1}{R_0\rho_0\mu_\mathrm{m}\sin\theta}\left\{B_{0\phi}\nabla_\mathrm{H}^2\,-\,\frac{1}{R_0}\frac{\ud}{\ud\theta}\left[\frac{1}{R_0\sin\theta}\frac{\ud}{\ud\theta}(B_{0\phi}\sin\theta)\right]\right\}\frac{\upartial a'}{\upartial\phi}\\
+		<!-- -->
+		\frac{\upartial a'}{\upartial t}\,&amp;=\,\frac{B_{0\phi}}{R_0\sin\theta}\frac{\upartial \psi'}{\upartial\phi}
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<p>運動方程式と誘導方程式 合わせて式が 4 本あったが,<br>
+		ソレノイダル条件により独立に変化できる成分は 2 つ少なくなる</p>
+	</section>
+
+	<section data-state="part3">
+		<h2>Fourier 変換と無次元化</h2>
+		<p>波型の解を仮定する ($\varphi$ は波の位相, $m$ は東西波数, $\omega$ は角振動数)</p>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 40%;">
+		\[
+		\psi'(\mu,\phi,t)\,=\,\mathrm{Re}\left[\tilde{\psi}(\mu)\ue^{\ui\varphi}\right]\,,\quad\varphi\,\equiv\,m\phi-\omega t\,=\,m\phi-\lambda \tau
+		\]
+		</div>
+
+		<p>以下の 2 式を数値的に解く ($m$, $\alpha$, $\mathcal{B}$ が与えられたときの $\lambda$ と $\tilde{\psi}$, $\tilde{a}$ を求める)</p>
+
+		<div class="math-box" style="font-size: 0.9rem; width: 45%;">
+		\[\begin{align}
+		<!-- -->
+		\left(-\lambda\nabla_\mathrm{h}^2+m\right)\tilde{\psi}\,&amp;=\,m|\alpha|\left\{\mathcal{B}\nabla_\mathrm{h}^2\,-\,\frac{\ud^2}{\ud\mu^2}\left[\mathcal{B}(1-\mu^2)\right]\right\}\left(\frac{\operatorname{sgn}(\alpha) \tilde{a}}{\sqrt{\rho_0\mu_\mathrm{m}}}\right)\\
+		<!-- -->
+		-\lambda\left(\frac{\operatorname{sgn}(\alpha) \tilde{a}}{\sqrt{\rho_0\mu_\mathrm{m}}}\right)\,&amp;=\,m|\alpha|\mathcal{B}\tilde{\psi}
+		<!-- -->
+		\end{align}\]
+		</div>
+
+		<table>
+		<tr>
+			<td>ここで,</td><td><span class="alert">$B_{0\phi}=B_0\mathcal{B}(\theta)\sin\theta$</span> と書き直した ($\mathcal{B}$ は有界な $\theta$ の関数)</td>
+		</tr>
+		<tr>
+			<td></td></td><td>無次元時間 $\tau\equiv2\varOmega_0 t$ , 無次元角振動数　$\lambda\equiv\omega/2\varOmega_0$ , 無次元水平ラプラシアン $\nabla_\mathrm{h}^2\equiv R_0^2\nabla_\mathrm{H}^2$</td>
+		</tr>
+		<tr>
+			<td></td></td><td>$\mu\equiv\cos\theta$ と変数変換する (すなわち $\frac{\upartial}{\upartial\mu}=-\frac{1}{\sin\theta}\frac{\upartial}{\upartial\theta}$ , $\nabla_\mathrm{h}^2=\frac{\upartial}{\upartial\mu}\left[(1-\mu^2)\frac{\upartial}{\upartial\mu}\right]+\frac{1}{1-\mu^2}\frac{\upartial^2}{\upartial\phi^2}$)</td>
+		</tr>
+		<tr>
+			<td></td></td><td>唯一の無次元パラメータ <span class="alert">Lehnert 数 $\alpha\equiv B_0/2\varOmega_0R_0\sqrt{\rho_0\mu_\mathrm{m}} $</span> ($\text{磁場}/\text{回転}$)</td>
+		</tr>
+		</table>
+	</section>
+
+	<section>
+		<section data-state="part3">
+			<h2>数値計算を実行する前に分かること</h2>
+			<p>前スライドの解きたい連立方程式を組み合わせると 1 本の微分方程式ができる</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 70%;">
+			\[
+			\frac{\ud}{\ud\mu}\left[(\lambda^2-m^2\alpha^2\mathcal{B}^2)(1-\mu^2)\frac{\ud\tilde{\psi}}{\ud\mu}\right]\,-\,\left[\frac{m^2(\lambda^2-m^2\alpha^2\mathcal{B}^2)}{1-\mu^2}\,+\,m\left(\lambda+2m\alpha^2\mathcal{B}\frac{\ud}{\ud\mu}(\mathcal{B}\mu)\right)\right]\tilde{\psi}\,=\,0
+			\]
+			</div>
+
+			<p>この式は, $\mathcal{B}\neq1$ ($B_{0\phi}\neq B_0\sin\theta$) のとき, 普通の Sturm–Liouville 型ではない (<span class="ref">e.g. <a href="https://aip.scitation.org/doi/10.1063/1.525100" target="_blank" title="Sturm–Liouville eigenproblems with an interior pole">Boyd (1981)</a></span>)</p>
+			<p>もし角振動数 $\lambda$ が実数 (中立波) ならば<br>
+			(定義域 $-1\leq\mu\leq1$ 内に) 確定特異点  (<span class=alert>臨界緯度</span>)  $\mu_\mathrm{c}$ が存在しうる</p>
+
+			<div class="math-box_small" style="font-size: 0.95rem; width: 15%;">
+			\[
+			\mathcal{B}(\mu_\mathrm{c})\,=\,\pm\frac{\lambda}{m|\alpha|}
+			\]
+			</div>
+
+			<p style="margin-top: 5%;">一方, $\mathcal{B}=1$ ($B_{0\phi}=B_0\sin\theta$) のときは, 2 種類の中立波 (<span class="alert">Rossby 波</span>と<span class="alert">遅い磁気 Rossby 波</span>) が<br>
+			解 (固有モード) になることが容易に示せる
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のとき</h2>
+			<p>分散関係 (複号の $-$ が (西進) Rossby 波, $+$ が (東進) 遅い磁気 Rossby 波に対応)</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 35%;">
+			\[
+			\lambda\,=\,\frac{-m\pm m\sqrt{1+4\alpha^2n(n+1)[n(n+1)-2]}}{2n(n+1)}
+			\]
+			</div>
+
+			<p>$n=m=1$ のときは Lorentz 力が実効的にはたらかず, 磁場は受身的になる</p>
+
+			<p>固有関数は</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 65%;">
+			\[
+			\psi'\,=\,\mathrm{Re}\left[\tilde{\psi}_0\mathcal{N}_n^m\mathscr{P}_n^m\ue^{\ui\varphi}\right]\,,\quad \frac{\operatorname{sgn}(\alpha) a'}{\sqrt{\rho_0\mu_\mathrm{m}}}\,=\,\mathrm{Re}\left[-\frac{m|\alpha|}{\lambda}\tilde{\psi}_0\mathcal{N}_n^m\mathscr{P}_n^m\ue^{\ui\varphi}\right]\,=\,\frac{|B_0|}{\sqrt{\rho_0\mu_\mathrm{m}}}(1-\mu^2)^{1/2}\xi_\theta'
+			\]
+			</div>
+
+			<p></p>
+			<table>
+			<tr>
+				<td>ここで,</td><td>流線関数の振幅 $\tilde{\psi}_0$</td>
+			</tr>
+			<tr>
+				<td></td></td><td>Legendre 陪多項式 $\mathscr{P}_n^m(\mu)\equiv\dfrac{(-1)^m}{2^n(n!)}(1-\mu^2)^{m/2}\dfrac{\ud^{n+m}}{\ud\mu^{n+m}}[(\mu^2-1)^n]$</td>
+			</tr>
+			<tr>
+				<td></td></td><td>規格化定数 $\mathcal{N}_n^m\equiv(-1)^m\sqrt{\frac{2n+1}{2}\frac{(n-m)!}{(n+m)!}}$ (ゆえに, $\int_{-1}^1\mathscr{P}_n^m\mathscr{P}_{n'}^m\ud\mu=\delta_{n,n'}/\mathcal{N}_n^m\mathcal{N}_{n'}^m$)</td>
+			</tr>
+			</table>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のとき</h2>
+			<p>各固有モードは直交しており, $\overline{(\mathrm{Re}[\tilde{\psi}_0\ue^{i\varphi}/\lambda])^2}=\ue^{2\mathrm{Im}(\lambda)t}|\tilde{\psi}_0|^2/2|\lambda|^2$ などに注意すると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 75%;">
+			\[
+			\frac{1}{2}\int_{-1}^1\rho_0\frac{\overline{\bm{u}'^2}}{2}\ud\mu\,=\,n(n+1)\frac{\rho_0}{8}\frac{|\tilde{\psi}_0|^2}{R_0^2}\ue^{2\mathrm{Im}(\lambda)\tau}\,,\quad\frac{1}{2}\int_{-1}^1\frac{\overline{\bm{b}'^2}}{2\mu_\mathrm{m}}\ud\mu\,=\,n(n+1)\frac{\rho_0}{8}\frac{m^2\alpha^2}{|\lambda|^2}\frac{|\tilde{\psi}_0|^2}{R_0^2}\ue^{2\mathrm{Im}(\lambda)\tau}
+			\]
+			</div>
+
+			<p>ゆえに, いつも定数になる擬エネルギーは</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+			\[
+			\frac{1}{2}\int_{-1}^1\mathfrak{e}\ud\mu\,=\,\frac{\rho_0}{8}\frac{|\tilde{\psi}_0|^2}{R_0^2}\left[n(n+1)+[n(n+1)-2]\frac{m^2\alpha^2}{|\lambda|^2}\right]\ue^{2\mathrm{Im}(\lambda)\tau}
+			\]
+			</div>
+
+			<p>(分散関係から既に分かっているが) $n(n+1)+[n(n+1)-2]m^2\alpha^2|\lambda|^{-2}\neq0$ であるため<br>
+			固有モードは全て中立波 ($\mathrm{Im}(\lambda)=0$) でなければならない</p>
+
+			<p style="margin-top: 3%;">また, $\overline{u_\theta'u_\phi'}=0$ などにより, 全ての緯度で E-P フラックス $\bm{\mathcal{F}}=\bm{0}$ である<br>
+			($m$ が同じで $n$ が異なる複数の固有モードが共存する場合は, この限りでない)</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=1, 2$ (MR = magnetic Rossby)</p>
+
+			<div class="fig-box">
+				<img src="./figures/2DMHD-sphere_sin_m1_eig.png" width="23%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+				<p class="fig-text" style="left: 29.5%; top: 47%; font-size: 0.5rem;">遅い磁気<br>Rossby 波</p>
+				<p class="fig-text" style="left: 30%; top: 62.5%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+				<p class="fig-text" style="left: 41%; top: 40.5%; font-size: 0.5rem;">Alfv&eacute;n 波</p>
+				<p class="fig-text" style="left: 40%; top: 67%; font-size: 0.5rem;">Alfv&eacute;n 波</p>
+				<p class="fig-text" style="writing-mode: vertical-lr; left: 25.5%; top: 36.5%; font-size: 0.8rem;">東進</p>
+				<p class="fig-text" style="writing-mode: vertical-lr; left: 25.5%; top: 68.5%; font-size: 0.8rem;">西進</p>
+
+				<img src="./figures/2DMHD-sphere_sin_m2_eig.png" width="23%" alt="分散関係のグラフ (m=2)" style="margin: 1%;">
+				<p class="fig-text" style="left: 54.5%; top: 43.5%; font-size: 0.5rem;">遅い磁気<br>Rossby 波</p>
+				<p class="fig-text" style="left: 54.5%; top: 63.5%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+				<p class="fig-text" style="left: 65%; top: 31%; font-size: 0.5rem;">Alfv&eacute;n 波</p>
+				<p class="fig-text" style="left: 64.5%; top: 76.5%; font-size: 0.5rem;">Alfv&eacute;n 波</p>
+				<p class="fig-text" style="writing-mode: vertical-lr; left: 50.5%; top: 36.5%; font-size: 0.8rem;">東進</p>
+				<p class="fig-text" style="writing-mode: vertical-lr; left: 50.5%; top: 68.5%; font-size: 0.8rem;">西進</p>
+			</div>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=1$, $\log$-$\log$ プロット (MR = magnetic Rossby)</p>
+
+			<img src="./figures/2DMHD-sphere_sin_m1_eig_loglog.png" width="55%" alt="分散関係のグラフ (m=1)">
+			<p class="fig-text" style="left: 27%; top: 35.5%; font-size: 0.6rem;">(速い磁気)<br>Rossby 波<br>$\lambda\propto-|\alpha|^0$</p>
+			<p class="fig-text" style="left: 38.5%; top: 34%; font-size: 0.6rem;">Alfv&eacute;n 波<br>$\lambda\propto-|\alpha|^1$</p>
+			<p class="fig-text" style="left: 57.5%; top: 63%; font-size: 0.6rem;">遅い磁気<br>Rossby 波<br>$\lambda\propto|\alpha|^2$</p>
+			<p class="fig-text" style="left: 65.5%; top: 34%; font-size: 0.6rem;">Alfv&eacute;n 波<br>$\lambda\propto|\alpha|^1$</p>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数<br>
+			(左: 西進, 右: 東進)</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=2$, $\log$-$\log$ プロット (MR = magnetic Rossby)</p>
+
+			<img src="./figures/2DMHD-sphere_sin_m2_eig_loglog.png" width="55%" alt="分散関係のグラフ (m=2)">
+			<p class="fig-text" style="left: 27%; top: 36.5%; font-size: 0.6rem;">(速い磁気)<br>Rossby 波<br>$\lambda\propto-|\alpha|^0$</p>
+			<p class="fig-text" style="left: 37.5%; top: 34%; font-size: 0.6rem;">Alfv&eacute;n 波<br>$\lambda\propto-|\alpha|^1$</p>
+			<p class="fig-text" style="left: 57.5%; top: 63%; font-size: 0.6rem;">遅い磁気<br>Rossby 波<br>$\lambda\propto|\alpha|^2$</p>
+			<p class="fig-text" style="left: 64.5%; top: 34%; font-size: 0.6rem;">Alfv&eacute;n 波<br>$\lambda\propto|\alpha|^1$</p>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数<br>
+			(左: 西進, 右: 東進)</p>
+		</section>
+
+		<section data-state="part3-sub">
+			<h2>$\mathcal{B}=1$ $(B_{0\phi}=B_0\sin\theta)$ のときのエネルギー比</h2>
+			<p>東西波数 $m=1, 2$ (MR = magnetic Rossby, KE = 運動エネルギー, ME = 磁場エネルギー)</p>
+
+			<div class="fig-box">
+				<img src="./figures/2DMHD-sphere_sin_m1_ene.png" width="25%" alt="エネルギー比のグラフ (m=1)" style="margin: 1%;">
+
+				<img src="./figures/2DMHD-sphere_sin_m2_ene.png" width="25%" alt="エネルギー比のグラフ (m=2)" style="margin: 1%;">
+			</div>
+
+			<p>縦軸: 1 次摂動の磁場エネルギーの割合 ($m^2\alpha^2/(\lambda^2+m^2\alpha^2)$) / 横軸: Lehnert 数</p>
+
+			<p>遅い磁気 Rossby 波は磁場エネルギー優勢, Rossby 波は運動エネルギー優勢<br>
+			$|\alpha|\rightarrow\infty$ で等分配 (Alfv&eacute;n 波的) に近づく</p>
+		</section>
+	</section>
+
+<!-- ========== part 4 ========== -->
+
+	<section>
+		<section data-state="part4">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のとき</h2>
+
+			<div class="fig-box">
+				<div style="width: 70%;">
+					<p style="margin: 3% 0 3% 0;">地球外核では, 東西方向の磁場の主要部分は<br>
+					<span class="alert">赤道反対称</span>であると考えられている</p>
+
+					<p style="margin: 3% 0 3% 0;">このモデルは, その赤道反対称性を示す背景磁場の中で<br>
+					もっとも簡単なものの一つである</p>
+
+					<p style="margin: 3% 0 3% 0;">しかし, このような問題設定は臨界緯度の存在のために<br>
+					これまであまり採用されてこなかった</p>
+
+					<div class="math-box_small" style="font-size: 0.95rem; width: 20%;">
+					\[
+					\mu_\mathrm{c}\,=\,\pm\frac{\lambda}{m|\alpha|}
+					\]
+					</div>
+					<p style="margin: 3% 0 3% 0;">(中立波で $-m|\alpha|<\lambda< m|\alpha|$ の場合)<br>
+					一つの固有モード (一つの $(m, \lambda)$ の組) に対し<br>
+					臨界緯度が北半球と南半球に一つずつ存在</p>
+				</div>
+
+				<div style="width: 30%;">
+					<img src="./figures/background-field_sincos.png" width="75%" alt="背景磁場分布" style="margin: 1%;">
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のとき</h2>
+
+			<p>南北方向は, Legendre 陪多項式で展開する ($N_\mathrm{t}$ は切断次数, 本研究では $1000$ に設定)</p>
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\tilde{\psi}\,=\,\sum_{n=m}^{N_\mathrm{t}}\tilde{\psi}^{[n]}\mathcal{N}_n^m\mathscr{P}_n^m
+			\]
+			</div>
+
+			<p>解きたい連立方程式に代入し, Legendre 陪多項式の直交性と</p>
+			<p>$\nabla_\mathrm{h}^2\mathscr{P}_n^m=-n(n+1)\mathscr{P}_n^m$ ,&emsp; $\mu\mathscr{P}_n^m=\dfrac{n+m}{2n+1}\mathscr{P}_{n-1}^m+\dfrac{n-m+1}{2n+1}\mathscr{P}_{n+1}^m$ を用いると</p>
+
+			<div class="math-box_small" style="font-size: 0.85rem; width: 60%;">
+			\[
+			\lambda
+			\begin{pmatrix}
+			\tilde{\psi}^{[m]} \\ \tilde{\psi}^{[m+1]} \\ \vdots \\ \operatorname{sgn}(\alpha)\tilde{a}^{[m]}/\sqrt{\rho_0\mu_\mathrm{m}} \\ \operatorname{sgn}(\alpha)\tilde{a}^{[m+1]}/\sqrt{\rho_0\mu_\mathrm{m}} \\ \vdots
+			\end{pmatrix}
+			\,=\,
+			\begin{pmatrix}
+			-m\sf{\bm{R}} & -m|\alpha|\sf{\bm{K}}_1 \\ -m|\alpha|\sf{\bm{K}}_2 & \sf{\bm{O}}
+			\end{pmatrix}
+			\begin{pmatrix}
+			\tilde{\psi}^{[m]} \\ \tilde{\psi}^{[m+1]} \\ \vdots \\ \operatorname{sgn}(\alpha)\tilde{a}^{[m]}/\sqrt{\rho_0\mu_\mathrm{m}} \\ \operatorname{sgn}(\alpha)\tilde{a}^{[m+1]}/\sqrt{\rho_0\mu_\mathrm{m}} \\ \vdots
+			\end{pmatrix}
+			\]
+			</div>
+
+			<p>この固有値問題を数値的に解く (Python+NumPy (<code>numpy.linalg</code>) を使用)</p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のとき</h2>
+
+			<table>
+			<tr>
+				<td>ここで,</td><td>$k_n^m=\sqrt{\dfrac{(n+m)(n-m)}{(2n-1)(2n+1)}}$</td><td></td>
+			</tr>
+			<tr>
+				<td></td><td>
+				\[
+				\sf{\bm{R}}=
+				\begin{pmatrix}
+				\frac{1}{m(m+1)} & 0 & 0 & \cdots \\
+				0 & \frac{1}{(m+1)(m+2)} & 0 & \cdots \\
+				0 & 0 & \frac{1}{(m+2)(m+3)} & \cdots \\
+				\vdots & \vdots & \vdots & \ddots
+				\end{pmatrix}
+				\]
+			</td><td>$\sf{\bm{O}}$ は零行列</td>
+			</tr>
+			<tr>
+				<td></td><td>
+				\[
+				\sf{\bm{K}}_1=
+				\begin{pmatrix}
+				0 & \frac{(m-1)(m+4)}{m(m+1)}k_{m+1}^m & 0 & \cdots \\
+				\frac{(m-2)(m+3)}{(m+1)(m+2)}k_{m+1}^m & 0 & \frac{m(m+5)}{(m+1)(m+2)}k_{m+2}^m & \cdots \\
+				0 & \frac{(m-1)(m+4)}{(m+2)(m+3)}k_{m+2}^m & 0 & \cdots \\
+				\vdots & \vdots & \vdots & \ddots
+				\end{pmatrix}
+				\]
+				</td><td>
+				\[
+				\sf{\bm{K}}_2=
+				\begin{pmatrix}
+				0 & k_{m+1}^m & 0 & \cdots \\
+				k_{m+1}^m & 0 & k_{m+2}^m & \cdots \\
+				0 & k_{m+2}^m & 0 & \cdots \\
+				\vdots & \vdots & \vdots & \ddots
+				\end{pmatrix}
+				\]
+				</td>
+			</tr>
+			</table>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のとき</h2>
+
+			<p>一つのモードに注目すると, 各 $n$ 成分は直交しており</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 80%;">
+			\[
+			\frac{1}{2}\int_{-1}^1\rho_0\frac{\overline{\bm{u}'^2}}{2}\ud\mu\,=\,\sum_{n=m}^{N_\mathrm{t}}n(n+1)\frac{\rho_0}{8}\frac{|\tilde{\psi}^{[n]}|^2}{R_0^2}\ue^{2\mathrm{Im}(\lambda)\tau}\,,\quad\frac{1}{2}\int_{-1}^1\frac{\overline{\bm{b}'^2}}{2\mu_\mathrm{m}}\ud\mu\,=\,\sum_{n=m}^{N_\mathrm{t}}n(n+1)\frac{\rho_0}{8}\frac{|\tilde{a}^{[n]}/\sqrt{\rho_0\mu_\mathrm{m}}|^2}{R_0^2}\ue^{2\mathrm{Im}(\lambda)\tau}
+			\]
+			</div>
+
+			<p>ゆえに, 擬エネルギーは</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 60%;">
+			\[
+			\frac{1}{2}\int_{-1}^1\mathfrak{e}\ud\mu\,=\,\frac{\rho_0}{8}\sum_{n=m}^{N_\mathrm{t}}\left[n(n+1)\frac{|\tilde{\psi}^{[n]}|^2}{R_0^2}+[n(n+1)-6]\frac{|\tilde{a}^{[n]}/\sqrt{\rho_0\mu_\mathrm{m}}|^2}{R_0^2}\right]\ue^{2\mathrm{Im}(\lambda)\tau}
+			\]
+			</div>
+
+			<p>少なくとも <span class="alert">$m\geq 2$</span> の場合は<span class="alert">中立波</span>である</p>
+
+			<p style="margin-top: 3%;">以後, 固有関数は (擬エネルギーではなく) 1 次摂動による 2 次のエネルギーを用いて<br> $\dfrac{1}{2}\displaystyle{\int_{-1}^{1}}\overline{E_\mathrm{p}}\ud\mu=\dfrac{\rho_0}{8}\dfrac{1}{R_0^2}\ue^{2\mathrm{Im}(\lambda)\tau}$ となるよう規格化して表示する</p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のとき</h2>
+
+			<p>$m$ が同じの異なる複数の固有モードが共存しておらず, $\tilde{\psi}$ と $\tilde{a}$ が実数の場合は $\bm{\mathcal{F}}=\bm{0}$ となる</p>
+
+			<p style="margin-top: 3%;">実際に数値計算を行うと, $m=1$ の場合の 2 つの固有モードを除いて, $\tilde{\psi}$ と $\tilde{a}$ は実数になっている<br>
+			(すなわち, 固有関数が $(\theta, \phi)$ 面上で東西に曲がった構造をしていない)</p>
+
+			<p style="margin-top: 3%;">この例外となる 2 つの固有モードは, 固有値が複素数になる不安定モードだが<br>
+			切断波数依存性が強いため, 数値計算の都合により現れたものであると考えられる</p>
+
+			<p style="margin-top: 3%;">その他の固有モードにも切断波数依存性が強いものがあり<br>
+			後に示す分散関係のグラフでは, $\displaystyle{\sum_{n=m}^{N_\mathrm{t}/2}}|\tilde{\psi}^{[n]}|^2>10^2\displaystyle{\sum_{n=N_\mathrm{t}/2+1}^{N_\mathrm{t}}}|\tilde{\psi}^{[n]}|^2$ を満たすものだけをプロットしている<br>
+			(おそらく $-m|\alpha|\leq\lambda\leq m|\alpha|$ の範囲では, 連続固有値で埋めつくされるはずであるが<br>
+			この基準を満たさない, もしくは切断次数が不足しているために<br>
+			数値的に得られた分散関係には空白の領域が存在するように見える)</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=1$</p>
+
+			<div class="fig-box">
+				<div style="width: 70%;">
+					<img src="./figures/2DMHD-sphere_sincos_m1_E0_N1000_eigene_re.png" width="60%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+					<p class="fig-text" style="left: 18%; top: 59%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+					<p class="fig-text" style="left: 34.5%; top: 56%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+					<p class="fig-text" style="left: 22%; top: 42%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="left: 39%; top: 42.5%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="writing-mode: vertical-lr; left: 13%; top: 35%; font-size: 0.8rem;">東進</p>
+					<p class="fig-text" style="writing-mode: vertical-lr; left: 13%; top: 64%; font-size: 0.8rem;">西進</p>
+
+					<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数 / 色: 運動エネルギー比<br>
+					(左: 赤道対称モード, 右: 赤道反対称モード)</p>
+				</div>
+
+				<div style="width: 30%;">
+					<p style="margin: 20% 0 20% 0;">とりうる固有値が<br>
+					$-m|\alpha|\leq\lambda\leq m|\alpha|$ に<br>
+					連続的に広がる<br>
+					(<span class="alert">連続モード</span>と呼ぶ)</p>
+
+					<p style="margin: 20% 0 20% 0;">連続モードの大部分は<br>
+					エネルギー等分配で<br>
+					Alfv&eacute;n 波的である<br>
+					<span class="ref">(cf. <a href="./index.html#/18/6" target="_blank">補足スライド 18-6</a>)</span></p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=2$</p>
+
+			<img src="./figures/2DMHD-sphere_sincos_m2_E0_N1000_eigene_re.png" width="43%" alt="分散関係のグラフ (m=2)" style="margin: 1%;">
+			<p class="fig-text" style="left: 31.5%; top: 59%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+			<p class="fig-text" style="left: 49%; top: 58%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+			<p class="fig-text" style="left: 34.5%; top: 39%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="left: 53%; top: 38%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="writing-mode: vertical-lr; left: 27.5%; top: 35%; font-size: 0.8rem;">東進</p>
+			<p class="fig-text" style="writing-mode: vertical-lr; left: 27.5%; top: 64%; font-size: 0.8rem;">西進</p>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数 / 色: 運動エネルギー比<br>
+			(左: 赤道対称モード, 右: 赤道反対称モード)</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=1$, $\log$-$\log$ プロット</p>
+
+			<div class="fig-box">
+				<div style="width: 65%;">
+					<img src="./figures/2DMHD-sphere_sincos_m1_E0_N1000_eigene_re_loglog.png" width="50%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+					<p class="fig-text" style="left: 18.5%; top: 30%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+					<p class="fig-text" style="left: 18.5%; top: 60.5%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+					<p class="fig-text" style="left: 23%; top: 42%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="left: 23%; top: 76%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="left: 37%; top: 43%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="left: 36%; top: 75.5%; font-size: 0.5rem;">連続モード</p>
+					<p class="fig-text" style="writing-mode: vertical-lr; left: 13%; top: 30.5%; font-size: 0.8rem;">赤道対称モード</p>
+					<p class="fig-text" style="writing-mode: vertical-lr; left: 13%; top: 58%; font-size: 0.8rem;">赤道反対称モード</p>
+					<p class="fig-text" style="left: 22.5%; top: 85%; font-size: 0.8rem;">西進</p>
+					<p class="fig-text" style="left: 36%; top: 85%; font-size: 0.8rem;">東進</p>
+
+					<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数 / 色: 運動エネルギー比</p>
+				</div>
+
+				<div style="width: 35%;">
+					<p style="margin: 5% 0 10% 0;">Rossby 波は $\lambda>m|\alpha|$ のため<br>
+					離散固有値を維持する</p>
+
+					<p style="margin: 10% 0 10% 0;">($\mathcal{B}=1$ の場合と比べると)<br>
+					<span class="alert">遅い磁気 Rossby 波の<br>
+					離散固有値は消失</span>し,<br>
+					連続モードへと変化<br>
+					<span class="ref">(cf. <a href="./index.html#/18/4" target="_blank">補足スライド 18-4</a>)</span></p>
+
+					<p style="margin: 10% 0 5% 0; font-size: 1rem;">＊ 連続モードから現れる<br>
+					離散固有値 (のようなもの) は,<br>
+					数値計算の次数の打ち切り<br>
+					のために現れたもの<br>
+					(cf. <a href="./index.html#/19/4" target="_blank">補足スライド 19-4</a>)</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ $(B_{0\phi}=B_0\sin\theta\cos\theta)$ のときの分散関係</h2>
+			<p>東西波数 $m=2$, $\log$-$\log$ プロット</p>
+
+			<img src="./figures/2DMHD-sphere_sincos_m2_E0_N1000_eigene_re_loglog.png" width="32%" alt="分散関係のグラフ (m=2)" style="margin: 1%;">
+			<p class="fig-text" style="left: 36.5%; top: 30.5%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+			<p class="fig-text" style="left: 36.5%; top: 60%; font-size: 0.5rem;">(速い磁気)<br>Rossby 波</p>
+			<p class="fig-text" style="left: 40%; top: 41%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="left: 40%; top: 69.5%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="left: 54.5%; top: 42%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="left: 53%; top: 74%; font-size: 0.5rem;">連続モード</p>
+			<p class="fig-text" style="writing-mode: vertical-lr; left: 31%; top: 31%; font-size: 0.8rem;">赤道対称モード</p>
+			<p class="fig-text" style="writing-mode: vertical-lr; left: 31%; top: 59%; font-size: 0.8rem;">赤道反対称モード</p>
+			<p class="fig-text" style="left: 40%; top: 86%; font-size: 0.8rem;">西進</p>
+			<p class="fig-text" style="left: 53.5%; top: 86%; font-size: 0.8rem;">東進</p>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数 / 色: 運動エネルギー比</p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>連続固有値に埋もれた Rossby 波の離散固有値</h2>
+			<p>$n=m=1$ のとき, 連続固有値に重なって Rossby 波のブランチが現れる</p>
+
+			<p style="margin-top: 2%;">これは, 解くべき連立方程式が以下のようになる特別な場合であり<br>
+			(Lorentz 力が実効的にはたらかず, 磁場は受身的になる)<br>
+			そのため確定特異点が現れない</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 40%;">
+			\[\begin{align}
+			<!-- -->
+			\left(-\lambda\nabla_\mathrm{h}^2+1\right)\tilde{\psi}\,&amp;=\,|\alpha|\mu(\nabla_\mathrm{h}^2+6)\left(\frac{\operatorname{sgn}(\alpha) \tilde{a}}{\sqrt{\rho_0\mu_\mathrm{m}}}\right)\,=\,0\\
+			<!-- -->
+			-\lambda\left(\frac{\operatorname{sgn}(\alpha) \tilde{a}}{\sqrt{\rho_0\mu_\mathrm{m}}}\right)\,&amp;=\,|\alpha|\mu\tilde{\psi}
+			<!-- -->
+			\end{align}\]
+			</div>
+
+			<p>ここで, $\lambda=-1/2$ ,&nbsp; $\tilde{\psi}=\mathcal{N}_1^1\mathscr{P}_1^1$ ,&nbsp; $\operatorname{sgn}(\alpha)\tilde{a}/\sqrt{\rho_0\mu_\mathrm{m}}=(2|\alpha|/\sqrt{5})\mathcal{N}_2^1\mathscr{P}_2^1$</p>
+
+			<p style="margin-top: 2%;">エネルギー比が 0.5 (等分配) となるのは $|\alpha|=\sqrt{5/12}\approx0.6455$ のときで<br>
+			数値計算の結果とも一致する</p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ のときの Rossby 波の分散関係の近似式</h2>
+
+			<p>$f=\tilde{\psi}\sqrt{S}$ ,&nbsp;$S=\lambda^2-m^2\alpha^2\mathcal{B}^2$ とおくと</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 80%;">
+			\[
+			\frac{\ud}{\ud\mu}\left[(1-\mu^2)\frac{\ud f}{\ud\mu}\right]\,-\,\frac{m^2}{1-\mu^2}f\,-\,\left[\frac{m\left(\lambda+2m\alpha^2\mathcal{B}\frac{\ud}{\ud\mu}(\mathcal{B}\mu)\right)}{S}-\frac{\mu}{S}\frac{\ud S}{\ud\mu}-\frac{1-\mu^2}{4}\left(\frac{1}{S}\frac{\ud S}{\ud\mu}\right)^2+\frac{1-\mu^2}{2S}\frac{\ud^2S}{\ud\mu^2}\right]f\,=\,0
+			\]
+			</div>
+
+			<p>$\mathcal{B}=\mu$ として, $\lambda\gg m|\alpha|$ の場合を考えると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 75%;">
+			\[
+			\frac{\ud}{\ud\mu}\left[(1-\mu^2)\frac{\ud f}{\ud\mu}\right]\,-\,\frac{m^2}{1-\mu^2}f\,+\,\left[-\frac{m}{\lambda}\left(1+\frac{m^2\alpha^2}{\lambda^2}\right)-\frac{6m^2\alpha^2}{\lambda^2}\,+\,\frac{m^2\alpha^2}{\lambda^2}\left(\frac{m}{\lambda}+7\right)(1-\mu^2)\right]f\,=\,\uO\left(\frac{\alpha^4}{\lambda^4}\right)
+			\]
+			</div>
+
+			<p>ゆえに, $\tilde{\psi}\sqrt{\lambda^2-m^2\alpha^2\mu^2}$ は近似的に楕円体波動関数になり<br>
+			近似的な分散関係は</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 75%;">
+			\[
+			-\frac{m}{\lambda}\left(1+\frac{m^2\alpha^2}{\lambda^2}\right)-\frac{6m^2\alpha^2}{\lambda^2}\,=\,n(n+1)\,-\,\frac{1}{2}\left(1+\frac{(2m-1)(2m+1)}{(2n-1)(2n+3)}\right)\frac{m^2\alpha^2}{\lambda^2}\left(\frac{m}{\lambda}+7\right)\,+\,\uO\left(\frac{\alpha^4}{\lambda^4}\right)
+			\]
+			</div>
+
+			<p><span class="ref"></span></p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ のときの Rossby 波の分散関係の近似式</h2>
+			<p>東西波数 $m=1, 2$</p>
+
+			<div class="fig-box">
+				<img src="./figures/2DMHD-sphere_sincos_rossby_m1_N1000.png" width="33%" alt="Rossby 波の分散関係 (m=1)" style="margin: 1%;">
+
+				<img src="./figures/2DMHD-sphere_sincos_rossby_m2_N1000.png" width="33%" alt="Rossby 波の分散関係 (m=2)" style="margin: 1%;">
+			</div>
+
+			<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数</p>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ のときの Rossby 波の固有関数</h2>
+			<p>東西波数 $m=1, 2$ / Lehnert 数 $\alpha=10^{-2}$</p>
+
+			<div class="fig-box">
+				<img src="./figures/rossby_m1_1.png" width="30%" alt="Rossby 波の固有関数 (m=1)" style="margin: 1%;">
+
+				<img src="./figures/rossby_m1_2.png" width="30%" alt="Rossby 波の固有関数 (m=1)" style="margin: 1%;">
+
+				<img src="./figures/rossby_m1_3.png" width="30%" alt="Rossby 波の固有関数 (m=1)" style="margin: 1%;">
+			</div>
+
+			<div class="fig-box">
+				<img src="./figures/rossby_m2_1.png" width="30%" alt="Rossby 波の固有関数 (m=2)" style="margin: 1%;">
+
+				<img src="./figures/rossby_m2_2.png" width="30%" alt="Rossby 波の固有関数 (m=2)" style="margin: 1%;">
+
+				<img src="./figures/rossby_m2_3.png" width="30%" alt="Rossby 波の固有関数 (m=2)" style="margin: 1%;">
+			</div>
+
+			<p>左: 流線関数, 右: ベクトルポテンシャル</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>$\mathcal{B}=\mu$ のときの連続モードの固有関数</h2>
+
+			<p>東西波数 $m=1$ / 西進 (臨界緯度 $\theta\simeq 30^\circ$, $60^\circ$, $75^\circ$) / Lehnert 数 $\alpha=10^{-1}$, $10^0$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 46%; border-right: dashed 2px black; padding: 1%;">
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m1_a01_1.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a01_2.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m1_a01_3.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a01_4.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m1_a01_5.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a01_6.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+
+				<div style="display: block; width: 46%; padding: 1%;">
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_w_m1_a1_1.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a1_2.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_w_m1_a1_3.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a1_4.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_w_m1_a1_5.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m1_a1_6.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ のときの連続モードの固有関数</h2>
+
+			<p>東西波数 $m=2$ / 西進 (臨界緯度 $\theta\simeq 30^\circ$, $60^\circ$, $75^\circ$) / Lehnert 数 $\alpha=10^{-1}$, $10^0$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 46%; border-right: dashed 2px black; padding: 1%;">
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m2_a01_1.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a01_2.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m2_a01_3.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a01_4.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: pink;">
+						<img src="./figures/continuous_w_m2_a01_5.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a01_6.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">赤道側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+
+				<div style="display: block; width: 46%; padding: 1%;">
+					<div class="fig-box" style="">
+						<img src="./figures/continuous_w_m2_a1_1.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a1_2.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<div class="fig-box" style=";">
+						<img src="./figures/continuous_w_m2_a1_3.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a1_4.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="">
+						<img src="./figures/continuous_w_m2_a1_5.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_w_m2_a1_6.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>$\mathcal{B}=\mu$ のときの連続モードの固有関数</h2>
+
+			<p>東西波数 $m=1$ / 東進 (臨界緯度 $\theta\simeq 30^\circ$, $60^\circ$, $75^\circ$) / Lehnert 数 $\alpha=10^{-1}$, $10^0$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 46%; border-right: dashed 2px black; padding: 1%;">
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a01_1.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a01_2.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a01_3.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a01_4.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a01_5.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a01_6.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+
+				<div style="display: block; width: 46%; padding: 1%;">
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a1_1.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a1_2.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a1_3.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a1_4.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m1_a1_5.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m1_a1_6.png" width="40%" alt="連続モードの固有関数 (m=1)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>$\mathcal{B}=\mu$ のときの連続モードの固有関数</h2>
+
+			<p>東西波数 $m=2$ / 東進 (臨界緯度 $\theta\simeq 30^\circ$, $60^\circ$, $75^\circ$) / Lehnert 数 $\alpha=10^{-1}$, $10^0$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 46%; border-right: dashed 2px black; padding: 1%;">
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m2_a01_1.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a01_2.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m2_a01_3.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a01_4.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="background-color: lightblue;">
+						<img src="./figures/continuous_e_m2_a01_5.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a01_6.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;">極側で伝播</p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+
+				<div style="display: block; width: 46%; padding: 1%;">
+					<div class="fig-box" style="">
+						<img src="./figures/continuous_e_m2_a1_1.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a1_2.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<div class="fig-box" style=";">
+						<img src="./figures/continuous_e_m2_a1_3.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a1_4.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<div class="fig-box" style="">
+						<img src="./figures/continuous_e_m2_a1_5.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<img src="./figures/continuous_e_m2_a1_6.png" width="40%" alt="連続モードの固有関数 (m=2)" style="margin: 1%;">
+
+						<div style="width: 5%; margin: 1%;">
+							<p style="writing-mode: vertical-lr; font-size: 0.8rem;"></p>
+						</div>
+					</div>
+
+					<p>左: 赤道対称モード, 右: 赤道反対称モード</p>
+
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>確定特異点でのふるまいを調べる</h2>
+
+			<p>数値計算によると, 臨界緯度で連続モードの固有関数は尖った構造をしている</p>
+
+			<p>微分方程式の臨界緯度まわりの<br>
+			2 つの線型独立な Frobenius 級数解は ($\mathcal{B}\neq1$ で $-1<\mu_\mathrm{c}< 1$ のとき)</p>
+
+			<div class="math-box" style="font-size: 0.9rem; width: 45%;">
+			\[
+			\begin{align}
+			\tilde{\psi}^{(\mathrm{c})}_1\,&amp;=\,1\,+\,\sum_{k=1}^\infty a_k(\mu-\mu_\mathrm{c})^k\\
+			\tilde{\psi}^{(\mathrm{c})}_2\,&amp;=\,\left(1+\sum_{k=1}^\infty a_k(\mu-\mu_\mathrm{c})^k\right)\ln|\mu-\mu_\mathrm{c}|\,+\,\sum_{k=1}^\infty b_k(\mu-\mu_\mathrm{c})^k
+			\end{align}
+			\]
+			</div>
+
+			<table>
+			<tr>
+				<td>ここで,</td><td>$\mathcal{B}_\mathrm{c}^2\equiv[\mathcal{B}(\mu_\mathrm{c})]^2$, $(\mathcal{B}_\mathrm{c}^2)'\equiv(\ud\mathcal{B}^2/\ud\mu)|_{\mu=\mu_\mathrm{c}}=(\ud\mathcal{B}_\mathrm{c}^2/\ud\mu_\mathrm{c})$ などとする</td>
+			</tr>
+			<tr>
+				<td></td><td>$a_1=-\dfrac{\operatorname{sgn}(\lambda)|\mathcal{B}_\mathrm{c}\alpha^{-1}|+\mu_\mathrm{c}(\mathcal{B}_\mathrm{c}^2)'+2\mathcal{B}_\mathrm{c}^2}{(\mathcal{B}_\mathrm{c}^2)'(1-\mu_\mathrm{c}^2)}$</td>
+			</tr>
+			<tr>
+				<td></td><td>$b_1=\dfrac{2\operatorname{sgn}(\lambda)|\mathcal{B}_\mathrm{c}\alpha^{-1}|+4\mu_\mathrm{c}(\mathcal{B}_\mathrm{c}^2)'+4\mathcal{B}_\mathrm{c}^2-(\mathcal{B}_\mathrm{c}^2)''(1-\mu_\mathcal{c}^2)/2}{(\mathcal{B}_\mathrm{c}^2)'(1-\mu_\mathrm{c}^2)}$</td>
+			</tr>
+			</table>
+		</section>
+
+		<section data-stata="part4-sub">
+			<h2>Frobenius 級数解の導出</h2>
+
+			<p>級数解 $\tilde{\psi}^{(\mathrm{c})}=\displaystyle{\sum_{k=0}^\infty} a_k(\mu-\mu_\mathrm{c})^{k+r}$ を微分方程式 ($\mathcal{L}[\tilde{\psi}^{(\mathrm{c})}]=0$ とかく) に代入する</p>
+			<p>最低次 ($r-1$ 次) の係数は $r^2a_0=0$ (決定方程式)<br>
+			決定方程式の解 ($r=0$) が重解のため, 2 つある解のうちの一方 $\tilde{\psi}_1^{(\mathrm{c})}$ しか決まらない</p>
+
+			<p style="margin-top: 5%;">$r$ が決まれば係数 $a_1$ 以降は漸化式で求まるため,<br>
+			級数解を $\tilde{\psi}^{(\mathrm{c})}(r)=a_0(\mu-\mu_\mathrm{c})^r+\displaystyle{\sum_{k=1}^\infty} a_k(r)(\mu-\mu_\mathrm{c})^{k+r}$ と書き直しておく ($\tilde{\psi}_1^{(\mathrm{c})}=\tilde{\psi}^{(\mathrm{c})}(r=0)$)</p>
+
+			<p>$a_k(r)$ は漸化式を満たすように定められているとすると, $\mathcal{L}[\tilde{\psi}^{(\mathrm{c})}(r)]=r^2a_0$ となるが<br>
+			$r=0$ ならば $\mathcal{L}[\tilde{\psi}^{(\mathrm{c})}(r)]=0$ と $\mathcal{L}[\upartial\tilde{\psi}^{(\mathrm{c})}(r)/\upartial r]=2ra_0=0$ を満たし<br>
+			2 つ目の解 $\tilde{\psi}_2^{(\mathrm{c})}=\left.\dfrac{\upartial\tilde{\psi}^{(\mathrm{c})}(r)}{\upartial r}\right|_{r=0}=\displaystyle{\sum_{k=0}^\infty}a_k(\mu-\mu_\mathrm{c})^k\ln|\mu-\mu_\mathrm{c}|+\displaystyle{\sum_{k=0}^\infty}b_k(\mu-\mu_\mathrm{c})^k$ を得る<br>
+			ここで, $a_k=a_k(r=0)$, $b_k=(\upartial a_k(r)/\upartial r)|_{r=0}$</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part4">
+			<h2>数値解は Frobenius 解を表現できているかのチェック</h2>
+
+			<div class="fig-box">
+				<img src="./figures/series.png" width="43%" alt="数値解とFrobenius 級数解の最小二乗フィット" style="margin: 1%;">
+				<p class="fig-text" style="left: 12.5%; top: 36.5%; font-size: 0.6rem;">傾き ($C_2$) がほぼ同じで<br>切片 ($C_1$) が異なる</p>
+				<p class="fig-text" style="left: 27%; top: 31.5%; font-size: 0.6rem;">切片 ($C_2$) がほぼ同じで<br>傾き ($C_1$) が異なる</p>
+
+				<div style="width: 50%;">
+					<p>臨界緯度での接続条件から級数解の線形結合は<p>
+
+					<div class="math-box_small" style="font-size: 0.9rem; width: 60%;">
+					\[
+					\tilde{\psi}^{(\mathrm{c})}\,=\,[C_1+C_3\mathcal{H}(\mu-\mu_\mathcal{c})]\tilde{\psi}_1^{(\mathrm{c})}\,+\,C_2\tilde{\psi}_2^{(\mathrm{c})}
+					\]
+					</div>
+
+					<p>ここで, $\mathcal{H}(\mu-\mu_\mathcal{c})$ はステップ関数</p>
+
+					<p>$\tilde{\psi}_1^{(\mathrm{c})}=1+a_1(\mu-\mu_\mathrm{c})$,<br> $\tilde{\psi}_2^{(\mathrm{c})}=[1+a_1(\mu-\mu_\mathrm{c})]\ln|\mu-\mu_\mathrm{c}|+b_1(\mu-\mu_\mathrm{c})$ <br>
+					と近似し, 臨界緯度付近の数値解と<br>
+					フィッティングして, 係数 $C_1$ ($C_3$) と $C_2$ を求める</p>
+
+					<p style="margin-top: 5%;">$C_1$ は臨界緯度の前後で異なり (すなわち, $C_3\neq0$)<br>
+					$C_2$ は等しくなることを確認できる</p>
+
+					<p style="margin-top: 8%; font-size: 0.9rem;">＊ 切断次数 $N_\mathrm{t}=2000$ で計算<br>
+					北極から南極まで $18000$ 点<br>
+					臨界緯度の前後 $200$ 点 (前後 $2^\circ$分) の数値解とフィット<br>
+					(Python+NumPy (<code>numpy.polyfit</code>) を使用)</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part4-sub">
+			<h2>確定特異点での接続条件</h2>
+
+			<p>微分方程式を臨界緯度 $\mu=\mu_\mathrm{c}$ を挟む狭い区間で積分すると (高々 $\tilde{\psi}^{(\mathrm{c})}\sim\ln(\mu-\mu_\mathrm{c})$ なので)</p>
+
+			<div class="math-box_small" style="font-size: 0.85rem; width: 20%;">
+			\[
+			\left[\!\!\left[(\mu-\mu_\mathrm{c})\frac{\ud\tilde{\psi}^{(\mathrm{c})}}{\ud \mu}\right]\!\!\right]_{\mu=\mu_\mathrm{c}}\,=\,0
+			\]
+			</div>
+
+			<table>
+			<tr>
+				<td>ゆえに,</td><td>(i) $(\ud\tilde{\psi}^{(\mathrm{c})}/\ud\mu)|_{\mu=\mu_\mathrm{c}}=\uO[(\mu-\mu_\mathrm{c})^{-1}]$</td><td></td>
+			<tr>
+				<td></td><td>(ii) $(\ud\tilde{\psi}^{(\mathrm{c})}/\ud\mu)|_{\mu=\mu_\mathrm{c}}=\delta(\mu-\mu_\mathrm{c})\times\uO[(\mu-\mu_\mathrm{c})^{0}]$</td><td>のいずれかでなければならない</td>
+			<tr>
+			</table>
+
+			<table style="margin-top: 1%;">
+			<tr>
+				<td>(i) は $\tilde{\psi}^{(c)}_1$ と $\tilde{\psi}^{(c)}_2$ であれば自動的に満たされる<br>
+				ただし, $\tilde{\psi}^{(c)}_2$ の係数は臨界緯度の両側で同じでなければならない</td>
+			</tr>
+			<tr>
+			<td>(ii) から $\mathcal{H}(\mu-\mu_\mathrm{c})\tilde{\psi}^{(c)}_1$ も可能<br>
+			すなわち $\tilde{\psi}^{(c)}_1$ の係数は臨界緯度の両側で異なっていても良いことがわかる</td>
+			</tr>
+			</table>
+
+			<p style="margin-top: 2%;">2 階の微分方程式であるにもかかわらず, 線型独立な解が<br>
+			3 種類 ($\tilde{\psi}^{(c)}_1$, $\tilde{\psi}^{(c)}_2$, $\mathcal{H}(\mu-\mu_\mathrm{c})\tilde{\psi}^{(c)}_1$) 可能であるため, $-1<\mu_\mathrm{c}< 1$ となるような角振動数 $\lambda$ をもつ波は<br>
+			$C_1$, $C_2$, $C_3$ のいずれかが $0$ になるような特殊な状況でない限り, 連続モードになる</p>
+		</section>
+	</section>
+
+	<section data-state="part4" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge">ここまでのまとめ</h2>
+	</section>
+	<section data-state="part4" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">ここまでのまとめ</h2>
+		<ul>
+			<li class="semi-large">背景磁場が $B_{0\phi}=B_0\sin\theta\cos\theta$ の場合の<br>
+			固有値問題を数値的に解いた</li>
+			<li class="semi-large">背景磁場が $B_{0\phi}=B_0\cos\theta$ の場合と異なり<br>
+			<span class="alert">遅い磁気 Rossby 波の離散固有値が消失</span>し<br>
+			臨界緯度で特異な構造をもつ<span class="alert">連続モードが現れた</span></li>
+			<li class="semi-large">磁場が小さい場合 ($\alpha\lessapprox10^{-1}$) の連続モードでは<br>
+			<span class="alert">西進</span>モードは臨界緯度に対して<span class="alert">赤道</span>側で<ruby>伝播場<rp> (</rp><rt>propagating field</rt><rp>) </rp></ruby><br>
+			<span class="alert">東進</span>モードは臨界緯度に対して<span class="alert">極</span>側で伝播場となる</li>
+		</ul>
+	</section>
+
+	<section data-state="part4" data-background-color="#000011" class="summary">
+		<h2 class="large">遅い磁気 Rossby 波の離散固有値が<br>
+		消えることがなぜ重要か？</h2>
+		<ul>
+			<li style="margin: 3% 0 3% 0">マントルは電流を少しだけ通すので, 外核内の速い磁場変動はマントルに遮蔽されて<br>
+			地磁気変動として地表で観測することができない</li>
+			<li style="margin: 3% 0 3% 0">そのため, <span class="alert">外核最上部安定成層を調べるため</span>には<br>
+			遅い磁気 Rossby 波のような<span class="alert">周波数が小さい波</span> (具体的には周期 1 年以上) が<br>
+			好都合である</li>
+			<li style="margin: 3% 0 3% 0">しかし, 本研究のような問題設定では遅い磁気 Rossby 波は存在できない<br>
+			ということが分かった</li>
+			<li style="margin: 3% 0 3% 0">この解決策として, 2 次元系から浅水系や薄層 3 次元系に拡張すると<br>
+			良いかもしれないということが分かっている (本発表では省略する)</p>
+		</ul>
+	</section>
+
+<!-- ========== part 5 ========== -->
+
+	<section>
+		<section data-state="part5">
+			<h2>連続モードの物理的意味</h2>
+
+			<div class="fig-box">
+				<div style="width: 60%;">
+					<ul>
+						<li>連続モードは, エネルギー比でみると<br>
+						Alfv&eacute;n 波に近い</li>
+						<li>Alfv&eacute;n 波の伝播速度は磁場の強さに比例し<br>
+						波の伝播方向は磁力線に平行</li>
+						<li>空間的に磁場強度が変化する場所で<br>
+						広がりをもった初期摂動が与えられた場合,<br>
+						その各部分は局所的な磁場強度を感じて<br>
+						<span class="alert">各々の局所的な Alfv&eacute;n 波速度で伝播するため<br>
+						周波数がそろわず連続的な周波数成分を含む</span></li>
+						<li>連続モードの振幅は, 臨界緯度で非常に大きくなるため<br>
+						臨界緯度での局所的な磁場強度を感じて伝播する</li>
+						<li>連続モードを一つだけ取り出して<br>
+						議論することにはあまり意味がなく<br>
+						それらを足し合わせたものが物理現象として観察される</li>
+					</ul>
+				</div>
+
+				<div style="width: 40%;">
+					<img src="./figures/continuous-mode.png" width="100%" alt="連続モードの物理的意味" style="margin: 1%;">
+
+					<img src="./figures/background-field_sin.png" width="30%" alt="連続モードが発生しない例" style="margin: 1%;">
+					<p style="font-size: 1rem; margin: 0;">$B_{0\phi}=B_0\sin\theta$ の場合<br>
+					全ての緯度で横一列に並んで<br>
+					東西に伝播するため, 連続モードは生じない</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section data-state="part5-sub">
+			<h2>連続モードの集団の減衰 (位相混合)</h2>
+
+			<p style="margin-top: 5%;">連続モードを足し合わせたものは, 前スライドのように初期の摂動に比べて構造が傾いていき<br>
+			最終的には減衰することが知られている<span class="ref">(e.g. <a href="https://aip.scitation.org/doi/pdf/10.1063/1.1706010" target="_blank" title="Stability of Inviscid Plane Couette Flow">Case (1960)</a>)</span></p>
+
+			<p style="margin-top: 5%;">この現象は, 減衰モードの存在によるものではなく<br>
+			複数の連続モードが共存していることに起因するため<br>
+			減衰の仕方も指数関数的ではなく代数的 ($t\rightarrow\infty$ で $\sim t^{-n}$) になる</p>
+
+			<p><span class="ref" style="font-size: 1rem;">＊ 連続モードが存在するような状況で, 減衰モードが生じるという話もある<br>
+			(e.g. <a href="https://www.sciencedirect.com/science/article/pii/B9780080105864500663" target="_blank" title="ON THE VIBRATIONS OF THE ELECTRONIC PLASMA">Landau (1946)</a>, <a href="https://www.sciencedirect.com/science/article/pii/0370157386901651" target="_blank" title="Critical layer singularities and complex eigenvalues in some differential equations of mathematical physics">Adam (1986)</a>)</p>
+
+			<p style="margin-top: 5%;">この場合でも擬エネルギーは保存されなければならないため<br>
+			$\dfrac{1}{2}\displaystyle{\int_{-1}^1}\mathfrak{e}\ud\mu=0$ となることを予想している</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part5">
+			<h2>波線理論を用いて連続モードを考える</h2>
+			<p>これまでは球面上の MHD 線形波動の<span style="border-bottom: dotted 2px black">固有モード</span>を調べてきた</p>
+
+			<p>最後に, 波長が短い波による波束が, ある地点で励起された場合に<br>
+			それが周囲に伝播される様子を考え, 固有モードの結果と関係付けることを試みる</p>
+
+			<p style="margin-top: 3%;">WKBJ 解を仮定し, 微分方程式に代入する<p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 25%;">
+			\[
+			\tilde{\psi}\,=\,\exp\left[\ui\int^\mu\frac{\nu(\mu_*)}{\sqrt{1-\mu_*^2}}\ud\mu_*\right]
+			\]
+			</div>
+
+			<p><span class="alert">$\alpha$ が小さい</span>場合に注目し, 波長が背景磁場の空間スケールに比べ十分短いとする<br>
+			そして, $\nu=\textcolor{blue}{\alpha^{-1/2}}l(\mu)$, $m/\sqrt{1-\mu^2}=\textcolor{blue}{\alpha^{-1/2}}k(\mu)$, $\lambda=\textcolor{red}{\alpha^{1/2}}\Lambda$ とスケーリングする ($l$, $k$, $\Lambda$ は $\uO(\alpha^0)$)</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 35%;">
+			\[
+			[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)](k^2+l^2)\,+\,\sqrt{1-\mu^2}k\Lambda\,=\,0
+			\]
+			</div>
+
+			<p>$\beta$ 平面の場合, 左辺の $\mathcal{B}^2(1-\mu^2)$ は $B_x^2$, 右辺の $\sqrt{1-\mu^2}$ はベータパラメータに相当する</p>
+		</section>
+
+		<section data-state="part5-sub">
+			<h2>WKBJ 近似</h2>
+			<p>$\nu=\alpha^{-1/2}l(\mu)+L(\mu)+\uO(\alpha^{1/2})$ というように, より高次まで展開する</br>
+			最低次の項の係数からは前スライドの局所分散関係が得られ, 次の次数の項の係数から</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 45%;">
+			\[
+			\ui\frac{L}{\sqrt{1-\mu^2}}\,=\,\frac{\ud}{\ud\mu}\ln\left[l^{-1/2}(1-\mu^2)^{-1/4}[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)]^{-1/2}\right]
+			\]
+			</div>
+
+			<p>これを元の WKBJ 解に代入すると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 65%;">
+			\[
+			\psi'\,\approx\,[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)]^{-1/2}l^{-1/2}(1-\mu^2)^{-1/4}\ue^{\ui\varphi}\,,\quad\varphi\,=\,m\phi\,-\,\alpha^{-1/2}\int^\theta l(\theta_*)\ud\theta_*\,-\,\lambda\tau
+			\]
+			</div>
+
+			<p>臨界緯度に近づくと $l^{-1/2}\sim[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)]^{1/4}$ より, $\psi'\rightarrow\infty$ となることがわかる</p>
+
+			<p style="margin-top: 3%">$\alpha^{-1/2}(k(\bm{x}, \tau), l(\bm{x}, \tau))=\left(\frac{1}{\sin\theta}\frac{\upartial\varphi}{\upartial\phi}, -\frac{\upartial\varphi}{\upartial\theta}\right)\equiv\breve{\bm{\nabla}}_\mathrm{h}\varphi$, $\lambda(\bm{x}, \tau)=-\frac{\upartial\varphi}{\upartial\tau}=\lambda_\bm{k}(\bm{x}, \tau, \bm{k})$ とすると, $[\breve{\bm{\nabla}}_\mathrm{h}\times\bm{k}]_r=0$ より<br>
+			$\frac{\upartial k}{\upartial\tau}=-\frac{\alpha^{1/2}}{\sin\theta}\frac{\upartial\lambda}{\upartial\phi}=-\frac{\alpha^{1/2}}{\sin\theta}\left[\frac{\upartial\lambda_\bm{k}}{\upartial k}\frac{\upartial k}{\upartial\phi}+\frac{\upartial\lambda_\bm{k}}{\upartial l}\frac{\upartial l}{\upartial\phi}+\frac{\upartial\lambda_\bm{k}}{\upartial \phi}\right]=-(\sin\theta)^{-1}(\bm{c}_\mathrm{g}\ip\breve{\bm{\nabla}}_\mathrm{h})(k\sin\theta)-\frac{\alpha^{1/2}}{\sin\theta}\frac{\upartial\lambda_\bm{k}}{\upartial\phi}$ および</br>
+			$\frac{\ud_\mathrm{g}\lambda}{\ud\tau}=\breve{\bm{\nabla}}_\mathrm{h}\lambda_\bm{k}\ip\frac{\ud_\mathrm{g}\bm{x}}{\ud\tau}+\frac{\upartial\lambda_\bm{k}}{\upartial k}\frac{\ud_\mathrm{g}k}{\ud\tau}+\frac{\upartial\lambda_\bm{k}}{\upartial l}\frac{\ud_\mathrm{g}l}{\ud\tau}+\frac{\upartial\lambda_\bm{k}}{\upartial\tau}=\frac{\upartial\lambda_\bm{k}}{\upartial\tau}$ を得るので, $k\sin\theta$ と $\lambda$ は群速度にのって見ると保存する<p>
+		</section>
+	</section>
+
+	<section data-state="part5">
+		<h2>ray tracing 方程式</h2>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 70%;">
+		\[
+		\frac{\ud_\mathrm{g}\bm{x}}{\ud\tau}\,=\,\alpha^{1/2}\left(\frac{\upartial\lambda}{\upartial k}, \frac{\upartial\lambda}{\upartial l}\right)\,=\,\bm{c}_\mathrm{g}\,,\quad\frac{\ud_\mathrm{g}(k\sin\theta)}{\ud\tau}\,=\,-\alpha^{1/2}\frac{\upartial\lambda}{\upartial\phi}\,=\,0\,,\quad\frac{\ud_\mathrm{g}l}{\ud\tau}\,=\,-c_{\mathrm{g},\phi}k\cot\theta+\alpha^{1/2}\frac{\upartial\lambda}{\upartial\theta}
+		\]
+		</div>
+
+		<p>ここで, $\bm{x}$ は無次元位置ベクトル, $\ud_\mathrm{g}/\ud\tau=\upartial/\upartial\tau+\bm{c}_\mathrm{g}\ip\breve{\bm{\nabla}}_\mathrm{h}$ は群速度にのって見た時間微分</p>
+
+		<p>とある $(k\sin\theta,\lambda)$ をもつ波束は $\bm{c}_\mathrm{g}$で移動し, 局所分散関係に従って南北方向の構造 ($l$) を変化させる</p>
+
+		<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+		\[
+		\begin{align}
+		[l(\mu)]^2\,&amp;=\,-k^2-\frac{\sqrt{1-\mu^2}k\Lambda}{\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)}\\
+		c_{\mathrm{g},\phi}\,&amp;=\,\alpha\frac{\upartial\Lambda}{\upartial k}\,=\,\alpha\frac{2k\mathcal{B}^2(1-\mu^2)(2k^2+l^2)-(2k\Lambda+\sqrt{1-\mu^2})\Lambda}{2\Lambda(k^2+l^2)+\sqrt{1-\mu^2}k}\\
+		c_{\mathrm{g},-\theta}\,&amp;=\,\alpha\frac{\upartial\Lambda}{\upartial l}\,=\,-\alpha\frac{2l[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)]}{2\Lambda(k^2+l^2)+\sqrt{1-\mu^2}k}\\
+		\end{align}
+		\]
+		</div>
+
+		<p>臨界緯度では $l\rightarrow\pm\infty$, $c_{\mathrm{g},-\theta}\rightarrow0$</br>
+		$l$ が実数であるためには, $-\sqrt{1-\mu^2}k\Lambda/[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)] > 0$<br>
+		$l=0$ のとき $c_{\mathrm{g},-\theta}=0$ で反射が起こりうる</p>
+	</section>
+
+	<section data-state="part5">
+		<h2>群速度</h2>
+
+		<div class="fig-box">
+			<img src="./figures/group-vel.png" width="43%" alt="群速度" style="margin: 1%;">
+			<p class="fig-text" style="left: 10.5%; top: 80%; font-size: 0.8rem; background-color: silver; padding: 5px; border-radius: 5px;">西進連続モード</p>
+			<p class="fig-text" style="left: 33%; top: 80%; font-size: 0.8rem; background-color: silver; padding: 5px; border-radius: 5px;">東進連続モード</p>
+			<p class="fig-text" style="left: 20%; top: 43%; font-size: 0.8rem; background-color: silver; padding: 5px; border-radius: 5px;">Rossby 波</p>
+			<p class="fig-text" style="left: 16%; top: 30.5%; font-size: 3rem; transform: rotate(-6deg)">←</p>
+			<p class="fig-text" style="left: 16%; top: 67%; font-size: 3rem; transform: rotate(6deg)">←</p>
+			<p class="fig-text" style="left: 21.5%; top: 49%; font-size: 1.5rem; transform: rotate(45deg)">→</p>
+			<p class="fig-text" style="left: 21.5%; top: 54%; font-size: 1.5rem; transform: rotate(-45deg)">→</p>
+			<p class="fig-text" style="left: 24%; top: 49%; font-size: 1.5rem; transform: rotate(135deg)">→</p>
+			<p class="fig-text" style="left: 24%; top: 54%; font-size: 1.5rem; transform: rotate(-135deg)">→</p>
+			<p class="fig-text" style="left: 32.5%; top: 41.5%; font-size: 3rem; transform: rotate(-6deg)">→</p>
+			<p class="fig-text" style="left: 32.5%; top: 56%; font-size: 3rem; transform: rotate(6deg)">→</p>
+
+			<div style="width: 50%;">
+				<p style="margin: 5% 0;">群速度の向きは<br>
+				波数空間での周波数の等値面に垂直</p>
+
+				<p style="margin: 5% 0;">$k\Lambda/[\Lambda^2-k^2\mathcal{B}^2(1-\mu^2)] < 0$ より<br>
+				西進連続モードは西寄り<br>
+				東進連続モードは東寄りの群速度をもつ</p>
+
+				<p style="margin: 5% 0;">励起された波束は<br>
+				$\Lambda$ と $k\sin\theta$ を維持しながら伝播する</p>
+
+				<p style="margin: 5% 0;">$l\rightarrow\pm\infty$ のとき<br>
+				波束は臨界緯度付近に到達したことを示す</p>
+
+				<p style="margin: 5% 0; font-size: 1rem;">＊ 東進連続モードの群速度は<br>
+				$\beta$ 平面での遅い磁気 Rossby 波のものとよく似ている</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<section data-state="part5">
+			<h2>波束の軌跡</h2>
+
+			<div class="fig-box">
+				<div style="width: 50%; display: block;">
+					<img src="./figures/ray_continuous.png" width="75%" alt="群速度" style="margin: 1%;">
+					<p>色相: 波数ベクトル (位相速度) の向き</p>
+				</div>
+
+				<div style="width: 50%;">
+					<p style="margin: 1% 0 1% 0;">以下の連立微分方程式を数値積分<br>
+					いくつかの $(k, l)$ の組み合わせの波束を計算</p>
+
+					<p style="font-size: 0.9rem;">＊ Python+SciPy (<code>scipy.integrate.odeint</code>) を使用</p>
+
+					<div class="math-box_small" style="font-size: 0.85rem; width: 80%;">
+					\[
+					\begin{align}
+					<!-- -->
+					\frac{\ud_\mathrm{g}\phi}{\ud(\alpha\tau)}\,&amp;=\,\frac{c_{\mathrm{g},\phi}(l, \theta)}{\alpha\sqrt{1-\mu^2}}\,,\quad\frac{\ud_\mathrm{g}\theta}{\ud(\alpha\tau)}\,=\,-\frac{c_{\mathrm{g},-\theta}(l, \theta)}{\alpha}\\
+					<!-- -->
+					\frac{\ud_\mathrm{g}l}{\ud(\alpha\tau)}\,&amp;=\,-\frac{c_{\mathrm{g},\phi}(l, \theta)}{\alpha}k\cot\theta+\frac{\upartial\Lambda}{\upartial\theta}(l, \theta)
+					<!-- -->
+					\end{align}
+					\]
+					</div>
+
+					<p style="margin: 3% 0;">西進連続モードは赤道側から<br>
+					東進連続モードは極側から臨界緯度に近づき<br>
+					臨界緯度を横切ることができない<br>
+					(到達するのに無限の時間がかかる)</p>
+
+					<p style="margin: 3% 0;"><span class="alert">固有モードにおける<br>
+					伝播場-エバネッセント場の関係と一致</span></p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part5-sub">
+			<h2>Rossby 波の波束の軌跡</h2>
+
+			<img src="./figures/ray_rossby.png" width="35%" alt="群速度" style="margin: 1%;">
+			<p>色相: 波数ベクトル (位相速度) の向き</p>
+		</section>
+	</section>
+
+	<section>
+		<section data-state="part5">
+			<h2>波の作用保存則</h2>
+
+			<p>WKBJ 近似が有効な状況下での擬運動量保存則 $\upartial(\rho_0\mathfrak{p})/\upartial t=\div\mathcal{\bm{F}}$ を計算する</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+			\[
+			\begin{align}
+			<!-- -->
+			\overline{E_\mathrm{p}}\,&amp;=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}\left[|\Lambda|^2+k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
+			<!-- -->
+			\mathfrak{p}\,&amp;=\,\frac{\alpha^{-2}k}{4\varOmega_0R_0}\frac{\sqrt{1-\mu^2}}{|\Lambda|^2}\left[2\mathrm{Re}(\Lambda)(k^2+l^2)+\sqrt{1-\mu^2}k\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
+			<!-- -->
+			\bm{\mathcal{F}}\,&amp;=\,-\rho_0\frac{\alpha^{-1}kl\sqrt{1-\mu^2}}{|\Lambda|^2}\left[|\Lambda|^2-k^2\mathcal{B}^2(1-\mu)^2\right]\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
+			<!-- -->
+			\end{align}
+			\]
+			</div>
+
+			<p>$\Lambda$ を実数に限り (中立波), 局所分散関係を用いると</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+			\[
+			\rho_0\mathfrak{p}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta})\,+\,\uO(\alpha^{-1/2})
+			\]
+			</div>
+
+			<p>$m=\alpha^{-1/2}k\sin\theta$ は群速度にのって見ると保存するので<br>
+			波束をとり囲む, $\bm{c}_\mathrm{g}$ で移動しつつ変形しうる体積で積分すると<br>
+			$\overline{E_\mathrm{p}}/\omega$ (<span class="alert">波の作用</span>, 断熱不変量) は保存する (擬運動量保存則は, 波の作用の保存を表していた)</p>
+
+		</section>
+	</section>
+
+<!-- ========== part 6 ========== -->
+
+	<section data-state="part6" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="huge">まとめ</h2>
+	</section>
+	<section data-state="part6" data-background-color="#000011" class="summary" data-auto-animate>
+		<h2 class="large">まとめ</h2>
+
+		<div style="display: flex;">
+			<div style="width: 50%; margin: 1%; padding: 1%; padding-left: 0; border: orchid solid 3px; border-radius: 20px; background: linear-gradient(to top, orchid 1%, black 8%);">
+				<ul style="margin: 0;">
+					<li style="margin: 5% 0">地球の外核最上部安定成層を調べるため<br>
+					 MHD 波動を考えたい</li>
+					<li style="margin: 5% 0">背景磁場が $B_{0\phi}=B_0\sin\theta\cos\theta$ の場合の<br>
+					固有値問題を数値的に解いた</li>
+					<li style="margin: 5% 0">背景磁場の選択は<br>
+					MHD 波動に重大な影響を及ぼしうる</li>
+					<li style="margin: 5% 0">本発表の問題設定では<br>
+					遅い磁気 Rossby 波は存在できない</li>
+					<li style="margin: 5% 0">浅水系への拡張が必要である</li>
+				</ul>
+			</div>
+
+			<div style="width: 50%; display: block;">
+				<div style="width: 90%; margin: 1%; padding: 3%; border: aquamarine solid 3px; border-radius: 20px; background: linear-gradient(to top, aquamarine 1%, black 10%);">
+					<p>本発表の問題における<br>
+					擬運動量と擬エネルギー,<br>
+					波の作用保存則を導出した<p>
+					<p style="fontsize: 0.8rem;">$\mathfrak{p}\equiv(\varOmega_0\sin^2\theta/R_0)\overline{\xi_\theta'^2}-\overline{\zeta'\xi_\theta'}\sin\theta$</p>
+				</div>
+
+				<div style="display: flex; width: 90%; margin: 1%; margin-top: 2%; padding: 3%; border: aquamarine solid 3px; border-radius: 20px; background: linear-gradient(to top, aquamarine 1%, black 10%);">
+					<div style="width: 65%;">
+						<p>数値計算で連続モードの<br>
+						存在を確かめた<p>
+						<p>磁場が弱い状況における<br>
+						波線理論との<br>
+						対応について考察した</p>
+					</div>
+					<div style="width: 35%;">
+						<img src="./figures/ray_continuous.png" width="90%" alt="test" style="margin: 1%;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!--
+	<section data-state="part6" data-background-color="#000011" class="summary" data-auto-animate>
+		<p><span class="ref">合同セミナー限定スライド</span></p>
+		<h2 class="semi-large">具体案のない future work</h2>
+		<p><span class="ref">ちゃんと調べてないのですでにそういう研究があるかもしれない</span></p>
+		<ul>
+			<li>波と平均<span class="alert">"場"</span>の相互作用 (平均場=平均流+平均磁場)</li>
+			<ul>
+				<li>波の話をダイナモとかの話へ広げられるか？</li>
+				<li>波と平均流 相互作用の問題では, 散逸によって<br>
+				(シアー流 由来の) 臨界層付近で波 (と波が運ぶ運動量) が減衰し, 平均流を変化させる</li>
+				<li>キネマティックダイナモの問題では, なんか波とか乱流とかがあるとして<br>
+				$\alpha$ 効果 ($\overline{\bm{u}'\times\bm{b}'}=\alpha\bm{B}_0$) で平均磁場をつくる</li>
+			</ul>
+			<li>ダイナモ計算の中には波が存在しているか？</li>
+				<ul>
+					<li>現実と違うパラメータの値により, 波が過剰に減衰してるとかないか？</li>
+					<li>もしそうなら, パラメタリゼーション必要？</li>
+					<li>ダイナモ計算の結果を解析するときに, (気象系のように) <br>
+					E-P フラックス (波の作用フラックス) などを解析に使えるか？</li>
+				</ul>
+		</ul>
+	</section>
+-->
+
+</div>
+</div>
+
+	<script src="../reveal.js-master/dist/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			width: 1024,
+			height: 576,
+
+			slideNumber: slide => {
+	    		return [ Reveal.getIndices( slide ).h, '/', this.Reveal.getHorizontalSlides().length - 1 ];
+			}
+		});
+	</script>
+
+	<script src="./main.js"></script>
+
+</body>
+
+</html>
