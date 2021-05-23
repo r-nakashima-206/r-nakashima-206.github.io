@@ -165,7 +165,7 @@ li {
 
 .period {
     color: currentColor; /* 文字色 */
-    background: linear-gradient(transparent 80%, lime 80%); /* 蛍光ペン風 */
+    background: linear-gradient(transparent 80%, pink 80%); /* 蛍光ペン風 */
     font-size: 0.9rem; /* フォントサイズ */
     margin-left : 20px; /* 左側のスペース */
 }
