@@ -25,13 +25,15 @@ h2, h3 {
 
 header {
     background-color: indigo; /* 背景色 */
+    position: sticky; /* ヘッダー位置を固定 */
+    top: 0; /* ヘッダーの位置 */
 }
 
 header a {
     color: orange; /* 文字色 */
     border-bottom: none; /* 下線を消去 */
 }
-header a .link-text {
+header a:not(.nav_here) .link-text {
     border-bottom: 1px solid currentColor; /* 下線 */
 }
 header a:hover{
@@ -42,7 +44,6 @@ header a.nav_here {
     pointer-events: none; /* リンク無効化 */
     cursor: default;  /* カーソルをdefaultに */
     text-decoration: none;  /* 下線を消去 */
-    border-bottom: none; /* 下線を消去 */
 }
 
 header h1 {
