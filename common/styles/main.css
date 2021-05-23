@@ -89,6 +89,9 @@ a {
 a:hover {
     color: darkorange; /* 文字色 */
 }
+a.hidden-link {
+    border-bottom: none; /* 下線を消去 */
+}
 
 hr {
     margin: 40px -100px 20px -20px; /* 上右下左の空白, mainの左右paddingと合わせる */
