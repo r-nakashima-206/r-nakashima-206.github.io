@@ -45,7 +45,8 @@
 				id="nav_part3"><i class="fas fa-chevron-right"></i> 定式化</span><span id="nav_part3-sub" class="sub-slide">$($補足$)$</span> <span
 				id="nav_part4"><i class="fas fa-chevron-right"></i> 数値計算</span><span id="nav_part4-sub" class="sub-slide">$($補足$)$</span> <span
 				id="nav_part5"><i class="fas fa-chevron-right"></i> 考察</span><span id="nav_part5-sub" class="sub-slide">$($補足$)$</span> <span
-				id="nav_part6"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part6-sub" class="sub-slide">$($補足$)$</span></p>
+				id="nav_part6"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part6-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part7"><i class="fas fa-chevron-right"></i> さらなる補足</span><span id="nav_part7-sub" class="sub-slide">$($補足$)$</span></p>
 			<nav>
 		</dic>
 	</header>
@@ -1500,7 +1501,7 @@
 			<p>数値計算によると, 臨界緯度で連続モードの固有関数は尖った構造をしている</p>
 
 			<p>微分方程式の臨界緯度まわりの<br>
-			2 つの線型独立な Frobenius 級数解は ($\mathcal{B}\neq1$ で $-1<\mu_\mathrm{c}< 1$ のとき)</p>
+			2 つの線型独立な Frobenius 級数解は ($\mathcal{B}\neq1$, $\lambda\neq0$ で $-1<\mu_\mathrm{c}< 1$ のとき)</p>
 
 			<div class="math-box" style="font-size: 0.9rem; width: 45%;">
 			\[
@@ -1513,7 +1514,7 @@
 
 			<table>
 			<tr>
-				<td>ここで,</td><td>$\mathcal{B}_\mathrm{c}^2\equiv[\mathcal{B}(\mu_\mathrm{c})]^2$, $(\mathcal{B}_\mathrm{c}^2)'\equiv(\ud\mathcal{B}^2/\ud\mu)|_{\mu=\mu_\mathrm{c}}=(\ud\mathcal{B}_\mathrm{c}^2/\ud\mu_\mathrm{c})$ などとする</td>
+				<td>ここで,</td><td>$\mathcal{B}_\mathrm{c}^2\equiv[\mathcal{B}(\mu_\mathrm{c})]^2$, $(\mathcal{B}_\mathrm{c}^2)'\equiv(\ud\mathcal{B}^2/\ud\mu)|_{\mu=\mu_\mathrm{c}}=(\ud\mathcal{B}_\mathrm{c}^2/\ud\mu_\mathrm{c})$ などとする (条件より $(\mathcal{B}_\mathrm{c}^2)'\neq0$)</td>
 			</tr>
 			<tr>
 				<td></td><td>$a_1=-\dfrac{\operatorname{sgn}(\lambda)|\mathcal{B}_\mathrm{c}\alpha^{-1}|+\mu_\mathrm{c}(\mathcal{B}_\mathrm{c}^2)'+2\mathcal{B}_\mathrm{c}^2}{(\mathcal{B}_\mathrm{c}^2)'(1-\mu_\mathrm{c}^2)}$</td>
@@ -1531,7 +1532,7 @@
 			<p>最低次 ($r-1$ 次) の係数は $r^2a_0=0$ (決定方程式)<br>
 			決定方程式の解 ($r=0$) が重解のため, 2 つある解のうちの一方 $\tilde{\psi}_1^{(\mathrm{c})}$ しか決まらない</p>
 
-			<p style="margin-top: 5%;">$r$ が決まれば係数 $a_1$ 以降は漸化式で求まるため,<br>
+			<p style="margin-top: 5%;">$r$ が決まれば係数 $a_1$ 以降は漸化式で求まるため<br>
 			級数解を $\tilde{\psi}^{(\mathrm{c})}(r)=a_0(\mu-\mu_\mathrm{c})^r+\displaystyle{\sum_{k=1}^\infty} a_k(r)(\mu-\mu_\mathrm{c})^{k+r}$ と書き直しておく ($\tilde{\psi}_1^{(\mathrm{c})}=\tilde{\psi}^{(\mathrm{c})}(r=0)$)</p>
 
 			<p>$a_k(r)$ は漸化式を満たすように定められているとすると, $\mathcal{L}[\tilde{\psi}^{(\mathrm{c})}(r)]=r^2a_0$ となるが<br>
@@ -1868,39 +1869,36 @@
 		</section>
 	</section>
 
-	<section>
-		<section data-state="part5">
-			<h2>波の作用保存則</h2>
+	<section data-state="part5">
+		<h2>波の作用保存則</h2>
 
-			<p>WKBJ 近似が有効な状況下での擬運動量保存則 $\upartial(\rho_0\mathfrak{p})/\upartial t=\div\mathcal{\bm{F}}$ を計算する</p>
+		<p>WKBJ 近似が有効な状況下での擬運動量保存則 $\upartial(\rho_0\mathfrak{p})/\upartial t=\div\mathcal{\bm{F}}$ を計算する</p>
 
-			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
-			\[
-			\begin{align}
-			<!-- -->
-			\overline{E_\mathrm{p}}\,&amp;=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}\left[|\Lambda|^2+k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
-			<!-- -->
-			\mathfrak{p}\,&amp;=\,\frac{\alpha^{-2}k}{4\varOmega_0R_0}\frac{\sqrt{1-\mu^2}}{|\Lambda|^2}\left[2\mathrm{Re}(\Lambda)(k^2+l^2)+\sqrt{1-\mu^2}k\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
-			<!-- -->
-			\bm{\mathcal{F}}\,&amp;=\,-\rho_0\frac{\alpha^{-1}kl\sqrt{1-\mu^2}}{|\Lambda|^2}\left[|\Lambda|^2-k^2\mathcal{B}^2(1-\mu)^2\right]\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
-			<!-- -->
-			\end{align}
-			\]
-			</div>
+		<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+		\[
+		\begin{align}
+		<!-- -->
+		\overline{E_\mathrm{p}}\,&amp;=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}\left[|\Lambda|^2+k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
+		<!-- -->
+		\mathfrak{p}\,&amp;=\,\frac{\alpha^{-2}k}{4\varOmega_0R_0}\frac{\sqrt{1-\mu^2}}{|\Lambda|^2}\left[2\mathrm{Re}(\Lambda)(k^2+l^2)+\sqrt{1-\mu^2}k\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
+		<!-- -->
+		\bm{\mathcal{F}}\,&amp;=\,-\rho_0\frac{\alpha^{-1}kl\sqrt{1-\mu^2}}{|\Lambda|^2}\left[|\Lambda|^2-k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
+		<!-- -->
+		\end{align}
+		\]
+		</div>
 
-			<p>$\Lambda$ を実数に限り (中立波), 局所分散関係を用いると</p>
+		<p>$\Lambda$ を実数に限り (中立波), 局所分散関係を用いると</p>
 
-			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
-			\[
-			\rho_0\mathfrak{p}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta})\,+\,\uO(\alpha^{-1/2})
-			\]
-			</div>
+		<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+		\[
+		\rho_0\mathfrak{p}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta})\,+\,\uO(\alpha^{-1/2})
+		\]
+		</div>
 
-			<p>$m=\alpha^{-1/2}k\sin\theta$ は群速度にのって見ると保存するので<br>
-			波束をとり囲む, $\bm{c}_\mathrm{g}$ で移動しつつ変形しうる体積で積分すると<br>
-			$\overline{E_\mathrm{p}}/\omega$ (<span class="alert">波の作用</span>, 断熱不変量) は保存する (擬運動量保存則は, 波の作用の保存を表していた)</p>
-
-		</section>
+		<p>$m=\alpha^{-1/2}k\sin\theta$ は群速度にのって見ると保存するので<br>
+		波束をとり囲む, $\bm{c}_\mathrm{g}$ で移動しつつ変形しうる体積で積分すると<br>
+		$\overline{E_\mathrm{p}}/\omega$ (<span class="alert">波の作用</span>, 断熱不変量) は保存する (擬運動量保存則は, 波の作用の保存を表していた)</p>
 	</section>
 
 <!-- ========== part 6 ========== -->
@@ -1974,6 +1972,57 @@
 		</ul>
 	</section>
 -->
+
+	<section>
+		<section data-state="part7">
+			<h2>magnetostrophic 近似</h2>
+			<p>遅い磁気 Rossby 波やそれに類する波を研究する場合<br>
+			伝統的に<span class="alert">運動方程式の慣性項を無視する近似</span>が用いられる</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+			\[
+			\frac{\ud}{\ud\mu}\left[\mathcal{B}^2(1-\mu^2)\frac{\ud\tilde{\psi}}{\ud\mu}\right]\,+\,\left[-\frac{m^2\mathcal{B}^2}{1-\mu^2}\,+\,\frac{\lambda}{m\alpha^2}+2\mathcal{B}\frac{\ud}{\ud\mu}(\mathcal{B}\mu)\right]\tilde{\psi}\,=\,0
+			\]
+			</div>
+
+			<p>この近似では, 確定特異点が $\mathcal{B}(\mu_\mathcal{c})=0$ となる ($\lambda$ に依存しない) $\mu=\mu_\mathrm{c}$ のみとなるので<br>
+			<span class="alert">連続モードが</span>上手く<span class="alert">除去された</span>かのように見える</p>
+			<p style="margin-top: 1%">結果を比較するために $\mathcal{B}=\mu$ の場合に着目し, $g=\mu\tilde{\psi}$ とおくと</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\frac{\lambda}{m\alpha^2}g\,=\,-\mu^2(\nabla_\mathrm{h}^2+6)g
+			\]
+			</div>
+
+			<p>$\mu^2\mathscr{P}_n^m=\dfrac{(n+m-1)(n+m)}{(2n-1)(2n+1)}\mathscr{P}_{n-2}^m+\dfrac{2(n^2-m^2)+(2n+1)}{(2n-1)(2n+3)}\mathscr{P}_{n}^m+\dfrac{(n-m+1)(n-m+2)}{(2n+1)(2n+3)}\mathscr{P}_{n+2}^m$ を用いると<br>
+			数値的に固有値問題を解くことができる</p>
+		</section>
+
+		<section data-state="part7">
+			<h2>$\mathcal{B}=\mu$ のときの magnetostrophic 近似での分散関係</h2>
+
+			<p>$\dfrac{\lambda}{m\alpha^2}g^{[n]}=(n-4)(n+1)k_{n-1}^mk_n^mg^{[n-2]}+(n-2)(n+3)\dfrac{2(n^2-m^2)+(2n+1)}{(2n-1)(2n+3)}g^{[n]}+n(n+5)k_{n+1}^mk_{n+2}^mg^{[n+2]}$</p>
+
+			<p>東西波数 $m=1$</p>
+
+			<div class="fig-box">
+				<div style="width: 65%;">
+					<img src="./figures/2DMHD-sphere_sincos_magnetostrophic_m1_N1000.png" width="60%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+					<p class="fig-text" style="left: 22%; top: 83%; font-size: 0.8rem;">西進</p>
+					<p class="fig-text" style="left: 40.5%; top: 83%; font-size: 0.8rem;">東進</p>
+
+					<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数</p>
+				</div>
+
+				<div style="width: 35%; margin-top: 5%;">
+					<p>近似の有無で<br>
+					結果が大きく変わってしまい<br>
+					適切な近似とはいえない</p>
+				</div>
+			</div>
+		</section>
+	</section>
 
 </div>
 </div>
