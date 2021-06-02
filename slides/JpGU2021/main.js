@@ -18,7 +18,7 @@ Reveal.addEventListener( 'top-slide', function() {
 // ナビゲーション //
 // ======================================== //
 
-const num_part = 6;
+const num_part = 7;
 const el_part = Array(num_part);
 const el_part_sub = Array(num_part);
 for (let i = 1; i <= num_part; i++) {
@@ -204,6 +204,37 @@ Reveal.addEventListener( 'part6-sub', function() {
 		}
 
 		if (i === 6) {
+			el_part_sub[i].className = 'here show-sub';
+		} else {
+			el_part_sub[i].className = 'sub-slide';
+		}
+	}
+}, false );
+
+Reveal.addEventListener( 'part7', function() {
+	for (var i = 1; i <= num_part; i++) {
+		if (i < 7) {
+			el_part[i].className = 'past';
+		} else if (i === 7) {
+			el_part[i].className = 'here';
+		} else {
+			el_part[i].className = 'future';
+		}
+
+		el_part_sub[i].className = 'sub-slide';
+	}
+}, false );
+Reveal.addEventListener( 'part7-sub', function() {
+	for (var i = 1; i <= num_part; i++) {
+		if (i < 7) {
+			el_part[i].className = 'past';
+		} else if (i === 7) {
+			el_part[i].className = 'here';
+		} else {
+			el_part[i].className = 'future';
+		}
+
+		if (i === 7) {
 			el_part_sub[i].className = 'here show-sub';
 		} else {
 			el_part_sub[i].className = 'sub-slide';

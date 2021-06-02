@@ -45,7 +45,8 @@
 				id="nav_part3"><i class="fas fa-chevron-right"></i> 定式化</span><span id="nav_part3-sub" class="sub-slide">$($補足$)$</span> <span
 				id="nav_part4"><i class="fas fa-chevron-right"></i> 数値計算</span><span id="nav_part4-sub" class="sub-slide">$($補足$)$</span> <span
 				id="nav_part5"><i class="fas fa-chevron-right"></i> 考察</span><span id="nav_part5-sub" class="sub-slide">$($補足$)$</span> <span
-				id="nav_part6"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part6-sub" class="sub-slide">$($補足$)$</span></p>
+				id="nav_part6"><i class="fas fa-chevron-right"></i> まとめ</span><span id="nav_part6-sub" class="sub-slide">$($補足$)$</span> <span
+				id="nav_part7"><i class="fas fa-chevron-right"></i> さらなる補足</span><span id="nav_part7-sub" class="sub-slide">$($補足$)$</span></p>
 			<nav>
 		</dic>
 	</header>
@@ -1500,7 +1501,7 @@
 			<p>数値計算によると, 臨界緯度で連続モードの固有関数は尖った構造をしている</p>
 
 			<p>微分方程式の臨界緯度まわりの<br>
-			2 つの線型独立な Frobenius 級数解は ($\mathcal{B}\neq1$ で $-1<\mu_\mathrm{c}< 1$ のとき)</p>
+			2 つの線型独立な Frobenius 級数解は ($\mathcal{B}\neq1$, $\lambda\neq0$ で $-1<\mu_\mathrm{c}< 1$ のとき)</p>
 
 			<div class="math-box" style="font-size: 0.9rem; width: 45%;">
 			\[
@@ -1513,7 +1514,7 @@
 
 			<table>
 			<tr>
-				<td>ここで,</td><td>$\mathcal{B}_\mathrm{c}^2\equiv[\mathcal{B}(\mu_\mathrm{c})]^2$, $(\mathcal{B}_\mathrm{c}^2)'\equiv(\ud\mathcal{B}^2/\ud\mu)|_{\mu=\mu_\mathrm{c}}=(\ud\mathcal{B}_\mathrm{c}^2/\ud\mu_\mathrm{c})$ などとする</td>
+				<td>ここで,</td><td>$\mathcal{B}_\mathrm{c}^2\equiv[\mathcal{B}(\mu_\mathrm{c})]^2$, $(\mathcal{B}_\mathrm{c}^2)'\equiv(\ud\mathcal{B}^2/\ud\mu)|_{\mu=\mu_\mathrm{c}}=(\ud\mathcal{B}_\mathrm{c}^2/\ud\mu_\mathrm{c})$ などとする (条件より $(\mathcal{B}_\mathrm{c}^2)'\neq0$)</td>
 			</tr>
 			<tr>
 				<td></td><td>$a_1=-\dfrac{\operatorname{sgn}(\lambda)|\mathcal{B}_\mathrm{c}\alpha^{-1}|+\mu_\mathrm{c}(\mathcal{B}_\mathrm{c}^2)'+2\mathcal{B}_\mathrm{c}^2}{(\mathcal{B}_\mathrm{c}^2)'(1-\mu_\mathrm{c}^2)}$</td>
@@ -1531,7 +1532,7 @@
 			<p>最低次 ($r-1$ 次) の係数は $r^2a_0=0$ (決定方程式)<br>
 			決定方程式の解 ($r=0$) が重解のため, 2 つある解のうちの一方 $\tilde{\psi}_1^{(\mathrm{c})}$ しか決まらない</p>
 
-			<p style="margin-top: 5%;">$r$ が決まれば係数 $a_1$ 以降は漸化式で求まるため,<br>
+			<p style="margin-top: 5%;">$r$ が決まれば係数 $a_1$ 以降は漸化式で求まるため<br>
 			級数解を $\tilde{\psi}^{(\mathrm{c})}(r)=a_0(\mu-\mu_\mathrm{c})^r+\displaystyle{\sum_{k=1}^\infty} a_k(r)(\mu-\mu_\mathrm{c})^{k+r}$ と書き直しておく ($\tilde{\psi}_1^{(\mathrm{c})}=\tilde{\psi}^{(\mathrm{c})}(r=0)$)</p>
 
 			<p>$a_k(r)$ は漸化式を満たすように定められているとすると, $\mathcal{L}[\tilde{\psi}^{(\mathrm{c})}(r)]=r^2a_0$ となるが<br>
@@ -1547,8 +1548,8 @@
 
 			<div class="fig-box">
 				<img src="./figures/series.png" width="43%" alt="数値解とFrobenius 級数解の最小二乗フィット" style="margin: 1%;">
-				<p class="fig-text" style="left: 12.5%; top: 36.5%; font-size: 0.6rem;">傾き ($C_2$) がほぼ同じで<br>切片 ($C_1$) が異なる</p>
-				<p class="fig-text" style="left: 27%; top: 31.5%; font-size: 0.6rem;">切片 ($C_2$) がほぼ同じで<br>傾き ($C_1$) が異なる</p>
+				<p class="fig-text" style="left: 12%; top: 35%; font-size: 0.6rem;">傾き ($C_2$) がほぼ同じで<br>切片 ($C_1$) が異なる</p>
+				<p class="fig-text" style="left: 27.5%; top: 31%; font-size: 0.6rem;">切片 ($C_2$) がほぼ同じで<br>傾き ($C_1$) が異なる</p>
 
 				<div style="width: 50%;">
 					<p>臨界緯度での接続条件から級数解の線形結合は<p>
@@ -1717,7 +1718,7 @@
 			\]
 			</div>
 
-			<p><span class="alert">$\alpha$ が小さい</span>場合に注目し, 波長が背景磁場の空間スケールに比べ十分短いとする<br>
+			<p><span class="alert">$\alpha$ が小さい</span>場合 (地球コア条件) に注目し, 波長が背景磁場の空間スケールに比べ十分短いとする<br>
 			そして, $\nu=\textcolor{blue}{\alpha^{-1/2}}l(\mu)$, $m/\sqrt{1-\mu^2}=\textcolor{blue}{\alpha^{-1/2}}k(\mu)$, $\lambda=\textcolor{red}{\alpha^{1/2}}\Lambda$ とスケーリングする ($l$, $k$, $\Lambda$ は $\uO(\alpha^0)$)</p>
 
 			<div class="math-box_small" style="font-size: 0.9rem; width: 35%;">
@@ -1827,7 +1828,7 @@
 
 			<div class="fig-box">
 				<div style="width: 50%; display: block;">
-					<img src="./figures/ray_continuous.png" width="75%" alt="群速度" style="margin: 1%;">
+					<img src="./figures/ray_continuous.png" width="75%" alt="連続モードの波束の軌跡" style="margin: 1%;">
 					<p>色相: 波数ベクトル (位相速度) の向き</p>
 				</div>
 
@@ -1863,44 +1864,41 @@
 		<section data-state="part5-sub">
 			<h2>Rossby 波の波束の軌跡</h2>
 
-			<img src="./figures/ray_rossby.png" width="35%" alt="群速度" style="margin: 1%;">
+			<img src="./figures/ray_rossby.png" width="35%" alt="Rossby 波の波束の軌跡" style="margin: 1%;">
 			<p>色相: 波数ベクトル (位相速度) の向き</p>
 		</section>
 	</section>
 
-	<section>
-		<section data-state="part5">
-			<h2>波の作用保存則</h2>
+	<section data-state="part5">
+		<h2>波の作用保存則</h2>
 
-			<p>WKBJ 近似が有効な状況下での擬運動量保存則 $\upartial(\rho_0\mathfrak{p})/\upartial t=\div\mathcal{\bm{F}}$ を計算する</p>
+		<p>WKBJ 近似が有効な状況下での擬運動量保存則 $\upartial(\rho_0\mathfrak{p})/\upartial t=\div\mathcal{\bm{F}}$ を計算する</p>
 
-			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
-			\[
-			\begin{align}
-			<!-- -->
-			\overline{E_\mathrm{p}}\,&amp;=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}\left[|\Lambda|^2+k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
-			<!-- -->
-			\mathfrak{p}\,&amp;=\,\frac{\alpha^{-2}k}{4\varOmega_0R_0}\frac{\sqrt{1-\mu^2}}{|\Lambda|^2}\left[2\mathrm{Re}(\Lambda)(k^2+l^2)+\sqrt{1-\mu^2}k\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
-			<!-- -->
-			\bm{\mathcal{F}}\,&amp;=\,-\rho_0\frac{\alpha^{-1}kl\sqrt{1-\mu^2}}{|\Lambda|^2}\left[|\Lambda|^2-k^2\mathcal{B}^2(1-\mu)^2\right]\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
-			<!-- -->
-			\end{align}
-			\]
-			</div>
+		<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+		\[
+		\begin{align}
+		<!-- -->
+		\overline{E_\mathrm{p}}\,&amp;=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}\left[|\Lambda|^2+k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
+		<!-- -->
+		\mathfrak{p}\,&amp;=\,\frac{\alpha^{-2}k}{4\varOmega_0R_0}\frac{\sqrt{1-\mu^2}}{|\Lambda|^2}\left[2\mathrm{Re}(\Lambda)(k^2+l^2)+\sqrt{1-\mu^2}k\right]\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
+		<!-- -->
+		\bm{\mathcal{F}}\,&amp;=\,-\rho_0\frac{\alpha^{-1}kl\sqrt{1-\mu^2}}{|\Lambda|^2}\left[|\Lambda|^2-k^2\mathcal{B}^2(1-\mu^2)\right]\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
+		<!-- -->
+		\end{align}
+		\]
+		</div>
 
-			<p>$\Lambda$ を実数に限り (中立波), 局所分散関係を用いると</p>
+		<p>$\Lambda$ を実数に限り (中立波), 局所分散関係を用いると</p>
 
-			<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
-			\[
-			\rho_0\mathfrak{p}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta})\,+\,\uO(\alpha^{-1/2})
-			\]
-			</div>
+		<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+		\[
+		\rho_0\mathfrak{p}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta})\,+\,\uO(\alpha^{-1/2})
+		\]
+		</div>
 
-			<p>$m=\alpha^{-1/2}k\sin\theta$ は群速度にのって見ると保存するので<br>
-			波束をとり囲む, $\bm{c}_\mathrm{g}$ で移動しつつ変形しうる体積で積分すると<br>
-			$\overline{E_\mathrm{p}}/\omega$ (<span class="alert">波の作用</span>, 断熱不変量) は保存する (擬運動量保存則は, 波の作用の保存を表していた)</p>
-
-		</section>
+		<p>$m=\alpha^{-1/2}k\sin\theta$ は群速度にのって見ると保存するので<br>
+		波束をとり囲む, $\bm{c}_\mathrm{g}$ で移動しつつ変形しうる体積で積分すると<br>
+		$\overline{E_\mathrm{p}}/\omega$ (<span class="alert">波の作用</span>, 断熱不変量) は保存する (擬運動量保存則は, 波の作用の保存を表していた)</p>
 	</section>
 
 <!-- ========== part 6 ========== -->
@@ -1974,6 +1972,185 @@
 		</ul>
 	</section>
 -->
+
+	<section>
+		<section data-state="part7">
+			<h2>magnetostrophic 近似</h2>
+			<p>遅い磁気 Rossby 波やそれに類する波を研究する場合<br>
+			伝統的に<span class="alert">運動方程式の慣性項を無視する近似</span>が用いられる</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+			\[
+			\frac{\ud}{\ud\mu}\left[\mathcal{B}^2(1-\mu^2)\frac{\ud\tilde{\psi}}{\ud\mu}\right]\,+\,\left[-\frac{m^2\mathcal{B}^2}{1-\mu^2}\,+\,\frac{\lambda}{m\alpha^2}+2\mathcal{B}\frac{\ud}{\ud\mu}(\mathcal{B}\mu)\right]\tilde{\psi}\,=\,0
+			\]
+			</div>
+
+			<p>この近似では, 確定特異点が $\mathcal{B}(\mu_\mathcal{c})=0$ となる ($\lambda$ に依存しない) $\mu=\mu_\mathrm{c}$ のみとなるので<br>
+			<span class="alert">連続モードが</span>上手く<span class="alert">除去された</span>かのように見える</p>
+			<p style="margin-top: 1%">結果を比較するために $\mathcal{B}=\mu$ の場合に着目し, $g=\mu\tilde{\psi}$ とおくと</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 20%;">
+			\[
+			\frac{\lambda}{m\alpha^2}g\,=\,-\mu^2(\nabla_\mathrm{h}^2+6)g
+			\]
+			</div>
+
+			<p>$\mu^2\mathscr{P}_n^m=\dfrac{(n+m-1)(n+m)}{(2n-1)(2n+1)}\mathscr{P}_{n-2}^m+\dfrac{2(n^2-m^2)+(2n+1)}{(2n-1)(2n+3)}\mathscr{P}_{n}^m+\dfrac{(n-m+1)(n-m+2)}{(2n+1)(2n+3)}\mathscr{P}_{n+2}^m$ を用いると<br>
+			数値的に固有値問題を解くことができる</p>
+		</section>
+
+		<section data-state="part7">
+			<h2>$\mathcal{B}=\mu$ のときの magnetostrophic 近似での分散関係</h2>
+
+			<p>$\dfrac{\lambda}{m\alpha^2}g^{[n]}=(n-4)(n+1)k_{n-1}^mk_n^mg^{[n-2]}+(n-2)(n+3)\dfrac{2(n^2-m^2)+(2n+1)}{(2n-1)(2n+3)}g^{[n]}+n(n+5)k_{n+1}^mk_{n+2}^mg^{[n+2]}$</p>
+
+			<p>東西波数 $m=1$</p>
+
+			<div class="fig-box">
+				<div style="width: 60%;">
+					<img src="./figures/2DMHD-sphere_sincos_magnetostrophic_m1_N1000.png" width="70%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+					<p class="fig-text" style="left: 19%; top: 83.5%; font-size: 0.8rem;">西進</p>
+					<p class="fig-text" style="left: 39%; top: 83.5%; font-size: 0.8rem;">東進</p>
+
+					<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数</p>
+				</div>
+
+				<div style="width: 40%; margin-top: 5%;">
+					<p>近似の有無で<br>
+					結果が大きく変わってしまい<br>
+					本発表の問題設定では<br>
+					適切な近似とはいえない</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>$\mathcal{B}=\mu$ のときの magnetostrophic 近似での固有関数</h2>
+
+			<p>東西波数 $m=1$ / Lehnert 数 $\alpha=10^{-1}$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 60%; padding: 1%;">
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_1.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_1.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_2.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_2.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_3.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_3.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<p>左: magnetostrophic 近似, 右: 近似なし</p>
+
+				</div>
+
+				<div style="display: block; width: 40%; padding: 1%;">
+					<p style="margin-top: 15%">$0$ でない無次元角振動数を<br>
+					もつモードの場合<br>
+					本来, 確定特異点が 2 つ現れる<br>
+					はずであるが</p>
+					<p style="margin-top: 10%">magnetostrophic 近似の場合は<br>
+					どのモードに対しても<br>
+					確定特異点が赤道上にあるようになる</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<div class="fig-box">
+				<div style="display: block; width: 50%; padding: 1%;">
+					<p style="margin-top: 10%">magnetostrophic 近似により, 局所分散関係は</p>
+
+					<div class="math-box_small" style="font-size: 0.9rem; width: 45%;">
+					\[
+					\Lambda\,=\,k\mathcal{B}^2\sqrt{1-\mu^2}(k^2+l^2)
+					\]
+					</div>
+
+					<p>ゆえに</p>
+
+					<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+					\[
+					\begin{align}
+					[l(\mu)]^2\,&amp;=\,-k^2+\frac{\Lambda}{k\mathcal{B}^2\sqrt{1-\mu^2}}\\
+					c_{\mathrm{g},\phi}^{\mathrm{(ms)}}\,&amp;=\,\alpha\cdot\mathcal{B}^2\sqrt{1-\mu^2}(3k^2+l^2)\\
+					c_{\mathrm{g},-\theta}^{\mathrm{(ms)}}\,&amp;=\,\alpha\cdot2kl\mathcal{B}^2\sqrt{1-\mu^2}\\
+					\end{align}
+					\]
+					</div>
+				</div>
+
+				<div style="width: 50%;">
+					<p>群速度</p>
+
+					<img src="./figures/mag-str_group-vel.png" width="70%" alt="群速度" style="margin: 1%;">
+					<p class="fig-text" style="left: 79%; top: 41.7%; font-size: 3rem; transform: rotate(-40deg)">→</p>
+					<p class="fig-text" style="left: 81%; top: 52.2%; font-size: 3rem; transform: rotate(0deg)">→</p>
+					<p class="fig-text" style="left: 79%; top: 62.7%; font-size: 3rem; transform: rotate(40deg)">→</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<div class="fig-box">
+				<div style="width: 50%;">
+					<p>波束の軌跡</p>
+
+					<img src="./figures/ray_magnetostrophic.png" width="65%" alt="波束の軌跡" style="margin: 1%;">
+					<p>色相: 波数ベクトル (位相速度) の向き</p>
+				</div>
+
+				<div style="display: block; width: 50%; padding: 1%;">
+					<p style="margin-top: 30%">magnetostrophic 近似の場合<br>
+					臨界緯度ではなく赤道に近づくが<br>
+					同様に赤道を横切れない</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<p>magnetostrophic 近似の場合, いくつかの量の定義を変更することで, 波の作用保存則が成立する</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+			\[
+			\begin{align}
+			<!-- -->
+			\overline{E_\mathrm{p}^{\mathrm{(ms)}}}\,&amp;=\,\frac{\overline{b_\theta'^2}+\overline{b_\phi'^2}}{2\mu_\mathrm{m}}\,=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}k^2\mathcal{B}^2(1-\mu^2)\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
+			<!-- -->
+			\mathfrak{p}^{\mathrm{(ms)}}\,&amp;=\,\frac{\varOmega_0\sin^2\theta}{R_0}\overline{\xi_\theta'^2}\,=\,\frac{\alpha^{-2}k^2}{4\varOmega_0R_0}\frac{1-\mu^2}{|\Lambda|^2}\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
+			<!-- -->
+			\bm{\mathcal{F}}^{\mathrm{(ms)}}\,&amp;=\,\frac{\overline{b_\theta'b_\phi'}}{\mu_\mathrm{m}}\sin\theta\hat{\bm{e}}_\theta\,=\,\rho_0\frac{\alpha^{-1}k^3l}{|\Lambda|^2}\mathcal{B}^2(1-\mu^2)^{3/2}\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
+			<!-- -->
+			\end{align}
+			\]
+			</div>
+
+			<p>magnetostrophic 近似での局所分散関係を用いると, 再び</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 65%;">
+			\[
+			\rho_0\mathfrak{p}^{\mathrm{(ms)}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}^{\mathrm{(ms)}}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}^{\mathrm{(ms)}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}^{\mathrm{(ms)}}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta}^{\mathrm{(ms)}})\,+\,\uO(\alpha^{-1/2})
+			\]
+			</div>
+
+			<p></p>
+		</section>
+	</section>
 
 </div>
 </div>
