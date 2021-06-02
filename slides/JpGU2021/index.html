@@ -1548,8 +1548,8 @@
 
 			<div class="fig-box">
 				<img src="./figures/series.png" width="43%" alt="数値解とFrobenius 級数解の最小二乗フィット" style="margin: 1%;">
-				<p class="fig-text" style="left: 12.5%; top: 36.5%; font-size: 0.6rem;">傾き ($C_2$) がほぼ同じで<br>切片 ($C_1$) が異なる</p>
-				<p class="fig-text" style="left: 27%; top: 31.5%; font-size: 0.6rem;">切片 ($C_2$) がほぼ同じで<br>傾き ($C_1$) が異なる</p>
+				<p class="fig-text" style="left: 12%; top: 35%; font-size: 0.6rem;">傾き ($C_2$) がほぼ同じで<br>切片 ($C_1$) が異なる</p>
+				<p class="fig-text" style="left: 27.5%; top: 31%; font-size: 0.6rem;">切片 ($C_2$) がほぼ同じで<br>傾き ($C_1$) が異なる</p>
 
 				<div style="width: 50%;">
 					<p>臨界緯度での接続条件から級数解の線形結合は<p>
@@ -1718,7 +1718,7 @@
 			\]
 			</div>
 
-			<p><span class="alert">$\alpha$ が小さい</span>場合に注目し, 波長が背景磁場の空間スケールに比べ十分短いとする<br>
+			<p><span class="alert">$\alpha$ が小さい</span>場合 (地球コア条件) に注目し, 波長が背景磁場の空間スケールに比べ十分短いとする<br>
 			そして, $\nu=\textcolor{blue}{\alpha^{-1/2}}l(\mu)$, $m/\sqrt{1-\mu^2}=\textcolor{blue}{\alpha^{-1/2}}k(\mu)$, $\lambda=\textcolor{red}{\alpha^{1/2}}\Lambda$ とスケーリングする ($l$, $k$, $\Lambda$ は $\uO(\alpha^0)$)</p>
 
 			<div class="math-box_small" style="font-size: 0.9rem; width: 35%;">
@@ -1828,7 +1828,7 @@
 
 			<div class="fig-box">
 				<div style="width: 50%; display: block;">
-					<img src="./figures/ray_continuous.png" width="75%" alt="群速度" style="margin: 1%;">
+					<img src="./figures/ray_continuous.png" width="75%" alt="連続モードの波束の軌跡" style="margin: 1%;">
 					<p>色相: 波数ベクトル (位相速度) の向き</p>
 				</div>
 
@@ -1864,7 +1864,7 @@
 		<section data-state="part5-sub">
 			<h2>Rossby 波の波束の軌跡</h2>
 
-			<img src="./figures/ray_rossby.png" width="35%" alt="群速度" style="margin: 1%;">
+			<img src="./figures/ray_rossby.png" width="35%" alt="Rossby 波の波束の軌跡" style="margin: 1%;">
 			<p>色相: 波数ベクトル (位相速度) の向き</p>
 		</section>
 	</section>
@@ -2007,20 +2007,148 @@
 			<p>東西波数 $m=1$</p>
 
 			<div class="fig-box">
-				<div style="width: 65%;">
-					<img src="./figures/2DMHD-sphere_sincos_magnetostrophic_m1_N1000.png" width="60%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
-					<p class="fig-text" style="left: 22%; top: 83%; font-size: 0.8rem;">西進</p>
-					<p class="fig-text" style="left: 40.5%; top: 83%; font-size: 0.8rem;">東進</p>
+				<div style="width: 60%;">
+					<img src="./figures/2DMHD-sphere_sincos_magnetostrophic_m1_N1000.png" width="70%" alt="分散関係のグラフ (m=1)" style="margin: 1%;">
+					<p class="fig-text" style="left: 19%; top: 83.5%; font-size: 0.8rem;">西進</p>
+					<p class="fig-text" style="left: 39%; top: 83.5%; font-size: 0.8rem;">東進</p>
 
 					<p>縦軸: 無次元角振動数 / 横軸: Lehnert 数</p>
 				</div>
 
-				<div style="width: 35%; margin-top: 5%;">
+				<div style="width: 40%; margin-top: 5%;">
 					<p>近似の有無で<br>
 					結果が大きく変わってしまい<br>
+					本発表の問題設定では<br>
 					適切な近似とはいえない</p>
 				</div>
 			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>$\mathcal{B}=\mu$ のときの magnetostrophic 近似での固有関数</h2>
+
+			<p>東西波数 $m=1$ / Lehnert 数 $\alpha=10^{-1}$</p>
+
+			<div class="fig-box">
+				<div style="display: block; width: 60%; padding: 1%;">
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_1.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_1.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_2.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_2.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<div class="fig-box">
+						<img src="./figures/magnetostrophic_3.png" width="30%" alt="連続モードの固有関数 (m=1)" style="margin: 1%; margin-right: 5%;">
+
+						<img src="./figures/vs_magnetostrophic_3.png" width="30%" alt="連続モードの固有関数 (m=1, magnetostrophic)" style="margin: 1%;">
+					</div>
+
+					<p>左: magnetostrophic 近似, 右: 近似なし</p>
+
+				</div>
+
+				<div style="display: block; width: 40%; padding: 1%;">
+					<p style="margin-top: 15%">$0$ でない無次元角振動数を<br>
+					もつモードの場合<br>
+					本来, 確定特異点が 2 つ現れる<br>
+					はずであるが</p>
+					<p style="margin-top: 10%">magnetostrophic 近似の場合は<br>
+					どのモードに対しても<br>
+					確定特異点が赤道上にあるようになる</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<div class="fig-box">
+				<div style="display: block; width: 50%; padding: 1%;">
+					<p style="margin-top: 10%">magnetostrophic 近似により, 局所分散関係は</p>
+
+					<div class="math-box_small" style="font-size: 0.9rem; width: 45%;">
+					\[
+					\Lambda\,=\,k\mathcal{B}^2\sqrt{1-\mu^2}(k^2+l^2)
+					\]
+					</div>
+
+					<p>ゆえに</p>
+
+					<div class="math-box_small" style="font-size: 0.9rem; width: 55%;">
+					\[
+					\begin{align}
+					[l(\mu)]^2\,&amp;=\,-k^2+\frac{\Lambda}{k\mathcal{B}^2\sqrt{1-\mu^2}}\\
+					c_{\mathrm{g},\phi}^{\mathrm{(ms)}}\,&amp;=\,\alpha\cdot\mathcal{B}^2\sqrt{1-\mu^2}(3k^2+l^2)\\
+					c_{\mathrm{g},-\theta}^{\mathrm{(ms)}}\,&amp;=\,\alpha\cdot2kl\mathcal{B}^2\sqrt{1-\mu^2}\\
+					\end{align}
+					\]
+					</div>
+				</div>
+
+				<div style="width: 50%;">
+					<p>群速度</p>
+
+					<img src="./figures/mag-str_group-vel.png" width="70%" alt="群速度" style="margin: 1%;">
+					<p class="fig-text" style="left: 79%; top: 41.7%; font-size: 3rem; transform: rotate(-40deg)">→</p>
+					<p class="fig-text" style="left: 81%; top: 52.2%; font-size: 3rem; transform: rotate(0deg)">→</p>
+					<p class="fig-text" style="left: 79%; top: 62.7%; font-size: 3rem; transform: rotate(40deg)">→</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<div class="fig-box">
+				<div style="width: 50%;">
+					<p>波束の軌跡</p>
+
+					<img src="./figures/ray_magnetostrophic.png" width="65%" alt="波束の軌跡" style="margin: 1%;">
+					<p>色相: 波数ベクトル (位相速度) の向き</p>
+				</div>
+
+				<div style="display: block; width: 50%; padding: 1%;">
+					<p style="margin-top: 30%">magnetostrophic 近似の場合<br>
+					臨界緯度ではなく赤道に近づくが<br>
+					同様に赤道を横切れない</p>
+				</div>
+			</div>
+		</section>
+
+		<section data-state="part7">
+			<h2>magnetostrophic 近似での波線理論</h2>
+
+			<p>magnetostrophic 近似の場合, いくつかの量の定義を変更することで, 波の作用保存則が成立する</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 50%;">
+			\[
+			\begin{align}
+			<!-- -->
+			\overline{E_\mathrm{p}^{\mathrm{(ms)}}}\,&amp;=\,\frac{\overline{b_\theta'^2}+\overline{b_\phi'^2}}{2\mu_\mathrm{m}}\,=\,\frac{\rho_0}{2}\alpha^{-1}\frac{k^2+l^2}{|\Lambda|^2}k^2\mathcal{B}^2(1-\mu^2)\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-1/2})\\
+			<!-- -->
+			\mathfrak{p}^{\mathrm{(ms)}}\,&amp;=\,\frac{\varOmega_0\sin^2\theta}{R_0}\overline{\xi_\theta'^2}\,=\,\frac{\alpha^{-2}k^2}{4\varOmega_0R_0}\frac{1-\mu^2}{|\Lambda|^2}\frac{\overline{\psi'^2}}{R_0^2}\,+\,\uO(\alpha^{-3/2})\\
+			<!-- -->
+			\bm{\mathcal{F}}^{\mathrm{(ms)}}\,&amp;=\,\frac{\overline{b_\theta'b_\phi'}}{\mu_\mathrm{m}}\sin\theta\hat{\bm{e}}_\theta\,=\,\rho_0\frac{\alpha^{-1}k^3l}{|\Lambda|^2}\mathcal{B}^2(1-\mu^2)^{3/2}\frac{\overline{\psi'^2}}{R_0^2}\hat{\bm{e}}_\theta\,+\,\uO(\alpha^{-1/2})
+			<!-- -->
+			\end{align}
+			\]
+			</div>
+
+			<p>magnetostrophic 近似での局所分散関係を用いると, 再び</p>
+
+			<div class="math-box_small" style="font-size: 0.9rem; width: 65%;">
+			\[
+			\rho_0\mathfrak{p}^{\mathrm{(ms)}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}^{\mathrm{(ms)}}}}{\omega}\,+\,\uO(\alpha^{-3/2})\,,\quad\bm{\mathcal{F}}^{\mathrm{(ms)}}\,=\,\frac{(m/R_0)\overline{E_\mathrm{p}^{\mathrm{(ms)}}}}{\omega}(2\varOmega_0R_0\bm{c}_{\mathrm{g},-\theta}^{\mathrm{(ms)}})\,+\,\uO(\alpha^{-1/2})
+			\]
+			</div>
+
+			<p></p>
 		</section>
 	</section>
 
