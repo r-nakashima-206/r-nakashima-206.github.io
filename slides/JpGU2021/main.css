@@ -239,23 +239,41 @@ figcaption {
 
 #info_footer {
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
     bottom: 0;
     width: 100%;
+    background-color: #606060;
     z-index: 1;
 }
 #presentation_speaker {
-    width: 100%;
-    background-color: #606060;
+    width: 75%;
+}
+#poweredby {
+    left: 75%;
+    width: 25%;
 }
 #presentation_speaker address {
     cfont-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
     font-size: 1.3rem;
     color: white;
     padding: 10px 10px 15px 20px;
+    margin: 0;
     font-style: normal;
 }
-#presentation_speaker a {
+#presentation_speaker address::selection {
+    color: currentColor;
+    background: deepskyblue;
+}
+#poweredby p {
+    cfont-family: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 10px 15px 20px;
+    margin: 0;
+    font-style: normal;
+}
+#presentation_speaker a, #poweredby a{
     color: currentColor;
     text-decoration: underline;
     z-index: 1;
