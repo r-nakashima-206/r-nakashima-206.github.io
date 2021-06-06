@@ -10,7 +10,7 @@ body {
 }
 
 h2, h3 {
-    font-family: 'Noto Serif JP', serif;
+    font-family: 'Noto Serif JP', serif; /* Google Fonts */
 }
 
 #container {
@@ -25,8 +25,8 @@ h2, h3 {
 
 header {
     background-color: indigo; /* 背景色 */
-    position: sticky; /* ヘッダー位置を固定 */
-    top: 0; /* ヘッダーの位置 */
+    position: sticky; /* 位置を固定 */
+    top: 0; /* 位置 */
 }
 
 header a {
