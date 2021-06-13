@@ -1,3 +1,5 @@
+// https://kenpoco.hatenadiary.org/entry/20080501/1209636103
+
 function include(filename, afterfunc) {
 
   include.seq = (include.seq)? include.seq + 1: 1;

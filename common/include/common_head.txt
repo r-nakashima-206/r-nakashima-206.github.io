@@ -16,8 +16,10 @@
 
 
 <!-- CSS -->
+<link type="text/css" rel="stylesheet" href="./common/styles/normalize.css">
 <link type="text/css" rel="stylesheet" href="./common/styles/main.css">
 <!-- ひたすらCSS -->
+<link type="text/css" rel="stylesheet" href="../common/styles/normalize.css">
 <link type="text/css" rel="stylesheet" href="../common/styles/main.css">
 <link type="text/css" rel="stylesheet" href="../common/styles/hla.css">
 
