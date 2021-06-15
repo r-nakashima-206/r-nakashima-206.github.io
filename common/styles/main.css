@@ -60,7 +60,7 @@ header h1 {
     background-color: dimgray; /* 背景色 */
     padding: 2px 10px; /* 上右下左の空白*/
     font-size: 1rem; /* フォントサイズ */
-    font-weight: lighter; /* 文字の太さ */
+    font-weight: normal; /* 文字の太さ */
     color: white; /* 文字色 */
 }
 
@@ -112,7 +112,7 @@ h2.section {
     background-color: indigo; /* 背景色 */
     width: 500px; /* 囲みの大きさ */
     font-size: 1.8rem; /* フォントサイズ */
-    font-weight: lighter; /* 文字の太さ */
+    font-weight: normal; /* 文字の太さ */
     color: yellow; /* 文字色 */
 }
 
@@ -123,7 +123,7 @@ h3.sub-section {
     border-left: 10px solid indigo; /* 囲み線(左のみ) */
     width: 500px; /* 囲みの大きさ(左囲み線の分だけ調整) */
     font-size: 1.6rem; /* フォントサイズ */
-    font-weight: lighter; /* 文字の太さ */
+    font-weight: normal; /* 文字の太さ */
     color: currentColor; /* 文字色 */
 }
 
