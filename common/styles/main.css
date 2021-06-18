@@ -93,13 +93,15 @@ main a {
     color: currentColor; /* 文字色 */
     text-decoration: none;  /* 下線を消去 */
     border-bottom: 1px solid currentColor; /* 下線 */
+    background: linear-gradient(to right, #99ff99 50%, transparent 50%) 100% 0% / 200% auto no-repeat; /* 背景 */
+    transition: background-position .5s ease-in;
 }
 main a.hidden-link {
     border-bottom: none; /* 下線を消去 */
 }
 main a:not(.hidden-link):hover {
     color: orangered; /* 文字色 */
-    background-color: #99ff99; /* 背景色 */
+    background-position: 0% 0%; /* 背景の位置 */
 }
 
 hr {
