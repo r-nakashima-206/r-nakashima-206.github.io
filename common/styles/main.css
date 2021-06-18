@@ -9,7 +9,7 @@ html.show_html {
 }
 
 body {
-    font-family: "Verdana", "Roboto", "YuGothic", "Yu Gothic", sans-serif; /* 基本のフォント(左ほど優先) */
+    font-family: "Verdana", "Roboto", "YuGothic", "Yu Gothic", sans-serif; /* フォント(左ほど優先) */
     line-height: 1.4rem; /* 行間 */
     margin: 0 auto; /* 上右下左の空白 */
     background-color: gainsboro; /* 背景色 */
@@ -93,13 +93,15 @@ main a {
     color: currentColor; /* 文字色 */
     text-decoration: none;  /* 下線を消去 */
     border-bottom: 1px solid currentColor; /* 下線 */
+    background: linear-gradient(to right, #99ff99 50%, transparent 50%) 100% 0% / 200% auto no-repeat; /* 背景 */
+    transition: background-position .5s ease-in;
 }
 main a.hidden-link {
     border-bottom: none; /* 下線を消去 */
 }
 main a:not(.hidden-link):hover {
     color: orangered; /* 文字色 */
-    background-color: #99ff99; /* 背景色 */
+    background-position: 0% 0%; /* 背景の位置 */
 }
 
 hr {
@@ -121,7 +123,7 @@ h3.sub-section {
     background: linear-gradient(to right, ghostwhite, lavender); /* 背景色グラデーション */
     border: 1px solid indigo; /* 囲み線 */
     border-left: 10px solid indigo; /* 囲み線(左のみ) */
-    width: 500px; /* 囲みの大きさ(左囲み線の分だけ調整) */
+    width: 500px; /* 囲みの大きさ */
     font-size: 1.6rem; /* フォントサイズ */
     font-weight: normal; /* 文字の太さ */
     color: currentColor; /* 文字色 */
@@ -174,7 +176,7 @@ li {
     color: currentColor; /* 文字色 */
     background: linear-gradient(transparent 80%, pink 80%); /* 蛍光ペン風 */
     font-size: 0.9rem; /* フォントサイズ */
-    margin-left : 20px; /* 左側のスペース */
+    margin-left : 20px; /* 上右下左の空白(左のみ) */
 }
 
 .english {
@@ -184,7 +186,7 @@ li {
 }
 
 #thesis .english, #thesis .period {
-    margin-left : 10px; /* 左側のスペース */
+    margin-left : 10px; /* 上右下左の空白(左のみ) */
 }
 
 .best-time {
