@@ -27,12 +27,12 @@
 
 .hla header .index-arrow:before {
     border-left: 1px solid yellow; /* 線のスタイル */
-    margin-left : 13px; /* 左側のスペース */
+    margin-left : 13px; /* 上右下左の空白(左のみ) */
     content: "---"; /* 矢印を追加 */
 }
 @media screen and (min-width: 640px){
     .hla header .index-arrow:before {
-        margin-left : 15px; /* 左側のスペース */
+        margin-left : 15px; /* 上右下左の空白(左のみ) */
         content: "---\03e"; /* 矢印を追加 */
     }
 }
