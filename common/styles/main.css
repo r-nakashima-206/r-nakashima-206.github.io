@@ -144,9 +144,6 @@ p.textbox {
 p.indent {
     text-indent: 1rem; /* インデント */
 }
-p.no-margin-top {
-    margin-top: -20px; /* 上右下左の空白 */
-}
 
 p.info {
     font-size: 0.85rem; /* フォントサイズ */
