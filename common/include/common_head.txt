@@ -51,3 +51,8 @@
     gtag('js', new Date());
     gtag('config', 'UA-159930372-3');
 </script>
+
+
+<!-- html に class を追加し、ページ全体を表示 -->
+<script async src="./common/scripts/show_html.js"></script>
+<script async src="../common/scripts/show_html.js"></script>
