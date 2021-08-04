@@ -1,2 +1,2 @@
-const el_html = document.querySelector('html');
-el_html.classList.add('show_html');
+const elementHtml = document.querySelector('html');
+elementHtml.classList.add('show_html');
